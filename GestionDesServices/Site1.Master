@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="GestionDesServices.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Home</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    <script src="Ressource/jquery.slim.min.js"></script>
+        <link href="Ressource/bootstrap.min.css" rel="stylesheet" />
+        <script src="Ressource/bootstrap.min.js"></script>
+        <link href="Ressource/css/all.css" rel="stylesheet" />
+         <script src="Ressource/js/all.js"></script>
+    <link href="Ressource/StyleFooter.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        <header>
+        <!--NavBar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="#" alt="MarrakechServiceDomicile">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="~/Test/Index">
+                                Home
+                                
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Inscription.aspx">Devenir Prestataire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Login.aspx">Demander Un Services</a>
+  
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Why Us</a>
+                        </li>
+                        
+                    </ul>
+                    <!--
+                    <form class="form-inline my-2 my-lg-0">
+                        <button class="btn btn-outline-light my-2 my-sm-0">
+                            Sign in
+                        </button>
+                        &nbsp;
+                        <button class="btn btn-outline-dark  my-2 my-sm-0" style="background-color: #e3f2fd; ">
+                            Sign up</button>
+                    </form>
+                    -->
+                        
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+<!-- End NavBar-->
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+     </asp:ContentPlaceHolder>
+    
+
+
+    <!-- Footer -->
+  <br />
+    <footer class="footer-main w-100">
+        <div class="footer-second bg-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-12 text-white">
+                        <div class="row p-3">
+                            <div class="col-md-6 col-12">
+                                <p class="m-0">All Right Reserved 2020 - <a href="#" target="_blank">MonSite</a></p>
+                            </div>
+                            <div class="col-md-6 col-12 footer-icon text-right">
+                                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                                <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>
+                                <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="#"><i class="fab fa-vk fa-2x"></i></a>
+                                <a href="#"><i class="fab fa-google fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--EndFooter-->
+           
+        </div>
+    </form>
+</body>
+</html>
