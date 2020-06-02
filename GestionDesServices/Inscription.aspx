@@ -102,10 +102,11 @@
                     <!-- Submit Button -->
                     <div class="form-group col-lg-12 mx-auto mb-0">
                         <a href="#" class="btn btn-primary btn-block py-2">
+                           
                             <span class="font-weight-bold">Create your account</span>
                         </a>
                     </div>
-
+                     <asp:Button ID="Button1" runat="server" Text="Create your account" class="btn btn-primary btn-block py-2" />
                     <!-- Already Registered -->
                     <div class="text-center w-100">
                         <p class="text-muted font-weight-bold">Already Registered? <a href="Login.aspx" class="text-primary ml-2">Login</a></p>
