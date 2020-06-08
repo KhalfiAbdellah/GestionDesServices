@@ -153,8 +153,13 @@
     <Content Include="Ressource\font-awesome.css" />
     <Content Include="Ressource\font-awesome.min.css" />
     <Content Include="Ressource\HomeStyle.css" />
+    <Content Include="Ressource\Image\Animeaux.jpg" />
+    <Content Include="Ressource\Image\Demenagement.jpg" />
     <Content Include="Ressource\Image\GardeEnfant.jpg" />
     <Content Include="Ressource\Image\HomeImage.svg" />
+    <Content Include="Ressource\Image\Informatique.jpg" />
+    <Content Include="Ressource\Image\Jardinage.jpg" />
+    <Content Include="Ressource\Image\Menage.jpg" />
     <Content Include="Ressource\jquery.min.js" />
     <Content Include="Ressource\jquery.slim.min.js" />
     <Content Include="Ressource\js\all.js" />
