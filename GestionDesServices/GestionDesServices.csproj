@@ -106,6 +106,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\GestionDesServices.mdf" />
+    <Content Include="App_Data\GestionDesServices_log.ldf">
+      <DependentUpon>GestionDesServices.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -113,7 +117,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
-    <Content Include="DemandeDeService.aspx" />
+    <Content Include="Page Demande de Service\DemandeDeService.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GardeEnfant.aspx" />
@@ -128,9 +132,9 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Home.aspx" />
-    <Content Include="Inscription.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="Page Home\Home.aspx" />
+    <Content Include="Page Inscription\Inscription.aspx" />
+    <Content Include="Page Login\Login.aspx" />
     <Content Include="Ressource\bootstrap.bundle.min.js" />
     <Content Include="Ressource\bootstrap.min.css" />
     <Content Include="Ressource\bootstrap.min.js" />
@@ -236,11 +240,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DemandeDeService.aspx.cs">
+    <Compile Include="Page Demande de Service\DemandeDeService.aspx.cs">
       <DependentUpon>DemandeDeService.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DemandeDeService.aspx.designer.cs">
+    <Compile Include="Page Demande de Service\DemandeDeService.aspx.designer.cs">
       <DependentUpon>DemandeDeService.aspx</DependentUpon>
     </Compile>
     <Compile Include="GardeEnfant.aspx.cs">
@@ -260,25 +264,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Home.aspx.cs">
+    <Compile Include="Page Home\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home.aspx.designer.cs">
+    <Compile Include="Page Home\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Inscription.aspx.cs">
+    <Compile Include="Page Inscription\Inscription.aspx.cs">
       <DependentUpon>Inscription.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Inscription.aspx.designer.cs">
+    <Compile Include="Page Inscription\Inscription.aspx.designer.cs">
       <DependentUpon>Inscription.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Page Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Page Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -304,9 +308,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
