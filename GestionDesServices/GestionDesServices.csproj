@@ -116,6 +116,8 @@
     <Content Include="DemandeDeService.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GardeEnfant.aspx" />
+    <Content Include="Garde_enfant.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -240,6 +242,20 @@
     </Compile>
     <Compile Include="DemandeDeService.aspx.designer.cs">
       <DependentUpon>DemandeDeService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GardeEnfant.aspx.cs">
+      <DependentUpon>GardeEnfant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GardeEnfant.aspx.designer.cs">
+      <DependentUpon>GardeEnfant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Garde_enfant.aspx.cs">
+      <DependentUpon>Garde_enfant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Garde_enfant.aspx.designer.cs">
+      <DependentUpon>Garde_enfant.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
