@@ -1,21 +1,29 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="GestionDesServices.Site1" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Home</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
         
     </asp:ContentPlaceHolder>
+
     <script src="Ressource/jquery.slim.min.js"></script>
         <link href="Ressource/bootstrap.min.css" rel="stylesheet" />
         <script src="Ressource/bootstrap.min.js"></script>
         <link href="Ressource/css/all.css" rel="stylesheet" />
          <script src="Ressource/js/all.js"></script>
     <link href="Ressource/StyleFooter.css" rel="stylesheet" />
+
+    <!--logo-->
+    <link rel="apple-touch-icon" sizes="180x180" href="website logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="website logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="website logo/favicon-32x32.png">
+    <link rel="manifest" href="website logo/site.webmanifest">
+    <!--logo end-->
+
 </head>
+
 <body>
     <form id="form1" runat="server">
         <div>
@@ -24,29 +32,32 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="#" alt="MarrakechServiceDomicile">
+                    <img src="website logo/go service logo.png">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
                         <li class="nav-item active">
-                            <a class="nav-link" href="Home.aspx">
-                                Home
-                                
-                                <span class="sr-only">(current)</span>
-                            </a>
+                            <asp:HyperLink class="nav-link" ID="vers_acceuil" NavigateUrl="~/Page Acceuil/Acceuil.aspx" runat="server">Acceuil<span class="sr-only">(current)</span></asp:HyperLink>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="Inscription.aspx">Devenir Prestataire</a>
+                            <asp:HyperLink class="nav-link" ID="vers_inscription" NavigateUrl="~/Page Inscription/Inscription.aspx" runat="server">Cree un Compte</asp:HyperLink>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="DemandeDeService.aspx">Demander Un Services</a>
-  
+                            <asp:HyperLink class="nav-link" ID="vers_services" NavigateUrl="~/Page Services disponibles/ServicesDisponibles.aspx" runat="server">Services Disponibles</asp:HyperLink>
                         </li>
+                        
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Why Us</a>
+                            <asp:HyperLink class="nav-link" ID="vers_about" NavigateUrl="~/About.aspx" runat="server">Why us</asp:HyperLink>
+                        </li>
+
+                        <li class="nav-item">
+                            <asp:HyperLink class="nav-link" ID="vers_login" NavigateUrl="~/Page se connecter/SeConnecter.aspx" runat="server">Se connecter</asp:HyperLink>
                         </li>
                         
                     </ul>

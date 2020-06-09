@@ -117,7 +117,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
-    <Content Include="Page Demande de Service\DemandeDeService.aspx" />
+    <Content Include="Page Inscription\Inscription.css" />
+    <Content Include="Page Services disponibles\ServicesDisponibles.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -129,10 +130,25 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Page Services disponibles\Services diponibles.css" />
+    <Content Include="website logo\android-chrome-192x192.png" />
+    <Content Include="website logo\android-chrome-512x512.png" />
+    <Content Include="website logo\apple-touch-icon.png" />
+    <Content Include="website logo\favicon-16x16.png" />
+    <Content Include="website logo\favicon-32x32.png" />
+    <Content Include="website logo\favicon.ico" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Page Home\Home.aspx" />
+    <Content Include="Page Services disponibles\Images\babysitter.jpg" />
+    <Content Include="Page Services disponibles\Images\baker.jpg" />
+    <Content Include="Page Services disponibles\Images\barber.jpg" />
+    <Content Include="Page Services disponibles\Images\gardener.jpg" />
+    <Content Include="Page Services disponibles\Images\semsar.jpg" />
+    <Content Include="Page Services disponibles\Images\teacher.jpg" />
+    <Content Include="Page Acceuil\Acceuil.aspx" />
+    <Content Include="Page Inscription\Images\client-signup.jpg" />
     <Content Include="Page Inscription\Inscription.aspx" />
-    <Content Include="Page Login\Login.aspx" />
+    <Content Include="Page se connecter\Images\man-working-from-home-cat.jpg" />
+    <Content Include="Page se connecter\SeConnecter.aspx" />
     <Content Include="Ressource\bootstrap.bundle.min.js" />
     <Content Include="Ressource\bootstrap.min.css" />
     <Content Include="Ressource\bootstrap.min.js" />
@@ -152,7 +168,7 @@
     <Content Include="Ressource\css\v4-shims.min.css" />
     <Content Include="Ressource\font-awesome.css" />
     <Content Include="Ressource\font-awesome.min.css" />
-    <Content Include="Ressource\HomeStyle.css" />
+    <Content Include="Page Acceuil\Acceuil.css" />
     <Content Include="Ressource\Image\Animeaux.jpg" />
     <Content Include="Ressource\Image\Demenagement.jpg" />
     <Content Include="Ressource\Image\GardeEnfant.jpg" />
@@ -176,7 +192,7 @@
     <Content Include="Ressource\js\solid.min.js" />
     <Content Include="Ressource\js\v4-shims.js" />
     <Content Include="Ressource\js\v4-shims.min.js" />
-    <Content Include="Ressource\LoginStyle.css" />
+    <Content Include="Page se connecter\SeConnecter.css" />
     <Content Include="Ressource\StyleFooter.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -213,6 +229,8 @@
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="Site1.Master" />
+    <Content Include="website logo\go service logo.png" />
+    <Content Include="website logo\site.webmanifest" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -238,22 +256,22 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Page Demande de Service\DemandeDeService.aspx.cs">
-      <DependentUpon>DemandeDeService.aspx</DependentUpon>
+    <Compile Include="Page Services disponibles\ServicesDisponibles.aspx.cs">
+      <DependentUpon>ServicesDisponibles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Page Demande de Service\DemandeDeService.aspx.designer.cs">
-      <DependentUpon>DemandeDeService.aspx</DependentUpon>
+    <Compile Include="Page Services disponibles\ServicesDisponibles.aspx.designer.cs">
+      <DependentUpon>ServicesDisponibles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Page Home\Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="Page Acceuil\Acceuil.aspx.cs">
+      <DependentUpon>Acceuil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Page Home\Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="Page Acceuil\Acceuil.aspx.designer.cs">
+      <DependentUpon>Acceuil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page Inscription\Inscription.aspx.cs">
       <DependentUpon>Inscription.aspx</DependentUpon>
@@ -262,12 +280,12 @@
     <Compile Include="Page Inscription\Inscription.aspx.designer.cs">
       <DependentUpon>Inscription.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Page Login\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Page se connecter\SeConnecter.aspx.cs">
+      <DependentUpon>SeConnecter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Page Login\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Page se connecter\SeConnecter.aspx.designer.cs">
+      <DependentUpon>SeConnecter.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Mobile.Master.cs">

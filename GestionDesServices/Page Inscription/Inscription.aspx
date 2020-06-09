@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Inscription.aspx.cs" Inherits="GestionDesServices.Inscription" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Nouveau Client</title>
+    <link href="Inscription.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- Inscription -->
@@ -8,9 +10,9 @@
     <div id="inscri" class="row py-5 mt-4 align-items-center">
         <!-- For Demo Purpose -->
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
-            <img src="https://res.cloudinary.com/mhmd/image/upload/v1569543678/form_d9sh6m.svg" alt="" class="img-fluid mb-3 d-none d-md-block">
+            <img src="Images/client-signup.jpg" alt="" class="img-fluid mb-3 d-none d-md-block">
             <h1>Create an Account</h1>
-            <p class="font-italic text-muted mb-0">Create your acount here now.</p>
+            <p class="font-italic text-muted mb-0">Votre premiere etape pour connecter a votre fournisseur.</p>
 
         </div>
 
