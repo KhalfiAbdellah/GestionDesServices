@@ -1,6 +1,7 @@
 ﻿.footer-main {
     position: fixed;
     bottom: 0;
+    background-color:indianred !important;
 }
 
 .footer-second p {

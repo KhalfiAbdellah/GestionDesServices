@@ -5,38 +5,77 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <!--Login-->
-    <link href="Ressource/HomeStyle.css" rel="stylesheet" />
-<div class="container-fluid">
-    <div class="row no-gutter">
-        <!-- The image half -->
-        <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
-            <img src="Images/man-working-from-home-cat.jpg" alt="" class="img-fluid mb-3 d-none d-md-block">
-            <h1>Connecter-vous</h1>
-            <p class="font-italic text-muted mb-0">Rejoigner nous pour etre mis a jour avec notre nouveau actualiters</p>
+        <!-- banner -->
+    <div class="banner_w3lspvt" id="home" style="margin-top:auto">
+        <div class="csslider infinity" id="slider1">
+            <input type="radio" name="slides" checked="checked" id="slides_1" />
+            <input type="radio" name="slides" id="slides_2" />
+            <input type="radio" name="slides" id="slides_3" />
+            <input type="radio" name="slides" id="slides_4" />
 
-        </div>
-
-
-        <!-- The content half -->
-        <div class="col-md-6 ">
-            <div class="login d-flex align-items-center py-5">
-
-                <!-- Demo content-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-10 col-xl-7 mx-auto">
-                            <h3 class="display-4">Trouver le prestataire ideal pour tous les service!</h3>
+            <ul class="banner_slide_bg">
+                <li>
+                    <div class="slider-info bg1">
+                        <div class="bs-slider-overlay">
+                            <div class="banner-text">
+                                <div class="container">
+                                    <h2 class="movetxt agile-title text-capitalize">Welcome To <span style="color:deeppink">Bridge To Knowledge</span></h2>
+                                    <h4 class="movetxt mb-3 agile-title text-capitalize" style="font-size:large">The only place where students and teachers help each other with their academic experience</h4>
+                                    <a href="about.html" class="btn">know More About Us </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div><!-- End -->
+                </li>
+                <li>
+                    <div class="slider-info bg2">
+                        <div class="bs-slider-overlay1">
+                            <div class="banner-text">
+                                <div class="container">
 
+                                    <h4 class="movetxt mb-3 agile-title text-capitalize">Find online lessons provided by your own teacher</h4>
+                                    <a href="about.html" class="btn">know how </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider-info bg3">
+                        <div class="bs-slider-overlay1">
+                            <div class="banner-text">
+                                <div class="container">
+
+                                    <h4 class="movetxt mb-3 agile-title text-capitalize">Get help from your teacher This semester</h4>
+                                    <a href="about.html" class="btn">know how </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider-info bg4">
+                        <div class="bs-slider-overlay1">
+                            <div class="banner-text">
+                                <div class="container">
+
+                                    <h4 class="movetxt mb-3 agile-title text-capitalize">Stay up to date with your academic performance</h4>
+                                    <a href="about.html" class="btn">know how </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="navigation">
+                <div>
+                    <label for="slides_1"></label>
+                    <label for="slides_2"></label>
+                    <label for="slides_3"></label>
+                    <label for="slides_4"></label>
+                </div>
             </div>
-        </div><!-- End -->
-
+        </div>
     </div>
-</div>
-
-
-<!--End Login-->
+    <!-- //banner -->
 </asp:Content>

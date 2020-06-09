@@ -23,6 +23,7 @@
     <!--logo end-->
 
     <link href="Site1.css" rel="stylesheet" />
+    <link href="Page%20Acceuil/Acceuil.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -32,9 +33,7 @@
         <!--NavBar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top" id="nav" >
             <div class="container">
-                <a class="navbar-brand" href="#">
                     <img src="website logo/go service logo.png">
-                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -54,7 +53,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <asp:HyperLink class="nav-link" ID="vers_about" NavigateUrl="~/About.aspx" runat="server">Why us</asp:HyperLink>
+                            <asp:HyperLink class="nav-link" ID="vers_aboutt" NavigateUrl="~/About.aspx" runat="server">Why us</asp:HyperLink>
                         </li>
 
                         <li class="nav-item">

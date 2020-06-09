@@ -60,13 +60,13 @@ namespace GestionDesServices
         protected global::System.Web.UI.WebControls.HyperLink vers_services;
 
         /// <summary>
-        /// vers_about control.
+        /// vers_aboutt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink vers_about;
+        protected global::System.Web.UI.WebControls.HyperLink vers_aboutt;
 
         /// <summary>
         /// vers_login control.
