@@ -133,6 +133,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Page Services disponibles\Services diponibles.css" />
+    <Content Include="Site1.css" />
     <Content Include="website logo\android-chrome-192x192.png" />
     <Content Include="website logo\android-chrome-512x512.png" />
     <Content Include="website logo\apple-touch-icon.png" />
