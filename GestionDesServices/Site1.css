@@ -22,4 +22,6 @@ vers_acceuil:hover,#vers_inscription:hover, #vers_services:hover, #vers_aboutt:h
 /*footer*/
 .footer-second {
     background-color: indianred !important;
+    margin-top:100px;
+
 }

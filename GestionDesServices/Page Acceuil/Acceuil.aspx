@@ -19,9 +19,11 @@
                         <div class="bs-slider-overlay">
                             <div class="banner-text">
                                 <div class="container">
-                                    <h2 class="movetxt agile-title text-capitalize">Welcome To <span style="color:deeppink">Bridge To Knowledge</span></h2>
-                                    <h4 class="movetxt mb-3 agile-title text-capitalize" style="font-size:large">The only place where students and teachers help each other with their academic experience</h4>
-                                    <a href="about.html" class="btn">know More About Us </a>
+                                    <h2 class="movetxt agile-title text-capitalize">Bienvenue dans <span style="color:indianred">Go Service</span></h2>
+                                    <h4 class="movetxt mb-3 agile-title text-capitalize" style="font-size:large">
+                                        Le seul endroit où les fournisseurs de services et les clients se rencontrent
+                                        pour satisfaire leurs besoins</h4>
+                                    <a href="about.html" class="btn">Savoire plus</a>
                                 </div>
                             </div>
                         </div>
@@ -33,8 +35,8 @@
                             <div class="banner-text">
                                 <div class="container">
 
-                                    <h4 class="movetxt mb-3 agile-title text-capitalize">Find online lessons provided by your own teacher</h4>
-                                    <a href="about.html" class="btn">know how </a>
+                                    <h4 class="movetxt mb-3 agile-title text-capitalize">Trouver des prestataires de services prêts à se lancer dans le travail</h4>
+                                    <a href="about.html" class="btn">Decouvrez nous services </a>
                                 </div>
                             </div>
                         </div>
@@ -46,8 +48,8 @@
                             <div class="banner-text">
                                 <div class="container">
 
-                                    <h4 class="movetxt mb-3 agile-title text-capitalize">Get help from your teacher This semester</h4>
-                                    <a href="about.html" class="btn">know how </a>
+                                    <h4 class="movetxt mb-3 agile-title text-capitalize">Trouvez des clients qui ont besoin de votre service</h4>
+                                    <a href="about.html" class="btn">Decouvrez les demandes de serices actuels</a>
                                 </div>
                             </div>
                         </div>
@@ -59,8 +61,8 @@
                             <div class="banner-text">
                                 <div class="container">
 
-                                    <h4 class="movetxt mb-3 agile-title text-capitalize">Stay up to date with your academic performance</h4>
-                                    <a href="about.html" class="btn">know how </a>
+                                    <h4 class="movetxt mb-3 agile-title text-capitalize">restez informé de nos actualités pour ne pas manquer les prestataires de services prêts à l'emploi ainsi que les clients</h4>
+                                    <a href="about.html" class="btn">Cree un compte</a>
                                 </div>
                             </div>
                         </div>
