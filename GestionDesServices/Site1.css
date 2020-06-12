@@ -1,7 +1,7 @@
 ﻿/*style pour navbar en generale*/
 #nav {
     background-color: indianred !important;
-    height:100px;
+    height:100px !important;
 }
 
 /*style pour les bouttons de navbar*/
@@ -15,7 +15,7 @@
 }
 
 
-vers_acceuil:hover,#vers_inscription:hover, #vers_services:hover, #vers_aboutt:hover, #vers_login:hover {
+#vers_acceuil:hover,#vers_inscription:hover, #vers_services:hover, #vers_aboutt:hover, #vers_login:hover {
     background-color: white;
     color: indianred;
 }

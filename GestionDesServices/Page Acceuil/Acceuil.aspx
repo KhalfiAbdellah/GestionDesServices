@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <!-- banner -->
-    <div class="banner_w3lspvt" id="home" style="margin-top:auto; margin-bottom:53px;">
+    <div class="banner_w3lspvt" id="home" style=" margin-bottom:53px;">
         <div class="csslider infinity" id="slider1">
             <input type="radio" name="slides" checked="checked" id="slides_1" />
             <input type="radio" name="slides" id="slides_2" />
@@ -23,7 +23,8 @@
                                     <h4 class="movetxt mb-3 agile-title text-capitalize" style="font-size:large">
                                         Le seul endroit où les fournisseurs de services et les clients se rencontrent
                                         pour satisfaire leurs besoins</h4>
-                                    <a href="about.html" class="btn">Savoire plus</a>
+                                    
+                                    <asp:HyperLink class="btn" NavigateUrl="~/Page a propos/a propos.aspx" runat="server">Savoire plus</asp:HyperLink>
                                 </div>
                             </div>
                         </div>
@@ -35,8 +36,8 @@
                             <div class="banner-text">
                                 <div class="container">
 
-                                    <h4 class="movetxt mb-3 agile-title text-capitalize">Trouver des prestataires de services prêts à se lancer dans le travail</h4>
-                                    <a href="about.html" class="btn">Decouvrez nous services </a>
+                                    <h4 class="movetxt mb-3 agile-title text-capitalize" style="font-size:50px;">Trouver des prestataires de services prêts à se lancer dans le travail</h4>
+                                    <asp:HyperLink class="btn" NavigateUrl="~/Page Services disponibles/ServicesDisponibles.aspx" runat="server">Decouvrez nos services</asp:HyperLink>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +50,8 @@
                                 <div class="container">
 
                                     <h4 class="movetxt mb-3 agile-title text-capitalize">Trouvez des clients qui ont besoin de votre service</h4>
-                                    <a href="about.html" class="btn">Decouvrez les demandes de serices actuels</a>
+                                    <asp:HyperLink class="btn" NavigateUrl="~/Page Inscription/Inscription.aspx" runat="server">Cree un compte</asp:HyperLink>
+
                                 </div>
                             </div>
                         </div>
@@ -61,8 +63,9 @@
                             <div class="banner-text">
                                 <div class="container">
 
-                                    <h4 class="movetxt mb-3 agile-title text-capitalize">restez informé de nos actualités pour ne pas manquer les prestataires de services prêts à l'emploi ainsi que les clients</h4>
-                                    <a href="about.html" class="btn">Cree un compte</a>
+                                    <h4 class="movetxt mb-3 agile-title text-capitalize" style="font-size:50px;">restez informé de nos actualités pour ne pas manquer les prestataires de services prêts à l'emploi ainsi que les clients</h4>
+                                    <asp:HyperLink class="btn" NavigateUrl="~/Page Inscription/Inscription.aspx" runat="server">Cree un compte</asp:HyperLink>
+
                                 </div>
                             </div>
                         </div>

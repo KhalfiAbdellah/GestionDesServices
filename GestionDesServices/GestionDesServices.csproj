@@ -117,24 +117,33 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Page a propos\a propos.aspx" />
+    <Content Include="Page a propos\a propos.css" />
     <Content Include="Page Acceuil\Images\2675425.jpg" />
+    <Content Include="Page Acceuil\Images\4th slide.jpg" />
+    <Content Include="Page Acceuil\Images\clients.jpg" />
     <Content Include="Page Acceuil\Images\workers2.jpg" />
     <Content Include="Page Inscription\Inscription.css" />
     <Content Include="Page Services disponibles\Images\babysitter5.jpg" />
+    <Content Include="Page Services disponibles\Images\beautician.jpg" />
     <Content Include="Page Services disponibles\Images\blacksmith.jpg" />
     <Content Include="Page Services disponibles\Images\construction.jpg" />
     <Content Include="Page Services disponibles\Images\cook2.jpg" />
     <Content Include="Page Services disponibles\Images\driver.jpg" />
     <Content Include="Page Services disponibles\Images\electrician4.jpg" />
     <Content Include="Page Services disponibles\Images\gardener2.jpg" />
+    <Content Include="Page Services disponibles\Images\hairdresser.jpg" />
     <Content Include="Page Services disponibles\Images\home nurse2.jpg" />
+    <Content Include="Page Services disponibles\Images\home teacher.jpg" />
     <Content Include="Page Services disponibles\Images\lift service.jpg" />
     <Content Include="Page Services disponibles\Images\maid2.jpg" />
     <Content Include="Page Services disponibles\Images\mechanical3.jpg" />
     <Content Include="Page Services disponibles\Images\painter1.jpg" />
     <Content Include="Page Services disponibles\Images\pexels-photo-313776.jpeg" />
+    <Content Include="Page Services disponibles\Images\photographer.jpg" />
     <Content Include="Page Services disponibles\Images\plumber2.jpg" />
     <Content Include="Page Services disponibles\Images\semsar2.jpg" />
+    <Content Include="Page Services disponibles\Images\tailor.jpg" />
     <Content Include="Page Services disponibles\Images\web  developer.jpg" />
     <Content Include="Page Services disponibles\ServicesDisponibles.aspx" />
     <Content Include="favicon.ico" />
@@ -271,6 +280,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page a propos\a propos.aspx.cs">
+      <DependentUpon>a propos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page a propos\a propos.aspx.designer.cs">
+      <DependentUpon>a propos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page Services disponibles\ServicesDisponibles.aspx.cs">
       <DependentUpon>ServicesDisponibles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -339,7 +355,9 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Page a propos\Images\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />

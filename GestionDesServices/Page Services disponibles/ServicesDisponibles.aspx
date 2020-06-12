@@ -130,15 +130,36 @@
              </div>
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="img-hover-zoom">
-                    <a href="#"><img src="#" ></a>
+                    <a href="#"><img src="Images/hairdresser.jpg" ></a>
                 </div>                      
-                <div class="text-block"><h3>?</h3></div>
+                <div class="text-block"><h3>Hairdresser</h3></div>
              </div>
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="img-hover-zoom">
-                    <a href="#"><img src="#" ></a>
+                    <a href="#"><img src="Images/beautician.jpg" ></a>
                 </div>                      
-                <div class="text-block"><h3>?</h3></div>
+                <div class="text-block"><h3>Beautician</h3></div>
+             </div>
+        </div>
+        <br />
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="img-hover-zoom">
+                    <a href="#"><img src="Images/tailor.jpg" ></a>
+                </div>                       
+                <div class="text-block"><h3>Tailleur</h3></div>
+             </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="img-hover-zoom">
+                    <a href="#"><img src="Images/home teacher.jpg" ></a>
+                </div>                      
+                <div class="text-block"><h3>Home Teacher</h3></div>
+             </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="img-hover-zoom">
+                    <a href="#"><img src="Images/photographer.jpg" ></a>
+                </div>                      
+                <div class="text-block"><h3>Photographer</h3></div>
              </div>
         </div>
         
