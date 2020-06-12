@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <!-- banner -->
-    <div class="banner_w3lspvt" id="home" style="margin-top:auto">
+    <div class="banner_w3lspvt" id="home" style="margin-top:auto; margin-bottom:53px;">
         <div class="csslider infinity" id="slider1">
             <input type="radio" name="slides" checked="checked" id="slides_1" />
             <input type="radio" name="slides" id="slides_2" />

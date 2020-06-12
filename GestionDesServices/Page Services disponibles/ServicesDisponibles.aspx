@@ -17,7 +17,7 @@
                     </a>
                       
                 </div>
-                <div class="text-block"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;babysitter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></div>
+                <div class="text-block"><h3>babysitter</h3></div>
              </div>
 
             <div class="col-12 col-sm-6 col-md-3">
@@ -41,13 +41,13 @@
                 <div class="img-hover-zoom">
                     <a href="#"><img src="Images/electrician4.jpg" ></a>
                 </div>                       
-                <div class="text-block"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Electricien&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></div>
+                <div class="text-block"><h3>Electricien</h3></div>
              </div>
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="img-hover-zoom">
                     <a href="#"><img src="Images/gardener2.jpg" ></a>
                 </div>                      
-                <div class="text-block"><h3>jardignier&nbsp;&nbsp;&nbsp;</h3></div>
+                <div class="text-block"><h3>jardignier</h3></div>
              </div>
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="img-hover-zoom">
@@ -63,13 +63,13 @@
                 <div class="img-hover-zoom">
                     <a href="#"><img src="Images/mechanical3.jpg" ></a>
                 </div>                       
-                <div class="text-block"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Technicien&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></div>
+                <div class="text-block"><h3>Technicien</h3></div>
              </div>
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="img-hover-zoom">
                     <a href="#"><img src="Images/painter1.jpg" ></a>
                 </div>                      
-                <div class="text-block"><h3>painteur&nbsp;&nbsp;&nbsp;</h3></div>
+                <div class="text-block"><h3>painteur</h3></div>
              </div>
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="img-hover-zoom">
@@ -84,19 +84,61 @@
                 <div class="img-hover-zoom">
                     <a href="#"><img src="Images/plumber2.jpg" ></a>
                 </div>                       
-                <div class="text-block"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;plombier&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></div>
+                <div class="text-block"><h3>plombier</h3></div>
              </div>
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="img-hover-zoom">
                     <a href="#"><img src="Images/semsar2.jpg" ></a>
                 </div>                      
-                <div class="text-block"><h3>semsar&nbsp;&nbsp;&nbsp;</h3></div>
+                <div class="text-block"><h3>semsar</h3></div>
              </div>
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="img-hover-zoom">
                     <a href="#"><img src="Images/driver.jpg" ></a>
                 </div>                      
                 <div class="text-block"><h3>Chaufeur</h3></div>
+             </div>
+        </div>
+        <br />
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="img-hover-zoom">
+                    <a href="#"><img src="Images/blacksmith.jpg" ></a>
+                </div>                       
+                <div class="text-block"><h3>Blacksmith</h3></div>
+             </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="img-hover-zoom">
+                    <a href="#"><img src="Images/construction.jpg" ></a>
+                </div>                      
+                <div class="text-block"><h3>Construction workers</h3></div>
+             </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="img-hover-zoom">
+                    <a href="#"><img src="Images/maid2.jpg" ></a>
+                </div>                      
+                <div class="text-block"><h3>Maid</h3></div>
+             </div>
+        </div>
+        <br />
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="img-hover-zoom">
+                    <a href="#"><img src="Images/web  developer.jpg" ></a>
+                </div>                       
+                <div class="text-block"><h3>Programmeur</h3></div>
+             </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="img-hover-zoom">
+                    <a href="#"><img src="#" ></a>
+                </div>                      
+                <div class="text-block"><h3>?</h3></div>
+             </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="img-hover-zoom">
+                    <a href="#"><img src="#" ></a>
+                </div>                      
+                <div class="text-block"><h3>?</h3></div>
              </div>
         </div>
         

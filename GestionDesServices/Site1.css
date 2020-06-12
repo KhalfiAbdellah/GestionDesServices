@@ -1,6 +1,7 @@
 ﻿/*style pour navbar en generale*/
 #nav {
     background-color: indianred !important;
+    height:100px;
 }
 
 /*style pour les bouttons de navbar*/

@@ -61,16 +61,7 @@
                         </li>
                         
                     </ul>
-                    <!--
-                    <form class="form-inline my-2 my-lg-0">
-                        <button class="btn btn-outline-light my-2 my-sm-0">
-                            Sign in
-                        </button>
-                        &nbsp;
-                        <button class="btn btn-outline-dark  my-2 my-sm-0" style="background-color: #e3f2fd; ">
-                            Sign up</button>
-                    </form>
-                    -->
+                    
                         
                     
                 </div>
@@ -88,7 +79,7 @@
     <!-- Footer -->
   <br />
     <footer class="footer-main w-100">
-        <div class="footer-second bg-primary">
+        <div class="footer-second bg-primary" style="margin-top:0px">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-12 text-white">

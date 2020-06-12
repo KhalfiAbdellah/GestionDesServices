@@ -16,12 +16,17 @@
     }
 
 .text-block {
-    position: absolute;
+    /*position: absolute;*/
     bottom: 1px;
     right: 25%;
-    color: white;
+    left:25%;
+    color: black;
 }
 
     .text-block h3 {
         color: white;
+    }
+
+    h3{
+        
     }
