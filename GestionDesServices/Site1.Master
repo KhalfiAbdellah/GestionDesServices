@@ -87,12 +87,17 @@
                             <div class="col-md-6 col-12">
                                 <p class="m-0">All Right Reserved 2020 - <a href="#" target="_blank">MonSite</a></p>
                             </div>
-                            <ul class="col-md-6 col-12 footer-icon text-right">
-                               
-                                <li runat="server"><i class="fab fa-facebook fa-2x"></i></li>
-                                <li><i class="fab fa-twitter fa-2x"></i></li>
-                                <li><i class="fab fa-linkedin fa-2x"></i></li>  
-                            </ul>
+                            <div class="col-md-6 col-12 footer-icon text-right">
+                               <asp:HyperLink Target="_blank" runat="server" NavigateUrl="https://icons8.com/icons/set/linkedin">
+                                   <img src="imageSiteMaster/icons8-facebook-old-50.png" runat="server"/>
+                               </asp:HyperLink>
+                                <asp:HyperLink Target="_blank" runat="server" NavigateUrl="https://icons8.com/icons/set/linkedin">
+                                   <img src="~/imageSiteMaster/icons8-twitter-50.png" runat="server"/>
+                               </asp:HyperLink>
+                                <asp:HyperLink Target="_blank" runat="server" NavigateUrl="https://icons8.com/icons/set/linkedin">
+                                   <img src="~/imageSiteMaster/icons8-linkedin-50.png" runat="server" />
+                                </asp:HyperLink>
+                            </div>
                         </div>
                     </div>
                 </div>

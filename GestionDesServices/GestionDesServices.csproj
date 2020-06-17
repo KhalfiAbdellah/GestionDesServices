@@ -117,6 +117,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="imageSiteMaster\icons8-facebook-old-50.png" />
+    <Content Include="imageSiteMaster\icons8-linkedin-50.png" />
+    <Content Include="imageSiteMaster\icons8-twitter-50.png" />
     <Content Include="Page a propos\a propos.aspx" />
     <Content Include="Page a propos\a propos.css" />
     <Content Include="Page Acceuil\Images\2675425.jpg" />
