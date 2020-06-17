@@ -3,6 +3,45 @@
     <title>Demander un service</title>
     <link href="../../Ressource/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../Ressource/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <style>
+    .form-box {
+	    padding-top: 40px;
+    }
+
+    .form-top {
+	    overflow: hidden;
+	    padding: 0 25px 15px 25px;
+    	background: red;
+	    -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+	    text-align: left;
+    }
+
+    .form-top-left {
+	    float: left;
+	    width: 75%;
+	    padding-top: 25px;  
+    }
+
+    .form-top-left h3 { margin-top: 0; }
+
+    .form-top-right {
+	    float: left;
+	    width: 25%;
+	    padding-top: 5px;
+	    font-size: 46px;
+	    color: aqua;
+	    line-height: 100px;
+	    text-align: right;
+    }
+
+    .form-bottom {
+	    padding: 25px 25px 30px 25px;
+	    background: green;
+	    -moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+	    text-align: left;
+    }
+
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="row">
