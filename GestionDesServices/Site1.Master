@@ -8,12 +8,11 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
         
     </asp:ContentPlaceHolder>
-
+       
         <script src="Ressource/jquery.slim.min.js"></script>
         <link href="Ressource/bootstrap.min.css" rel="stylesheet" />
         <script src="Ressource/bootstrap.min.js"></script>
-        <link href="Ressource/css/all.css" rel="stylesheet" />
-         <script src="Ressource/js/all.js"></script>
+        
          <link href="Ressource/StyleFooter.css" rel="stylesheet" />
 
     <!--logo-->
@@ -88,12 +87,12 @@
                             <div class="col-md-6 col-12">
                                 <p class="m-0">All Right Reserved 2020 - <a href="#" target="_blank">MonSite</a></p>
                             </div>
-                            <div class="col-md-6 col-12 footer-icon text-right">
-                                
-                                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                                <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>  
-                            </div>
+                            <ul class="col-md-6 col-12 footer-icon text-right">
+                               
+                                <li runat="server"><i class="fab fa-facebook fa-2x"></i></li>
+                                <li><i class="fab fa-twitter fa-2x"></i></li>
+                                <li><i class="fab fa-linkedin fa-2x"></i></li>  
+                            </ul>
                         </div>
                     </div>
                 </div>

@@ -2,19 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Accueil</title>
     <link href="Acceuil.css" rel="stylesheet" />
-
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <!--logo-->
-    <link rel="apple-touch-icon" sizes="180x180" href="website logo/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="website logo/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="website logo/favicon-32x32.png">
-    <link rel="manifest" href="website logo/site.webmanifest">
-    <!--logo end-->
-
-    <link href="Site1.css" rel="stylesheet" />
-    <link href="Page Acceuil/Acceuil.css" rel="stylesheet" />
+    
         <!-- banner -->
     <div class="banner_w3lspvt" id="home" style=" margin-bottom:53px;">
         <div class="csslider infinity" id="slider1">
