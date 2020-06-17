@@ -4,16 +4,17 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
         
     </asp:ContentPlaceHolder>
 
-    <script src="Ressource/jquery.slim.min.js"></script>
+        <script src="Ressource/jquery.slim.min.js"></script>
         <link href="Ressource/bootstrap.min.css" rel="stylesheet" />
         <script src="Ressource/bootstrap.min.js"></script>
         <link href="Ressource/css/all.css" rel="stylesheet" />
          <script src="Ressource/js/all.js"></script>
-    <link href="Ressource/StyleFooter.css" rel="stylesheet" />
+         <link href="Ressource/StyleFooter.css" rel="stylesheet" />
 
     <!--logo-->
     <link rel="apple-touch-icon" sizes="180x180" href="website logo/apple-touch-icon.png">
@@ -23,7 +24,7 @@
     <!--logo end-->
 
     <link href="Site1.css" rel="stylesheet" />
-    <link href="Page%20Acceuil/Acceuil.css" rel="stylesheet" />
+    <link href="Page Acceuil/Acceuil.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -33,7 +34,7 @@
         <!--NavBar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top" id="nav" >
             <div class="container">
-                    <img src="website logo/go service logo.png">
+                    <img src="website logo/go service logo.png" runat="server">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -88,13 +89,10 @@
                                 <p class="m-0">All Right Reserved 2020 - <a href="#" target="_blank">MonSite</a></p>
                             </div>
                             <div class="col-md-6 col-12 footer-icon text-right">
+                                
                                 <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
                                 <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                                <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>
-                                <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-                                <a href="#"><i class="fab fa-vk fa-2x"></i></a>
-                                <a href="#"><i class="fab fa-google fa-2x"></i></a>
+                                <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>  
                             </div>
                         </div>
                     </div>

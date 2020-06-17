@@ -148,8 +148,6 @@
     <Content Include="Page Services disponibles\ServicesDisponibles.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="GardeEnfant.aspx" />
-    <Content Include="Garde_enfant.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -160,6 +158,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Page Services disponibles\Services diponibles.css" />
+    <Content Include="Page Services disponibles\Souspage\DemandeService.aspx" />
     <Content Include="Site1.css" />
     <Content Include="website logo\android-chrome-192x192.png" />
     <Content Include="website logo\android-chrome-512x512.png" />
@@ -294,20 +293,6 @@
     <Compile Include="Page Services disponibles\ServicesDisponibles.aspx.designer.cs">
       <DependentUpon>ServicesDisponibles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GardeEnfant.aspx.cs">
-      <DependentUpon>GardeEnfant.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GardeEnfant.aspx.designer.cs">
-      <DependentUpon>GardeEnfant.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Garde_enfant.aspx.cs">
-      <DependentUpon>Garde_enfant.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Garde_enfant.aspx.designer.cs">
-      <DependentUpon>Garde_enfant.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -331,6 +316,13 @@
     </Compile>
     <Compile Include="Page se connecter\SeConnecter.aspx.designer.cs">
       <DependentUpon>SeConnecter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page Services disponibles\Souspage\DemandeService.aspx.cs">
+      <DependentUpon>DemandeService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page Services disponibles\Souspage\DemandeService.aspx.designer.cs">
+      <DependentUpon>DemandeService.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Mobile.Master.cs">
