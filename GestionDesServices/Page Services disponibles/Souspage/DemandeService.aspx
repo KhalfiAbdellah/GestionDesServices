@@ -40,15 +40,21 @@
 	    -moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
 	    text-align: left;
     }
-
+    .tab{
+        display:none;
+    }
+     #className{
+        background-color: #ff9494;
+     }   
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
 <div class="row">
     <div class="col-sm-6 col-sm-offset-3 form-box">
     <div role="form" class="register-form">
               		
-    <div id="form1">
+    <fieldset class="tab">
         <div class="form-top">
             <div class="form-top-left">
 		        <h3>Step 1 / 4</h3>
@@ -65,15 +71,15 @@
 	        </div>
 	        <div class="form-group">
 		        <label>Code Postale ou ville</label>
-		        <input class="form-control" type="text">
+		        <input class="form-control" type="text" required>
 	        </div>
 	        <div class="form-group">
 		        <label>Nom de service</label>
-		        <input class="form-control" type="text" value="Enfants a Garder">
+		        <input class="form-control className" type="text" value="Enfants a Garder" required>
 	        </div>
 	        <div class="form-group">
 		        <label>Sexe</label>
-		        <select class="form-control">
+		        <select class="form-control" required>
 			        <option>
 				        Donner le Sexe d'enfant
 			        </option>
@@ -89,7 +95,7 @@
             <div class="form-group">
                 <label>Date de naissance</label>
                 <br />
-		        <select class="form-control-lg">
+		        <select class="form-control-lg" required>
 			        <option>01</option>
 		        </select>
 		        <select class="form-control-lg">
@@ -107,10 +113,10 @@
 			        </li>
 		        </ul>
 	        </div>
-            <button type="button" class="btn btn-next">Next</button>
+            <button type="button" class="btn btn-next" onclick="nextPrev(1)">Next</button>
     	</div>
-    </div>
-    <div id="form2">
+    </fieldset>
+    <fieldset class="tab">
         <div class="form-top">
             <div class="form-top-left">
 		        <h3>Step 2 / 4</h3>
@@ -159,10 +165,10 @@
 		    </select>
 	    </div>
         <button type="button" class="btn btn-previous">Previous</button>
-	    <button type="button" class="btn btn-next">Next</button>
-    </div>
+	    <button type="button" class="btn btn-next" onclick="nextPrev(1)">Next</button>
+    </fieldset>
 		
-	<div id="form3">
+	<fieldset class="tab">
         <div class="form-top">
             <div class="form-top-left">
 		        <h3>Step 3 / 4</h3>
@@ -189,9 +195,9 @@
 		<p>Prestation encadrée et profils vérifiés. <br /> Votre service est assuré par Service Client 7/7 de 08h à 22h.</p>
 	    </div>
         <button type="button" class="btn btn-previous">Previous</button>
-	    <button type="button" class="btn btn-next">Next</button>
-    </div>
-    <div id="form4">
+	    <button type="button" class="btn btn-next" onclick="nextPrev(1)">Next</button>
+    </fieldset>
+    <fieldset class="tab">
         <div class="form-top">
             <div class="form-top-left">
 		        <h3>Step 4 / 4</h3>
@@ -215,8 +221,8 @@
 		    <textarea class="form-control" placeholder="Mes critaires"></textarea>
 	    </div>
         <button type="button" class="btn btn-previous">Previous</button>
-	    <button type="button" class="btn btn-next">Demander la service</button>
-    </div>
+	    <button type="button" class="btn btn-next" id="regForm">Demander la service</button>
+    </fieldset>
 
     <!--bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb-->
     </div>
@@ -228,5 +234,51 @@
     <br />
     </div>
 </div>
-    
+    <script>
+        var currentTab = 0; // tab courrant
+        showTab(currentTab); // afficher le tab courant
+        function showTab(n) {
+            //    afficher le tab specifier 
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+
+            
+        }
+        function validationForm() {
+            // fonction verifie la validation des champs de form 
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            // boucle qui verifie chaque champs dans le tab courrant 
+            for (i = 0; i < y.length; i++) {
+
+                if (y[i].value == "") {
+                    y[i].id = "className"
+                    // and set the current valid status to false
+                    valid = false;
+                }
+            }
+            
+            return valid; // return the valid status
+        }
+        function nextPrev(n) {
+             // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validationForm()) return false;
+                // Hide the current tab:
+                x[currentTab].style.display = "none";
+                // Increase or decrease the current tab by 1:
+                currentTab = currentTab + n;
+                // if you have reached the end of the form...
+                if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+                }
+                // Otherwise, display the correct tab:
+                 showTab(currentTab);
+                
+        }
+    </script>
 </asp:Content>
