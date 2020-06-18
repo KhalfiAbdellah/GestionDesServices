@@ -3,6 +3,7 @@
     <title>Demander un service</title>
     <link href="../../Ressource/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../Ressource/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
     <style>
     .form-box {
 	    padding-top: 40px;
@@ -43,9 +44,7 @@
     .tab{
         display:none;
     }
-     #className{
-        background-color: #ff9494;
-     }   
+        
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -54,7 +53,7 @@
     <div class="col-sm-6 col-sm-offset-3 form-box">
     <div role="form" class="register-form">
               		
-    <fieldset class="tab">
+    <fieldset class="tab" >
         <div class="form-top">
             <div class="form-top-left">
 		        <h3>Step 1 / 4</h3>
@@ -64,22 +63,23 @@
 		        <i class="fa fa-home fa-2x"></i>
 		    </div>
         </div>    
-	    <div class="form-bottom">
+	    <div class="form-bottom" >
             <div class="form-group">
-		    <label class="sr-only">Numero et Nom de la rue</label>
-		    <input class="form-control" type="text" placeholder="Numero et Nom de la rue">
+		    <label>Numero et Nom de la rue</label>
+		    <input class="form-control" type="text" placeholder="Adresse complete">
 	        </div>
 	        <div class="form-group">
 		        <label>Code Postale ou ville</label>
-		        <input class="form-control" type="text" required>
+		        <input class="form-control" type="text">
 	        </div>
 	        <div class="form-group">
 		        <label>Nom de service</label>
-		        <input class="form-control className" type="text" value="Enfants a Garder" required>
+		        <input class="form-control" type="text" value="Enfants a Garder" required>
 	        </div>
-	        <div class="form-group">
+	        <div id="enfant">
+            <div class="form-group">
 		        <label>Sexe</label>
-		        <select class="form-control" required>
+		        <select class="form-control className">
 			        <option>
 				        Donner le Sexe d'enfant
 			        </option>
@@ -93,23 +93,21 @@
 	        </div>
             
             <div class="form-group">
-                <label>Date de naissance</label>
+                <label>Veuillez saisir votre date de naissance :</label>
                 <br />
-		        <select class="form-control-lg" required>
-			        <option>01</option>
-		        </select>
-		        <select class="form-control-lg">
-			        <option>01</option>
-			        
-		        </select>
-		        <select class="form-control-lg">
-			        <option>2002</option>
-		        </select>
+		        
+                    <input class="form-control" type="date" id="bday"  min="2002-01-01" max="2020-12-31" name="bday" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                    <span class="validity"></span>
+                
 	        </div>
+            </div>         
+            <div id="data">
+
+            </div>
 	        <div class="form-group">
 		        <ul>
 			        <li>
-				        <button type="button" class="btn btn-danger">+ Ajouter un enfant</button>
+				        <button type="button" class="btn btn-danger" id="btn_cloner">+ Ajouter un enfant</button>
 			        </li>
 		        </ul>
 	        </div>
@@ -127,12 +125,12 @@
 		    </div>
         </div>
         <div class="form-group">
-	    
-	    <!-- Date et heurs voir comment integrer un calandrier	-->
+	        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
 	    </div>
 	    <div class="form-group">
 		    <label>Heure de debut</label>
 		    <select class="form-control">
+                <option>Veillez selectionner l'heure de debut </option>
 			    <option>00:00</option><option>00:30</option><option>01:00</option><option>01:30</option>
 			    <option>02:00</option><option>02:30</option><option>03:00</option><option>03:30</option>
 			    <option>04:00</option><option>04:30</option><option>05:00</option><option>05:30</option>
@@ -147,9 +145,11 @@
 			    <option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option>
 		    </select>
 	    </div>
+
 	    <div class="form-group">
 		    <label>Heure de fin</label>
 		    <select class="form-control">
+                <option>Veillez selectionner l'heure de fin </option>
 			    <option>00:00</option><option>00:30</option><option>01:00</option><option>01:30</option>
 			    <option>02:00</option><option>02:30</option><option>03:00</option><option>03:30</option>
 			    <option>04:00</option><option>04:30</option><option>05:00</option><option>05:30</option>
@@ -164,7 +164,7 @@
 			    <option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option>
 		    </select>
 	    </div>
-        <button type="button" class="btn btn-previous">Previous</button>
+        <button type="button" class="btn btn-previous" onclick="nextPrev(-1)">Previous</button>
 	    <button type="button" class="btn btn-next" onclick="nextPrev(1)">Next</button>
     </fieldset>
 		
@@ -194,7 +194,7 @@
 	    <div class="form-group">
 		<p>Prestation encadrée et profils vérifiés. <br /> Votre service est assuré par Service Client 7/7 de 08h à 22h.</p>
 	    </div>
-        <button type="button" class="btn btn-previous">Previous</button>
+        <button type="button" class="btn btn-previous" onclick="nextPrev(-1)">Previous</button>
 	    <button type="button" class="btn btn-next" onclick="nextPrev(1)">Next</button>
     </fieldset>
     <fieldset class="tab">
@@ -220,13 +220,14 @@
 		    <label>Description</label>
 		    <textarea class="form-control" placeholder="Mes critaires"></textarea>
 	    </div>
-        <button type="button" class="btn btn-previous">Previous</button>
+        <button type="button" class="btn btn-previous" onclick="nextPrev(-1)">Previous</button>
 	    <button type="button" class="btn btn-next" id="regForm">Demander la service</button>
     </fieldset>
 
     <!--bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb-->
     </div>
     <br />
+        
     <br />
     <br />
     <br />
@@ -235,6 +236,23 @@
     </div>
 </div>
     <script>
+        /*
+         ajouter un enfant
+         Donner le Sexe d'enfant
+			        </option>
+			        <option>
+				        Garcon
+			        </option>
+			        <option>
+				        Fille
+         */
+        
+        $(document).ready(function () {
+            $("#btn_cloner").click(function () {
+                $('#enfant').clone().appendTo('#data');
+            });
+        });
+
         var currentTab = 0; // tab courrant
         showTab(currentTab); // afficher le tab courant
         function showTab(n) {
@@ -246,19 +264,32 @@
         }
         function validationForm() {
             // fonction verifie la validation des champs de form 
-            var x, y, i, valid = true;
+            var x, y,z, j,i, valid = true;
             x = document.getElementsByClassName("tab");
             y = x[currentTab].getElementsByTagName("input");
+            z = x[currentTab].getElementsByTagName("select");
+            
+            
             // boucle qui verifie chaque champs dans le tab courrant 
             for (i = 0; i < y.length; i++) {
-
                 if (y[i].value == "") {
-                    y[i].id = "className"
-                    // and set the current valid status to false
+                    y[i].style.backgroundColor = "#ff9494";
                     valid = false;
                 }
+                
+                
             }
-            
+            for (j = 0; j < z.length; j++) {
+
+                if (z[j].selectedIndex == "0") {
+                    z[j].style.backgroundColor = "#ff9494";
+                    valid = false;
+                }
+                else
+                {
+                    z[j].style.backgroundColor = "white";
+                }
+            }
             return valid; // return the valid status
         }
         function nextPrev(n) {
