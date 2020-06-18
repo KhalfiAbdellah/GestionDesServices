@@ -17,12 +17,12 @@
    <!-- login start -->
 
 
-    <div class="container register">
-        <div class="row">
+    <div class="container register" style="background-color:indianred !important;">
+        <div class="row"style="background-color:indianred !important;" >
             <div class="col-md-3 register-left">
                 <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
-                <h3>Welcome</h3>
-                <p>You are 30 seconds away from earning your own money!</p>
+                <h3>Bienvenue</h3>
+                <p>Se connecter immediatement pour savoir les nouveaux actualites</p>
             </div>
             <div class="col-md-9 register-right">
                 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
@@ -41,14 +41,14 @@
                                 <form class="form-inline">
                                     <div class="form-group">
                                         <i class="fa fa-envelope-o"></i>
-                                        <input type="text" class="form-control" placeholder="Email" value="" />
+                                        <asp:TextBox runat="server" placeholder="Email" Type="text" Class="form-control" value=""></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <i class="fa fa-lock"></i>
-                                        <input type="password" class="form-control" placeholder="Password *" value="" />
+                                        <asp:TextBox runat="server" placeholder="Mot de passe" Type="password" Class="form-control" value=""></asp:TextBox>
                                     </div>
                                     <div class="float-right">
-                                        <input type="submit" class="btn btn-primary" value="Register" />
+                                        <input type="submit" class="btn btn-primary" value="Connecter" />
                                     </div>
                                 </form>
                             </div>

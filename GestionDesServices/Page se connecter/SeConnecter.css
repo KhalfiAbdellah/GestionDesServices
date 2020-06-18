@@ -1,7 +1,10 @@
-﻿.register {
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+﻿.container{
+    background-color:indianred !important;
+}
+.register {
     margin-top: 3%;
     padding: 3%;
+    background-color:indianred !important;
 }
 
 .register-left {
