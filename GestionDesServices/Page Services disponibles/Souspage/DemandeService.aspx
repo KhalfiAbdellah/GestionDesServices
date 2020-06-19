@@ -4,6 +4,7 @@
     <link href="../../Ressource/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../Ressource/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+    
     <style>
     .form-box {
 	    padding-top: 40px;
@@ -65,39 +66,30 @@
         </div>    
 	    <div class="form-bottom" >
             <div class="form-group">
-		    <label>Numero et Nom de la rue</label>
-		    <input class="form-control" type="text" placeholder="Adresse complete">
-	        </div>
-	        <div class="form-group">
-		        <label>Code Postale ou ville</label>
-		        <input class="form-control" type="text">
+		        <label>Adresse complete</label>
+		        <asp:TextBox class="form-control" ID="TextBox1" runat="server"></asp:TextBox>
+                
 	        </div>
 	        <div class="form-group">
 		        <label>Nom de service</label>
-		        <input class="form-control" type="text" value="Enfants a Garder" required>
-	        </div>
+	            <asp:TextBox class="form-control" ID="TextBox2" runat="server" value="Garde Enfants"></asp:TextBox>
+            </div>
 	        <div id="enfant">
             <div class="form-group">
 		        <label>Sexe</label>
-		        <select class="form-control className">
-			        <option>
-				        Donner le Sexe d'enfant
-			        </option>
-			        <option>
-				        Garcon
-			        </option>
-			        <option>
-				        Fille
-			        </option>
-		        </select>
+                <asp:DropDownList ID="DropDownList1" runat="server" class="form-control className">
+                    <asp:ListItem>Donner le Sexe d'enfant </asp:ListItem>
+                    <asp:ListItem>Garcon</asp:ListItem>
+                    <asp:ListItem>Fille</asp:ListItem>
+                </asp:DropDownList>        
+		        
 	        </div>
             
             <div class="form-group">
                 <label>Veuillez saisir votre date de naissance :</label>
                 <br />
-		        
-                    <input class="form-control" type="date" id="bday"  min="2002-01-01" max="2020-12-31" name="bday" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
-                    <span class="validity"></span>
+                <asp:TextBox class="form-control" ID="TextBox3" type="date" min="2002-01-01" max="2020-12-31" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" runat="server"></asp:TextBox>
+                <span class="validity"></span>
                 
 	        </div>
             </div>         
@@ -125,44 +117,47 @@
 		    </div>
         </div>
         <div class="form-group">
+            <label>A quelle date souhaitez vous que le job soit effectué ?</label>
 	        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
 	    </div>
 	    <div class="form-group">
 		    <label>Heure de debut</label>
-		    <select class="form-control">
-                <option>Veillez selectionner l'heure de debut </option>
-			    <option>00:00</option><option>00:30</option><option>01:00</option><option>01:30</option>
-			    <option>02:00</option><option>02:30</option><option>03:00</option><option>03:30</option>
-			    <option>04:00</option><option>04:30</option><option>05:00</option><option>05:30</option>
-			    <option>06:00</option><option>06:30</option><option>07:00</option><option>07:30</option>
-			    <option>08:00</option><option>08:30</option><option>09:00</option><option>09:30</option>
-			    <option>10:00</option><option>10:30</option><option>11:00</option><option>11:30</option>
-			    <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
-			    <option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option>
-			    <option>16:00</option><option>16:30</option><option>17:00</option><option>17:30</option>
-			    <option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option>
-			    <option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option>
-			    <option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option>
-		    </select>
+            <asp:DropDownList ID="DropDownList2" runat="server" class="form-control className">
+                <asp:ListItem>Veillez selectionner l'heure de debut </asp:ListItem>
+			    <asp:ListItem>00:00</asp:ListItem><asp:ListItem>00:30</asp:ListItem><asp:ListItem>01:00</asp:ListItem><asp:ListItem>01:30</asp:ListItem>
+			    <asp:ListItem>02:00</asp:ListItem><asp:ListItem>02:30</asp:ListItem><asp:ListItem>03:00</asp:ListItem><asp:ListItem>03:30</asp:ListItem>
+			    <asp:ListItem>04:00</asp:ListItem><asp:ListItem>04:30</asp:ListItem><asp:ListItem>05:00</asp:ListItem><asp:ListItem>05:30</asp:ListItem>
+			    <asp:ListItem>06:00</asp:ListItem><asp:ListItem>06:30</asp:ListItem><asp:ListItem>07:00</asp:ListItem><asp:ListItem>07:30</asp:ListItem>
+			    <asp:ListItem>08:00</asp:ListItem><asp:ListItem>08:30</asp:ListItem><asp:ListItem>09:00</asp:ListItem><asp:ListItem>09:30</asp:ListItem>
+			    <asp:ListItem>10:00</asp:ListItem><asp:ListItem>10:30</asp:ListItem><asp:ListItem>11:00</asp:ListItem><asp:ListItem>11:30</asp:ListItem>
+			    <asp:ListItem>12:00</asp:ListItem><asp:ListItem>12:30</asp:ListItem><asp:ListItem>13:00</asp:ListItem><asp:ListItem>13:30</asp:ListItem>
+			    <asp:ListItem>14:00</asp:ListItem><asp:ListItem>14:30</asp:ListItem><asp:ListItem>15:00</asp:ListItem><asp:ListItem>15:30</asp:ListItem>
+			    <asp:ListItem>16:00</asp:ListItem><asp:ListItem>16:30</asp:ListItem><asp:ListItem>17:00</asp:ListItem><asp:ListItem>17:30</asp:ListItem>
+			    <asp:ListItem>18:00</asp:ListItem><asp:ListItem>18:30</asp:ListItem><asp:ListItem>19:00</asp:ListItem><asp:ListItem>19:30</asp:ListItem>
+			    <asp:ListItem>20:00</asp:ListItem><asp:ListItem>20:30</asp:ListItem><asp:ListItem>21:00</asp:ListItem><asp:ListItem>21:30</asp:ListItem>
+			    <asp:ListItem>22:00</asp:ListItem><asp:ListItem>22:30</asp:ListItem><asp:ListItem>23:00</asp:ListItem><asp:ListItem>23:30</asp:ListItem>
+            </asp:DropDownList>
+		    
 	    </div>
 
 	    <div class="form-group">
 		    <label>Heure de fin</label>
-		    <select class="form-control">
-                <option>Veillez selectionner l'heure de fin </option>
-			    <option>00:00</option><option>00:30</option><option>01:00</option><option>01:30</option>
-			    <option>02:00</option><option>02:30</option><option>03:00</option><option>03:30</option>
-			    <option>04:00</option><option>04:30</option><option>05:00</option><option>05:30</option>
-			    <option>06:00</option><option>06:30</option><option>07:00</option><option>07:30</option>
-			    <option>08:00</option><option>08:30</option><option>09:00</option><option>09:30</option>
-			    <option>10:00</option><option>10:30</option><option>11:00</option><option>11:30</option>
-			    <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
-			    <option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option>
-			    <option>16:00</option><option>16:30</option><option>17:00</option><option>17:30</option>
-			    <option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option>
-			    <option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option>
-			    <option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option>
-		    </select>
+		    <asp:DropDownList ID="DropDownList3" runat="server" class="form-control className">
+                <asp:ListItem>Veillez selectionner l'heure de fin </asp:ListItem>
+			    <asp:ListItem>00:00</asp:ListItem><asp:ListItem>00:30</asp:ListItem><asp:ListItem>01:00</asp:ListItem><asp:ListItem>01:30</asp:ListItem>
+			    <asp:ListItem>02:00</asp:ListItem><asp:ListItem>02:30</asp:ListItem><asp:ListItem>03:00</asp:ListItem><asp:ListItem>03:30</asp:ListItem>
+			    <asp:ListItem>04:00</asp:ListItem><asp:ListItem>04:30</asp:ListItem><asp:ListItem>05:00</asp:ListItem><asp:ListItem>05:30</asp:ListItem>
+			    <asp:ListItem>06:00</asp:ListItem><asp:ListItem>06:30</asp:ListItem><asp:ListItem>07:00</asp:ListItem><asp:ListItem>07:30</asp:ListItem>
+			    <asp:ListItem>08:00</asp:ListItem><asp:ListItem>08:30</asp:ListItem><asp:ListItem>09:00</asp:ListItem><asp:ListItem>09:30</asp:ListItem>
+			    <asp:ListItem>10:00</asp:ListItem><asp:ListItem>10:30</asp:ListItem><asp:ListItem>11:00</asp:ListItem><asp:ListItem>11:30</asp:ListItem>
+			    <asp:ListItem>12:00</asp:ListItem><asp:ListItem>12:30</asp:ListItem><asp:ListItem>13:00</asp:ListItem><asp:ListItem>13:30</asp:ListItem>
+			    <asp:ListItem>14:00</asp:ListItem><asp:ListItem>14:30</asp:ListItem><asp:ListItem>15:00</asp:ListItem><asp:ListItem>15:30</asp:ListItem>
+			    <asp:ListItem>16:00</asp:ListItem><asp:ListItem>16:30</asp:ListItem><asp:ListItem>17:00</asp:ListItem><asp:ListItem>17:30</asp:ListItem>
+			    <asp:ListItem>18:00</asp:ListItem><asp:ListItem>18:30</asp:ListItem><asp:ListItem>19:00</asp:ListItem><asp:ListItem>19:30</asp:ListItem>
+			    <asp:ListItem>20:00</asp:ListItem><asp:ListItem>20:30</asp:ListItem><asp:ListItem>21:00</asp:ListItem><asp:ListItem>21:30</asp:ListItem>
+			    <asp:ListItem>22:00</asp:ListItem><asp:ListItem>22:30</asp:ListItem><asp:ListItem>23:00</asp:ListItem><asp:ListItem>23:30</asp:ListItem>
+
+		    </asp:DropDownList>
 	    </div>
         <button type="button" class="btn btn-previous" onclick="nextPrev(-1)">Previous</button>
 	    <button type="button" class="btn btn-next" onclick="nextPrev(1)">Next</button>
@@ -181,15 +176,15 @@
 	    
 	    <div class="form-group">
 		    <label>Nombre d'heur selectionner</label>
-		    <input class="form-control" type="text">
+		    <asp:TextBox class="form-control" ID="TextBox4" runat="server"></asp:TextBox>
 	    </div>
 	    <div class="form-group">
 		    <label>Rémunération horaire par Jobeur</label>
-		    <input class="form-control" type="text">
+		    <asp:TextBox class="form-control" ID="TextBox5" runat="server"></asp:TextBox>
 	    </div>
 	    <div class="form-group">
 		    <label>Montant de votre offre</label>
-		    <input class="form-control" type="text">
+		    <asp:TextBox class="form-control" ID="TextBox6" runat="server"></asp:TextBox>
 	    </div>
 	    <div class="form-group">
 		<p>Prestation encadrée et profils vérifiés. <br /> Votre service est assuré par Service Client 7/7 de 08h à 22h.</p>
@@ -210,7 +205,7 @@
 	    
 	    <div class="form-group">
 		    <label>Numero de telephone</label>
-		    <input class="form-control" type="tel">
+		    <asp:TextBox class="form-control" ID="TextBox7" runat="server" type="tel"></asp:TextBox>
 	    </div>
 	    <div class="form-group">
 		    <label>Photo</label>
@@ -218,7 +213,7 @@
 	    </div>
 	    <div class="form-group">
 		    <label>Description</label>
-		    <textarea class="form-control" placeholder="Mes critaires"></textarea>
+		    <textarea class="form-control" placeholder="Mes critaires" runat="server" cols="20" rows="2" id="textblock1"></textarea>
 	    </div>
         <button type="button" class="btn btn-previous" onclick="nextPrev(-1)">Previous</button>
 	    <button type="button" class="btn btn-next" id="regForm">Demander la service</button>
@@ -229,24 +224,17 @@
     <br />
         
     <br />
+        
     <br />
+        
     <br />
     <br />
     <br />
     </div>
 </div>
     <script>
-        /*
-         ajouter un enfant
-         Donner le Sexe d'enfant
-			        </option>
-			        <option>
-				        Garcon
-			        </option>
-			        <option>
-				        Fille
-         */
-        
+
+      
         $(document).ready(function () {
             $("#btn_cloner").click(function () {
                 $('#enfant').clone().appendTo('#data');
@@ -293,6 +281,7 @@
             return valid; // return the valid status
         }
         function nextPrev(n) {
+            
              // This function will figure out which tab to display
             var x = document.getElementsByClassName("tab");
             // Exit the function if any field in the current tab is invalid:
@@ -307,6 +296,8 @@
                 document.getElementById("regForm").submit();
                 return false;
                 }
+
+             
                 // Otherwise, display the correct tab:
                  showTab(currentTab);
                 

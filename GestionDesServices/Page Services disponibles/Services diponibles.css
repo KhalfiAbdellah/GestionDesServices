@@ -16,7 +16,7 @@
     }
 
 .text-block {
-    /*position: absolute;*/
+    position: relative;
     bottom: 1px;
     right: 25%;
     left:25%;
@@ -24,9 +24,7 @@
 }
 
     .text-block h3 {
-        color: white;
+        color: blue;
     }
 
-    h3{
-        
-    }
+    
