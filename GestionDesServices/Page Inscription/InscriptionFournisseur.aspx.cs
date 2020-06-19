@@ -13,12 +13,15 @@ namespace GestionDesServices.Page_Inscription
 {
     public partial class InscriptionFournisseur : System.Web.UI.Page
     {
+        Connecter cn = new Connecter();
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=CYBORG\INSTANCE1;Initial catalog=Gestion de Services;Integrated Security=true");
-            con.Open();
 
-            SqlCommand com = new SqlCommand("select *from Metiers", con);
+            //SqlConnection con = new SqlConnection(@"Data Source=CYBORG\INSTANCE1;Initial catalog=Gestion de Services;Integrated Security=true");
+            
+            cn.con.Open();
+
+            SqlCommand com = new SqlCommand("select *from Metiers", cn.con);
             SqlDataAdapter da = new SqlDataAdapter(com);
             DataSet ds = new DataSet();
             da.Fill(ds);  // fill dataset
@@ -26,6 +29,7 @@ namespace GestionDesServices.Page_Inscription
             Dropdownlist1.DataValueField = ds.Tables[0].Columns["nom_metier"].ToString();             // to retrive specific  textfield name 
             Dropdownlist1.DataSource = ds.Tables[0];      //assigning datasource to the dropdownlist
             Dropdownlist1.DataBind();  //binding dropdownlist
+            cn.con.Close();
         }
         static string Encrypt(string value)
         {
@@ -39,18 +43,18 @@ namespace GestionDesServices.Page_Inscription
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=CYBORG\INSTANCE1;Initial catalog=Gestion de Services;Integrated Security=true");
+            //SqlConnection con = new SqlConnection(@"Data Source=CYBORG\INSTANCE1;Initial catalog=Gestion de Services;Integrated Security=true");
 
 
 
-            SqlCommand cmd = new SqlCommand("insert into Fournisseurs values ('" + firstName.Text + "','" + lastName.Text + "','" + email.Text + "','" + adresse.Text + "',"+Dropdownlist1.SelectedIndex+","+1+","+prix.Text+","+phoneNumber.Text+",'"+ Encrypt(passwordConfirmation.Text) + "')", con);
-            con.Open();
-            int k = cmd.ExecuteNonQuery();
+            cn.cmd = new SqlCommand("insert into Fournisseurs values ('" + firstName.Text + "','" + lastName.Text + "','" + email.Text + "','" + adresse.Text + "',"+Dropdownlist1.SelectedIndex+","+1+","+prix.Text+","+phoneNumber.Text+",'"+ Encrypt(passwordConfirmation.Text) + "')",cn.con);
+            cn.con.Open();
+            int k = cn.cmd.ExecuteNonQuery();
             if (k != 0)
             {
                 Response.Write("<script>alert('Vous avez créé votre compte en tant que Prestataire avec succès');</script>");
             }
-            con.Close();
+            cn.con.Close();
         }
     }
 }

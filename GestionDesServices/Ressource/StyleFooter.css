@@ -1,9 +1,26 @@
 ﻿.footer-main {
-    position: fixed;
-    bottom: 0;
-    background-color:indianred !important;
+    position: relative;
+    top: 100%;
+    
+    width: 100%;
+   
+    background-color: indianred !important;
+}
+#page-container {
+    position: relative;
+    min-height: 100vh;
 }
 
+#content-wrap {
+    padding-bottom: 2.5rem; /* Footer height */
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; /* Footer height */
+}
 .footer-second p {
     color: white;
     padding-top: 10px;

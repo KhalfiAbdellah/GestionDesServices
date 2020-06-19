@@ -31,8 +31,11 @@ namespace GestionDesServices
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=CYBORG\INSTANCE1;Initial catalog=Gestion de Services;Integrated Security=true");
-
+            /* 
+                base donne abdellah Data Source=DESKTOP-O419RR1\MSI_DRAGON;Initial catalog=Gestion de Services;Integrated Security=true"
+             */
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-O419RR1\MSI_DRAGON;Initial catalog=Gestion de Services;Integrated Security=true");
+            
             string login = inputEmail.Text;
             string password = Encrypt(inputPassword.Text);
 
@@ -48,7 +51,7 @@ namespace GestionDesServices
             if (dr.HasRows == true)
             {
 
-
+                //"192.168.0.140"
                 //recherche du client
                 string q = "select nbr_cnx_clt from Clients where email_clt='" + login+"'";
                 SqlCommand cmd2 = new SqlCommand(q, con);
