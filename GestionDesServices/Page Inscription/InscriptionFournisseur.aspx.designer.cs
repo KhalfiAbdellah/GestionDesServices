@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GestionDesServices
+namespace GestionDesServices.Page_Inscription
 {
 
 
-    public partial class Inscription
+    public partial class InscriptionFournisseur
     {
 
         /// <summary>
@@ -42,6 +42,15 @@ namespace GestionDesServices
         protected global::System.Web.UI.WebControls.TextBox email;
 
         /// <summary>
+        /// Dropdownlist1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Dropdownlist1;
+
+        /// <summary>
         /// phoneNumber control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace GestionDesServices
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox adresse;
+
+        /// <summary>
+        /// prix control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox prix;
 
         /// <summary>
         /// Password control.

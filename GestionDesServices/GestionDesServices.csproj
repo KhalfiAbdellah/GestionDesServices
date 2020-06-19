@@ -106,10 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="App_Data\GestionDesServices.mdf" />
-    <Content Include="App_Data\GestionDesServices_log.ldf">
-      <DependentUpon>GestionDesServices.mdf</DependentUpon>
-    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -126,7 +122,13 @@
     <Content Include="Page Acceuil\Images\4th slide.jpg" />
     <Content Include="Page Acceuil\Images\clients.jpg" />
     <Content Include="Page Acceuil\Images\workers2.jpg" />
+    <Content Include="Page Inscription\Images\client.jpeg" />
+    <Content Include="Page Inscription\Images\client2.jpeg" />
+    <Content Include="Page Inscription\Images\Fournisseur.jpeg" />
+    <Content Include="Page Inscription\Images\Fournisseur2.jpeg" />
+    <Content Include="Page Inscription\Images\Fournisseur3.jpg" />
     <Content Include="Page Inscription\Inscription.css" />
+    <Content Include="Page Inscription\InscriptionFournisseur.aspx" />
     <Content Include="Page Services disponibles\Images\babysitter5.jpg" />
     <Content Include="Page Services disponibles\Images\beautician.jpg" />
     <Content Include="Page Services disponibles\Images\blacksmith.jpg" />
@@ -337,6 +339,13 @@
     <Compile Include="Page a propos\a propos.aspx.designer.cs">
       <DependentUpon>a propos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page Inscription\InscriptionFournisseur.aspx.cs">
+      <DependentUpon>InscriptionFournisseur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page Inscription\InscriptionFournisseur.aspx.designer.cs">
+      <DependentUpon>InscriptionFournisseur.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page Services disponibles\ServicesDisponibles.aspx.cs">
       <DependentUpon>ServicesDisponibles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -399,6 +408,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Page a propos\Images\" />
   </ItemGroup>
   <ItemGroup>
