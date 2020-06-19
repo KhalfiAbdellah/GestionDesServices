@@ -26,7 +26,7 @@ namespace GestionDesServices.Page_Inscription
             DataSet ds = new DataSet();
             da.Fill(ds);  // fill dataset
             Dropdownlist1.DataTextField = ds.Tables[0].Columns["nom_metier"].ToString(); // text field name of table dispalyed in dropdown
-            Dropdownlist1.DataValueField = ds.Tables[0].Columns["nom_metier"].ToString();             // to retrive specific  textfield name 
+            Dropdownlist1.DataValueField = ds.Tables[0].Columns["ID_metier"].ToString();             // to retrive specific  textfield name 
             Dropdownlist1.DataSource = ds.Tables[0];      //assigning datasource to the dropdownlist
             Dropdownlist1.DataBind();  //binding dropdownlist
             cn.con.Close();
@@ -47,12 +47,12 @@ namespace GestionDesServices.Page_Inscription
 
 
 
-            cn.cmd = new SqlCommand("insert into Fournisseurs values ('" + firstName.Text + "','" + lastName.Text + "','" + email.Text + "','" + adresse.Text + "',"+Dropdownlist1.SelectedIndex+","+1+","+prix.Text+","+phoneNumber.Text+",'"+ Encrypt(passwordConfirmation.Text) + "')",cn.con);
+            cn.cmd = new SqlCommand("insert into Fournisseurs values ('" + firstName.Text + "','" + lastName.Text + "','" + email.Text + "','" + adresse.Text + "',"+(Dropdownlist1.SelectedIndex+1)+","+1+","+prix.Text+","+phoneNumber.Text+",'"+ Encrypt(passwordConfirmation.Text) + "')",cn.con);
             cn.con.Open();
             int k = cn.cmd.ExecuteNonQuery();
             if (k != 0)
             {
-                Response.Write("<script>alert('Vous avez créé votre compte en tant que Prestataire avec succès');</script>");
+                Response.Write("<script>alert('Vous avez créé votre compte en tant que Prestataire avec succès "+ (Dropdownlist1.SelectedIndex + 1) + "');</script>");
             }
             cn.con.Close();
         }

@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace GestionDesServices
 {
@@ -16,6 +18,15 @@ namespace GestionDesServices
             
         }
 
+        static string Encrypt(string value)
+        {
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                UTF8Encoding utf8 = new UTF8Encoding();
+                byte[] data = md5.ComputeHash(utf8.GetBytes(value));
+                return Convert.ToBase64String(data);
+            }
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
             //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-O419RR1\MSI_DRAGON;Initial catalog=Gestion de Services;Integrated Security=true");
@@ -23,7 +34,7 @@ namespace GestionDesServices
             Connecter cn = new Connecter();
             
 
-            cn.cmd = new SqlCommand("insert into Clients values ('"+firstName.Text+"','"+lastName.Text+"','"+email.Text+"','"+adresse.Text+"','"+ passwordConfirmation.Text+"',"+1+",'"+phoneNumber.Text+"')", cn.con);
+            cn.cmd = new SqlCommand("insert into Clients values ('"+firstName.Text+"','"+lastName.Text+"','"+email.Text+"','"+adresse.Text+"','"+ Encrypt(passwordConfirmation.Text)+"',"+1+",'"+phoneNumber.Text+"')", cn.con);
             cn.con.Open();
             int k = cn.cmd.ExecuteNonQuery();
             if (k != 0)
