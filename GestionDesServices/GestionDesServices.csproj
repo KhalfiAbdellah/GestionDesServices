@@ -129,6 +129,10 @@
     <Content Include="Page Inscription\Images\Fournisseur3.jpg" />
     <Content Include="Page Inscription\Inscription.css" />
     <Content Include="Page Inscription\InscriptionFournisseur.aspx" />
+    <Content Include="Page List des fournisseurs\Images\1657789.jpg" />
+    <Content Include="Page List des fournisseurs\Images\56246.jpg" />
+    <Content Include="Page List des fournisseurs\List des fournisseurs.aspx" />
+    <Content Include="Page List des fournisseurs\List des fournisseurs.css" />
     <Content Include="Page Services disponibles\Images\babysitter5.jpg" />
     <Content Include="Page Services disponibles\Images\beautician.jpg" />
     <Content Include="Page Services disponibles\Images\blacksmith.jpg" />
@@ -345,6 +349,13 @@
     </Compile>
     <Compile Include="Page Inscription\InscriptionFournisseur.aspx.designer.cs">
       <DependentUpon>InscriptionFournisseur.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page List des fournisseurs\List des fournisseurs.aspx.cs">
+      <DependentUpon>List des fournisseurs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page List des fournisseurs\List des fournisseurs.aspx.designer.cs">
+      <DependentUpon>List des fournisseurs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page Services disponibles\ServicesDisponibles.aspx.cs">
       <DependentUpon>ServicesDisponibles.aspx</DependentUpon>

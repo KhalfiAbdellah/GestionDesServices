@@ -67,7 +67,7 @@ namespace GestionDesServices
                 //saving changes
                 cmd3.ExecuteNonQuery();
 
-                Response.Write("<script>alert('Connexion avec succee');</script>");
+                Response.Write("<script>alert('Bienvenuen "+nom_client+" une autre fois dans notre site ');</script>");
 
                 con.Close();
 
