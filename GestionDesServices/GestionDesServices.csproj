@@ -122,6 +122,7 @@
     <Content Include="Page Acceuil\Images\4th slide.jpg" />
     <Content Include="Page Acceuil\Images\clients.jpg" />
     <Content Include="Page Acceuil\Images\workers2.jpg" />
+    <Content Include="Page Demande Service\Baby Siter\BabySitter.aspx" />
     <Content Include="Page Inscription\Images\client.jpeg" />
     <Content Include="Page Inscription\Images\client2.jpeg" />
     <Content Include="Page Inscription\Images\Fournisseur.jpeg" />
@@ -343,6 +344,13 @@
     </Compile>
     <Compile Include="Page a propos\a propos.aspx.designer.cs">
       <DependentUpon>a propos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page Demande Service\Baby Siter\BabySitter.aspx.cs">
+      <DependentUpon>BabySitter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page Demande Service\Baby Siter\BabySitter.aspx.designer.cs">
+      <DependentUpon>BabySitter.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page Inscription\InscriptionFournisseur.aspx.cs">
       <DependentUpon>InscriptionFournisseur.aspx</DependentUpon>

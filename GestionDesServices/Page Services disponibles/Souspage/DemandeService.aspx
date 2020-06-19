@@ -74,32 +74,33 @@
 		        <label>Nom de service</label>
 	            <asp:TextBox class="form-control" ID="TextBox2" runat="server" value="Garde Enfants"></asp:TextBox>
             </div>
-	        <div id="enfant">
-            <div class="form-group">
-		        <label>Sexe</label>
-                <asp:DropDownList ID="DropDownList1" runat="server" class="form-control className">
-                    <asp:ListItem>Donner le Sexe d'enfant </asp:ListItem>
-                    <asp:ListItem>Garcon</asp:ListItem>
-                    <asp:ListItem>Fille</asp:ListItem>
-                </asp:DropDownList>        
+	        <div id="enfant" runat="server">
+                <div class="form-group">
+		            <label>Sexe</label>
+                    <asp:DropDownList ID="DropDownList1" runat="server" class="form-control className">
+                        <asp:ListItem>Donner le Sexe d'enfant </asp:ListItem>
+                        <asp:ListItem>Garcon</asp:ListItem>
+                        <asp:ListItem>Fille</asp:ListItem>
+                    </asp:DropDownList>        
 		        
-	        </div>
+	            </div>
             
-            <div class="form-group">
-                <label>Veuillez saisir votre date de naissance :</label>
-                <br />
-                <asp:TextBox class="form-control" ID="TextBox3" type="date" min="2002-01-01" max="2020-12-31" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" runat="server"></asp:TextBox>
-                <span class="validity"></span>
+                <div class="form-group">
+                    <label>Veuillez saisir votre date de naissance :</label>
+                    <br />
+                    <asp:TextBox class="form-control" ID="TextBox3" type="date" min="2002-01-01" max="2020-12-31" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" runat="server"></asp:TextBox>
+                    <span class="validity"></span>
                 
-	        </div>
-            </div>         
-            <div id="data">
+	            </div>
+                <div id="data">
 
-            </div>
+                </div>
+            </div>         
+            
 	        <div class="form-group">
 		        <ul>
 			        <li>
-				        <button type="button" class="btn btn-danger" id="btn_cloner">+ Ajouter un enfant</button>
+				        <button type="button" class="btn btn-danger" id="btn_cloner" runat="server">+ Ajouter un enfant</button>
 			        </li>
 		        </ul>
 	        </div>

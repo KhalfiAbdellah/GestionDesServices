@@ -11,6 +11,13 @@ namespace GestionDesServices.Page_Services_disponibles.Souspage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            enfant.Attributes.CssStyle.Add("display", "none");
+            btn_cloner.Attributes.CssStyle.Add("display", "none");
+            if (Request.QueryString["Name"]== "Baby Sitter")
+            {
+                enfant.Attributes.CssStyle.Add("display", "block");
+                btn_cloner.Attributes.CssStyle.Add("display", "block");
+            }
             TextBox2.Text = Request.QueryString["Name"];
         }
     }
