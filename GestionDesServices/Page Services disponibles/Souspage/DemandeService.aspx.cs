@@ -11,7 +11,7 @@ namespace GestionDesServices.Page_Services_disponibles.Souspage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            TextBox2.Text = Request.QueryString["Name"];
         }
     }
 }
