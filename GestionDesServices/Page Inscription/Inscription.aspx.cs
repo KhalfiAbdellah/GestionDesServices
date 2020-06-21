@@ -29,8 +29,7 @@ namespace GestionDesServices
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-O419RR1\MSI_DRAGON;Initial catalog=Gestion de Services;Integrated Security=true");
-
+            
             Connecter cn = new Connecter();
             
 
