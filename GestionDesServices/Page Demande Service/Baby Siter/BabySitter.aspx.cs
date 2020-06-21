@@ -13,6 +13,7 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
     {
         
         Connecter cn = new Connecter();
+        string clt;
         protected void Page_Load(object sender, EventArgs e)
         {
             // = Request.QueryString["Name"];
@@ -33,6 +34,7 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
                 cn.con.Close();
                 
                 DropDownList1.SelectedIndex = int.Parse(Request.QueryString["Name"]);
+                 clt = Request.QueryString["clt"];
             }
                
         }
@@ -93,7 +95,8 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
                 msg5.Attributes.CssStyle.Add("color", "red");
             }
             Response.Write(Service + " " + desc + " " + daterendevous + " " + hdebut + "" + hfin);
-            Response.Redirect("~/Page List des fournisseurs/List des fournisseurs.aspx?Name="+ Service, false);
+            
+            Response.Redirect("~/Page List des fournisseurs/List des fournisseurs.aspx?Name="+ Service+"&desc="+desc+"&clt="+clt);
             
 
         }

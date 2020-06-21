@@ -18,12 +18,15 @@ namespace GestionDesServices.Page_List_des_fournisseurs
         protected void Page_Load(object sender, EventArgs e)
         {
             string s = Request.QueryString["Name"];
+            string d = Request.QueryString["desc"];
+            string clt = Request.QueryString["clt"];
+            Response.Write( d + " " + s + "" + clt);
             cn.con.Open();
             cn.cmd = new SqlCommand("select f.nom_frn , f.prenom_frn , f.email_frn , f.adr_frn , f.Prix_service , f.numTel_frn   from Fournisseurs f, Metiers m where m.nom_metier = '" + s +"'", cn.con);
             SqlDataReader dr = cn.cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
-            Response.Write(service);
+            
             dt.Columns[0].ColumnName = "Nom";
             dt.Columns[1].ColumnName = "Prenom";
             dt.Columns[2].ColumnName = "Email";
@@ -60,10 +63,11 @@ namespace GestionDesServices.Page_List_des_fournisseurs
                 HtmlGenericControl div4 = new HtmlGenericControl("div");
                 div4.Attributes.Add("class", "caption");
                 div3.Controls.Add(div4);
-                
+               
                 HtmlGenericControl a = new HtmlGenericControl("a");
                 a.Attributes.Add("class", "btn btn-primary icon  pull-right");
-                a.Attributes.Add("href", "#");
+                a.Attributes.Add("href", "../Page Service desire/ServiceDesire.aspx?id=" + i +"&service="+s+"&desc="+d+"&clt="+clt+",false");
+                a.Attributes.Add("id", "tester");
                 a.InnerText = "Select";
                 
                 
