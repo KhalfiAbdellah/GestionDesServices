@@ -1,87 +1,150 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Acceuil.aspx.cs" Inherits="GestionDesServices.Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Accueil</title>
-    <link href="Acceuil.css" rel="stylesheet" />
+ <%--   <title>Accueil</title>
+    <link href="Acceuil.css" rel="stylesheet" />--%>
+
+
+
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon.css" rel="stylesheet" />
+    <link href="assets/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="assets/css/gijgo.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/nice-select.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/price_rangs.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link href="assets/css/slick.css" rel="stylesheet" />
+    <link href="assets/css/slicknav.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <a href="assets/css/style.map">assets/css/style.map</a><link href="assets/css/themify-icons.css" rel="stylesheet" />
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   
+
     
-        <!-- banner -->
-    <div class="banner_w3lspvt" id="home" style=" margin-bottom:53px;">
-        <div class="csslider infinity" id="slider1">
-            <input type="radio" name="slides" checked="checked" id="slides_1" />
-            <input type="radio" name="slides" id="slides_2" />
-            <input type="radio" name="slides" id="slides_3" />
-            <input type="radio" name="slides" id="slides_4" />
-
-            <ul class="banner_slide_bg">
-                <li>
-                    <div class="slider-info bg1">
-                        <div class="bs-slider-overlay">
-                            <div class="banner-text">
-                                <div class="container">
-                                    <h2 class="movetxt agile-title text-capitalize">Bienvenue dans <span style="color:indianred">Go Service</span></h2>
-                                    <h4 class="movetxt mb-3 agile-title text-capitalize" style="font-size:large">
-                                        Le seul endroit où les fournisseurs de services et les clients se rencontrent
-                                        pour satisfaire leurs besoins</h4>
-                                    
-                                    <asp:HyperLink class="btn" NavigateUrl="~/Page a propos/a propos.aspx" runat="server">Savoire plus</asp:HyperLink>
+        <!--? slider Area Start-->
+        <div class="slider-area ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height d-flex align-items-center"  style="background:url('Images/2675425.jpg'); border-image-repeat:stretch">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6 col-lg-7 col-md-8">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".2s">Popular Online Courses</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s">The New Way To Learn Properly in With Us!</h1>
+                                    <!-- Hero-btn -->
+                                    <div class="hero__btn">
+                                        <a href="industries.html" class="btn hero-btn"  data-animation="fadeInLeft" data-delay=".8s">Get Started</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </li>
-                <li>
-                    <div class="slider-info bg2">
-                        <div class="bs-slider-overlay1">
-                            <div class="banner-text">
-                                <div class="container">
-
-                                    <h4 class="movetxt mb-3 agile-title text-capitalize" style="font-size:50px;">Trouver des prestataires de services prêts à se lancer dans le travail</h4>
-                                    <asp:HyperLink class="btn" NavigateUrl="~/Page Services disponibles/ServicesDisponibles.aspx" runat="server">Decouvrez nos services</asp:HyperLink>
-                                </div>
+                </div>
+                </div>
+            </div>
+        <!--? Categories Area Start -->
+        <div class="categories-area section-padding30">
+            <div class="container">
+                <div class="row justify-content-sm-center">
+                    <div class="cl-xl-7 col-lg-8 col-md-10">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle text-center mb-70">
+                            <span>Popular Online Courses</span>
+                            <h2>Lets Brows All Catagori</h2>
+                        </div> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-web-design"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a  href="#">Web Design</a></h5>
+                                <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                                <a href="#" class="read-more1">Read More ></a>
                             </div>
                         </div>
                     </div>
-                </li>
-                <li>
-                    <div class="slider-info bg3">
-                        <div class="bs-slider-overlay1">
-                            <div class="banner-text">
-                                <div class="container">
-
-                                    <h4 class="movetxt mb-3 agile-title text-capitalize">Trouvez des clients qui ont besoin de votre service</h4>
-                                    <asp:HyperLink class="btn" NavigateUrl="~/Page Inscription/Inscription.aspx" runat="server">Cree un compte</asp:HyperLink>
-
-                                </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-education"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a  href="#">App Development</a></h5>
+                                <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                                <a  href="#" class="read-more1">Read More ></a>
                             </div>
                         </div>
                     </div>
-                </li>
-                <li>
-                    <div class="slider-info bg4">
-                        <div class="bs-slider-overlay1">
-                            <div class="banner-text">
-                                <div class="container">
-
-                                    <h4 class="movetxt mb-3 agile-title text-capitalize" style="font-size:50px;">restez informé de nos actualités pour ne pas manquer les prestataires de services prêts à l'emploi ainsi que les clients</h4>
-                                    <asp:HyperLink class="btn" NavigateUrl="~/Page Inscription/Inscription.aspx" runat="server">Cree un compte</asp:HyperLink>
-
-                                </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-communications"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a  href="#">Video Editing</a></h5>
+                                <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                                <a  href="#" class="read-more1">Read More ></a>
                             </div>
                         </div>
                     </div>
-                </li>
-            </ul>
-            <div class="navigation">
-                <div>
-                    <label for="slides_1"></label>
-                    <label for="slides_2"></label>
-                    <label for="slides_3"></label>
-                    <label for="slides_4"></label>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-computing"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a  href="#">Digital Marketing</a></h5>
+                                <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                                <a  href="#" class="read-more1">Read More ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-tools-and-utensils"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a  href="#">Seo Marketing</a></h5>
+                                <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                                <a  href="#" class="read-more1">Read More ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-business"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a  href="#">Content Writing</a></h5>
+                                <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                                <a  href="#" class="read-more1">Read More ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section Button -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="browse-btn2 text-center mt-50">
+                            <a href="courses.html" class="btn">Find More Courses</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- //banner -->
+        <!-- Categories Area End -->
+    
+
+   
 </asp:Content>

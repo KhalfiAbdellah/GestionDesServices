@@ -88,7 +88,7 @@
             <h3 class="heading mb-4">About <span>Us</span> </h3>
             <div class="row">
                 <div class="col-lg-6 left-img">
-                    <img src="Images/pexels-photo-207692.jpeg" class="img-fluid" alt="" />
+                    <img src="Images/about1.jpg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-lg-5 about-left">
                     <p class="">
@@ -108,7 +108,7 @@
         <div class="container py-md-3">
             <div class="row">
                 <div class="col-lg-6 left-img">
-                    <img src="Images/pexels-photo-2861798.jpeg" class="img-fluid" alt="" />
+                    <img src="Images/about2.jpg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-lg-6 mt-lg-0 mt-4">
                     <h3 class="heading mb-5">Find Lessons & courses</h3>
@@ -136,7 +136,7 @@
         <div class="container py-md-3">
             <div class="row">
                 <div class="col-lg-6 left-img">
-                    <img src="Images/pexels-photo-3184417.jpeg" class="img-fluid" alt="" />
+                    <img src="../Page%20Services%20disponibles/Images/plumber2.jpg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-lg-6 mt-lg-0 mt-4">
                     <h3 class="heading mb-5">Connect with your teacher</h3>
@@ -163,7 +163,7 @@
         <div class="container py-md-3">
             <div class="row">
                 <div class="col-lg-6 left-img">
-                    <img src="Images/pexels-photo-2046753.jpeg" class="img-fluid" alt="" />
+                    <img src="../Page Services disponibles/Images/babysitter5.jpg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-lg-6 mt-lg-0 mt-4">
                     <h3 class="heading mb-5">Connect with your friends</h3>

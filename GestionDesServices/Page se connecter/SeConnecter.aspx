@@ -20,7 +20,7 @@
     <div  id="inscri" class="row py-5 mt-4 align-items-center">
         <!-- The image half -->
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
-            <img src="Images/man-working-from-home-cat.jpg" alt="" class="img-fluid mb-3 d-none d-md-block">
+            <img src="Images/pexels-photo-3184287.jpeg" alt="" class="img-fluid mb-3 d-none d-md-block">
             <h1>Connecter-vous</h1>
             <p class="font-italic text-muted mb-0">Rejoigner nous pour etre mis a jour avec notre nouveau actualiters</p>
 
