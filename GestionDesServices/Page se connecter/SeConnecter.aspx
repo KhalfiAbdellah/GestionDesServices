@@ -48,7 +48,7 @@
                                     <input id="customCheck1" type="checkbox" checked class="custom-control-input" runat="server">
                                     <label for="customCheck1" class="custom-control-label">Remember password</label>
                                 </div>
-                                <asp:Button runat="server" type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" Text="Connecter" OnClick="Button1_Click1"/>
+                                <asp:Button runat="server" type="submit" class="btn btn-danger btn-block text-uppercase mb-2 rounded-pill shadow-sm" Text="Connecter" OnClick="Button1_Click1"/>
                                 <div class="text-center d-flex justify-content-between mt-4">
                                     <asp:HyperLink runat="server" NavigateUrl="#">Cree un compte</asp:HyperLink>
                                 </div>
