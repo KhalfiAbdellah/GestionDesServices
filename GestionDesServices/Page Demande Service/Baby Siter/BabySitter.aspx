@@ -29,7 +29,7 @@
             
 	        <div class="form-group">
 		        <label>Nom de service</label><span id="msg1" runat="server"></span>
-	            <asp:DropDownList ID="DropDownList1" runat="server" class="form-control"></asp:DropDownList>
+	            <asp:DropDownList ID="DropDownList1" runat="server" class="form-control" ></asp:DropDownList>
             </div>
             
             <div class="form-group">

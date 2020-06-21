@@ -16,7 +16,7 @@ namespace GestionDesServices.Page_Inscription
         Connecter cn = new Connecter();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
             //SqlConnection con = new SqlConnection(@"Data Source=CYBORG\INSTANCE1;Initial catalog=Gestion de Services;Integrated Security=true");
 
             if (!IsPostBack)

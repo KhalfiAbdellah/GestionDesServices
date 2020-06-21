@@ -7,20 +7,23 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.HtmlControls;
-
+using GestionDesServices.Page_Demande_Service.Baby_Siter;
 namespace GestionDesServices.Page_List_des_fournisseurs
 {
     public partial class List_des_fournisseurs : System.Web.UI.Page
     {
         Connecter cn = new Connecter();
+        public int service;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            string s = Request.QueryString["Name"];
             cn.con.Open();
-            cn.cmd = new SqlCommand("select nom_frn , prenom_frn , email_frn , adr_frn , Prix_service , numTel_frn  from Fournisseurs", cn.con);
+            cn.cmd = new SqlCommand("select f.nom_frn , f.prenom_frn , f.email_frn , f.adr_frn , f.Prix_service , f.numTel_frn   from Fournisseurs f, Metiers m where m.nom_metier = '" + s +"'", cn.con);
             SqlDataReader dr = cn.cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
-
+            Response.Write(service);
             dt.Columns[0].ColumnName = "Nom";
             dt.Columns[1].ColumnName = "Prenom";
             dt.Columns[2].ColumnName = "Email";
@@ -101,7 +104,8 @@ namespace GestionDesServices.Page_List_des_fournisseurs
 
         protected void selecter_Click(object sender, EventArgs e)
         {
-            
+            cn.con.Open();
+            cn.cmd = new SqlCommand("", cn.con);
         }
     }
 }

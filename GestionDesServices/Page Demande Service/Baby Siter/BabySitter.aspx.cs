@@ -11,6 +11,7 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
 {
     public partial class BabySitter : System.Web.UI.Page
     {
+        
         Connecter cn = new Connecter();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,7 +31,8 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
                 DropDownList1.DataSource = ds.Tables[0];      //assigning datasource to the dropdownlist
                 DropDownList1.DataBind();  //binding dropdownlist
                 cn.con.Close();
-                //DropDownList1.SelectedIndex = int.Parse(Request.QueryString["Name"]);
+                
+                DropDownList1.SelectedIndex = int.Parse(Request.QueryString["Name"]);
             }
                
         }
@@ -50,11 +52,13 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
             }
             cn.con.Close();*/
         }
+        string Service;
 
         protected void Step_Click(object sender, EventArgs e)
         {
-            string Service;
-            Service = DropDownList1.SelectedItem.Text;
+           Service = DropDownList1.SelectedItem.Text;
+            
+            
             if (Service == " ")
             {
                 msg1.InnerText = "choisir un service";
@@ -89,10 +93,12 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
                 msg5.Attributes.CssStyle.Add("color", "red");
             }
             Response.Write(Service + " " + desc + " " + daterendevous + " " + hdebut + "" + hfin);
-            Response.Redirect("~/Page List des fournisseurs/List des fournisseurs.aspx", false);
+            Response.Redirect("~/Page List des fournisseurs/List des fournisseurs.aspx?Name="+ Service, false);
             
 
         }
+
+        
     }
 
     
