@@ -5,11 +5,10 @@
      <title>List des Fournisseurs</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
     <link href="List%20des%20fournisseurs.css" rel="stylesheet" />--%>
-
-
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="../Ressource/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Ressource/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../Ressource/jquery.min.js"></script>
+    
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -67,27 +66,132 @@
                     </div>
                   </div>
                 </li>
-                  <li class="span5 clearfix">
+   
+            </ul>
+        </div>
+        <div class="span12">
+    		<ul class="thumbnails">
+                <li class="span5 clearfix">
                   <div class="thumbnail clearfix">
-                    <img src="Images/Minato.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                    <img src="Images/Deidara.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
                     <div class="caption" class="pull-left">
-                      <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right">Select</a>
+                      <a href="#" class="btn btn-primary icon  pull-right">Select</a>
                       <h4>      
-                      <a href="#" >Minato</a>
+                      <a href="#" >Deidara</a>
                       </h4>
-                      <small>Konohagakure</small>
+                      <small>AKATSUKI</small>  
                     </div>
                   </div>
                 </li>
                   <li class="span5 clearfix">
                   <div class="thumbnail clearfix">
-                    <img src="Images/Sarada.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                    <img src="Images/Hinata.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
                     <div class="caption" class="pull-left">
                       <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right">Select</a>
                       <h4>      
-                      <a href="#" >Uchiha Srada</a>
+                      <a href="#" >Hinata Hyuga</a>
                       </h4>
-                      <small>Konohagakure</small>
+                      <small>Konohagakure</small>  
+                    </div>
+                  </div>
+                </li>
+                  <li class="span5 clearfix">
+                  <div class="thumbnail clearfix">
+                    <img src="Images/Itachi.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                    <div class="caption" class="pull-left">
+                      <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right">Select</a>
+                      <h4>      
+                      <a href="#" >Uchiha Itachi</a>
+                      </h4>
+                      <small>AKATSUKI</small>  
+                    </div>
+                  </div>
+                </li>
+                  <li class="span5 clearfix">
+                  <div class="thumbnail clearfix">
+                    <img src="Images/Jiraya.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                    <div class="caption" class="pull-left">
+                      <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right">Select</a>
+                      <h4>      
+                      <a href="#" >Jiraya</a>
+                      </h4>
+                      <small>Konohagakure</small>     
+                    </div>
+                  </div>
+                </li>
+                <li class="span5 clearfix">
+                  <div class="thumbnail clearfix">
+                    <img src="Images/Jiraya.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                    <div class="caption" class="pull-left">
+                      <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right">Select</a>
+                      <h4>      
+                      <a href="#" >Jiraya</a>
+                      </h4>
+                      <small>Konohagakure</small>     
+                    </div>
+                  </div>
+                </li>
+            </ul>
+        </div>
+        <div class="span12">
+    		<ul class="thumbnails">
+                <li class="span5 clearfix">
+                  <div class="thumbnail clearfix">
+                    <img src="Images/Deidara.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                    <div class="caption" class="pull-left">
+                      <a href="#" class="btn btn-primary icon  pull-right">Select</a>
+                      <h4>      
+                      <a href="#" >Deidara</a>
+                      </h4>
+                      <small>AKATSUKI</small>  
+                    </div>
+                  </div>
+                </li>
+                  <li class="span5 clearfix">
+                  <div class="thumbnail clearfix">
+                    <img src="Images/Hinata.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                    <div class="caption" class="pull-left">
+                      <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right">Select</a>
+                      <h4>      
+                      <a href="#" >Hinata Hyuga</a>
+                      </h4>
+                      <small>Konohagakure</small>  
+                    </div>
+                  </div>
+                </li>
+                  <li class="span5 clearfix">
+                  <div class="thumbnail clearfix">
+                    <img src="Images/Itachi.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                    <div class="caption" class="pull-left">
+                      <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right">Select</a>
+                      <h4>      
+                      <a href="#" >Uchiha Itachi</a>
+                      </h4>
+                      <small>AKATSUKI</small>  
+                    </div>
+                  </div>
+                </li>
+                  <li class="span5 clearfix">
+                  <div class="thumbnail clearfix">
+                    <img src="Images/Jiraya.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                    <div class="caption" class="pull-left">
+                      <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right">Select</a>
+                      <h4>      
+                      <a href="#" >Jiraya</a>
+                      </h4>
+                      <small>Konohagakure</small>     
+                    </div>
+                  </div>
+                </li>
+                <li class="span5 clearfix">
+                  <div class="thumbnail clearfix">
+                    <img src="Images/Jiraya.jpg" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                    <div class="caption" class="pull-left">
+                      <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right">Select</a>
+                      <h4>      
+                      <a href="#" >Jiraya</a>
+                      </h4>
+                      <small>Konohagakure</small>     
                     </div>
                   </div>
                 </li>
