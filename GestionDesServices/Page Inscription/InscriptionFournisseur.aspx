@@ -3,7 +3,8 @@
     
     <title>Nouveau Client</title>
     <link href="Inscription.css" rel="stylesheet" />
-
+    <link href="../Ressource/css/all.css" rel="stylesheet" />
+    <script src="../Ressource/js/all.js"></script>
     <!--the following lines are necessary for the form-->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -65,10 +66,10 @@
                     <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white px-4 border-md border-right-0">
-                                <i class="fa fa-envelope text-muted"></i>
+                                <i class="fa fa-wallet text-muted"></i>
                             </span>
                         </div>
-                        <asp:DropDownList runat="server" ID="Dropdownlist1"></asp:DropDownList>
+                        <asp:DropDownList runat="server" ID="Dropdownlist1" ></asp:DropDownList>
                         </div>
 
                     <!-- Phone Number -->
@@ -88,7 +89,7 @@
                     <div class="input-group col-lg-6 mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white px-4 border-md border-right-0">
-                                <i class="fa fa-lock text-muted"></i>
+                                <i class="fa fa-home text-muted"></i>
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="adresse" type="text" name="adresse" placeholder="Adresse" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
@@ -98,7 +99,7 @@
                      <div class="input-group col-lg-6 mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white px-4 border-md border-right-0">
-                                <i class="fa fa-lock text-muted"></i>
+                                <i class="fa fa-money-bill text-muted"></i>
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="prix" type="text" name="prix" placeholder="Prix de votre service HORAIREMENT" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
@@ -125,10 +126,10 @@
                     </div>
 
                     <!-- Submit Button -->
-                     <asp:Button ID="Button1" runat="server" Text="Create your account" class="btn btn-primary btn-block py-2" OnClick="Button1_Click" />
+                     <asp:Button ID="Button1" runat="server" Text="Create your account" class="btn btn-danger btn-block py-2" OnClick="Button1_Click"/>
                     <!-- Already Registered -->
                     <div class="text-center w-100">
-                        <p class="text-muted font-weight-bold">Already Registered? <a href="Login.aspx" class="text-primary ml-2">Login</a></p>
+                        <p class="text-muted font-weight-bold">Already Registered? <a href="../Page se connecter/SeConnecter.aspx" class="text-danger ml-2">Login</a></p>
                     </div>
 
                 </div>

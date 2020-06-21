@@ -5,15 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace GestionDesServices
+namespace GestionDesServices.Page_Choisir_Role
 {
-    public partial class DemandeDeService : System.Web.UI.Page
+    public partial class Votre_Role : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string test = BS.Alt.ToString();
-            
+
         }
-        
     }
 }

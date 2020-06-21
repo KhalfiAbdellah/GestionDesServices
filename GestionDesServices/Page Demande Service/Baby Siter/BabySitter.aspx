@@ -33,7 +33,11 @@
 	        <div class="form-group">
 		        <label>Nom de service</label><span id="msg2" runat="server"></span>
 	            <asp:TextBox class="form-control" ID="TextBox2" runat="server" ReadOnly="true"></asp:TextBox>
-            </div>     
+            </div>
+            <div class="form-group">
+		        <label>Description</label><span id="msg12"></span>
+		        <textarea class="form-control" placeholder="Mes critaires" runat="server" cols="20" rows="2" id="textblock1"></textarea>
+	        </div>
        </div>         
 </fieldset>
 <fieldset class="tab">
@@ -85,6 +89,8 @@
 			    <asp:ListItem>22:00</asp:ListItem><asp:ListItem>23:00</asp:ListItem>
 
 		    </asp:DropDownList>
+            <br />
+            <asp:Button runat="server" OnClick="DropDownList3_TextChanged" Text="Calculer le taux minimale"/>
 	    </div>
 </fieldset>
 <fieldset class="tab">
@@ -100,7 +106,7 @@
 	    <div class="form-group">
 		    <label>Nombre d'heur selectionner</label><span id="msg7"></span>
 		    <asp:TextBox class="form-control" ID="TextBox4" runat="server"></asp:TextBox>
-            <asp:Button runat="server" OnClick="DropDownList3_TextChanged"/>
+            
 	    </div>
 	    <div class="form-group">
 		    <label>Rémunération horaire par Jobeur</label><span id="msg8"></span>
@@ -116,28 +122,7 @@
         
     </fieldset>
     <fieldset class="tab">
-        <div class="form-top">
-            <div class="form-top-left">
-		        <h3>Information complaimentaire :</h3>
-		    </div>
-		    <div class="form-top-right">
-		        <i class="fa fa-info-circle fa-2x"></i>
-		    </div>
-        </div>
-	    
-	    <div class="form-group">
-		    <label>Numero de telephone</label><span id="msg10"></span>
-		    <asp:TextBox class="form-control" ID="TextBox7" runat="server" type="tel"></asp:TextBox>
-	    </div>
-	    <div class="form-group">
-		    <label>Photo</label><span id="msg11"></span>
-		    <button class="form-control btn btn-danger">Upload</button>
-	    </div>
-	    <div class="form-group">
-		    <label>Description</label><span id="msg12"></span>
-		    <textarea class="form-control" placeholder="Mes critaires" runat="server" cols="20" rows="2" id="textblock1"></textarea>
-	    </div>
-       <asp:Button  runat="server" OnClick="btn_submit_Click"/>
+       <asp:Button  runat="server" OnClick="btn_submit_Click" Text="Generer"/>
     </fieldset>
 
   

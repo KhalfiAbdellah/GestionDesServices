@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Nouveau Client</title>
     <link href="Inscription.css" rel="stylesheet" />
-
+    <link href="../Ressource/css/all.css" rel="stylesheet" />
+    <script src="../Ressource/js/all.js"></script>
     <!--the following lines are necessary for the form-->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -105,10 +106,10 @@
                     </div>
 
                     <!-- Submit Button -->
-                     <asp:Button ID="Button1" runat="server" Text="Create your account" class="btn btn-primary btn-block py-2" OnClick="Button1_Click" />
+                     <asp:Button ID="Button1" runat="server" Text="Create your account" class="btn btn-danger btn-block py-2" OnClick="Button1_Click" />
                     <!-- Already Registered -->
                     <div class="text-center w-100">
-                        <p class="text-muted font-weight-bold">Already Registered? <a href="Login.aspx" class="text-primary ml-2">Login</a></p>
+                        <p class="text-muted font-weight-bold">Already Registered? <a href="../Page se connecter/SeConnecter.aspx" class="text-danger ml-2">Login</a></p>
                     </div>
 
                 </div>
