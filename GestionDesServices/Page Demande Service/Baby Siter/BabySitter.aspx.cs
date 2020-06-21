@@ -14,42 +14,30 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
         Connecter cn = new Connecter();
         protected void Page_Load(object sender, EventArgs e)
         {
-            TextBox2.Text = Request.QueryString["Name"];
+            // = Request.QueryString["Name"];
             //var moment = DateTime.Today.ToShortDateString();
-           // TextBox8.Attributes.Add("min",moment);
-            
+            // TextBox8.Attributes.Add("min",moment);
+            if (!IsPostBack)
+            {
+                cn.con.Open();
+
+                SqlCommand com = new SqlCommand("select *from Metiers", cn.con);
+                SqlDataAdapter da = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                da.Fill(ds);  // fill dataset
+                DropDownList1.DataTextField = ds.Tables[0].Columns["nom_metier"].ToString(); // text field name of table dispalyed in dropdown
+                DropDownList1.DataValueField = ds.Tables[0].Columns["ID_metier"].ToString();             // to retrive specific  textfield name 
+                DropDownList1.DataSource = ds.Tables[0];      //assigning datasource to the dropdownlist
+                DropDownList1.DataBind();  //binding dropdownlist
+                cn.con.Close();
+                //DropDownList1.SelectedIndex = int.Parse(Request.QueryString["Name"]);
+            }
                
         }
 
         protected void btn_submit_Click(object sender, EventArgs e)
         {
-            if(TextBox1.Text == "")
-            {
-                msg1.InnerText = "Veillez remplir le champs";
-                msg1.Attributes.CssStyle.Add("color", "red");
-            }
-            if (TextBox2.Text == "")
-            {
-                msg2.InnerText = "Veillez remplir le champs";
-                msg2.Attributes.CssStyle.Add("color", "red");
-            }
-            if (TextBox8.Text == "")
-            {
-                msg4.InnerText = "Veillez remplir le champs";
-                msg4.Attributes.CssStyle.Add("color", "red");
-            }
-            if (DropDownList2.SelectedIndex == 0)
-            {
-                msg1.InnerText = "Veillez Choisir la L'heure de debut";
-                msg1.Attributes.CssStyle.Add("color", "red");
-            }
-            if (DropDownList3.SelectedIndex == 0)
-            {
-                msg1.InnerText = "Veillez Choisir la L'heure de fin";
-                msg1.Attributes.CssStyle.Add("color", "red");
-            }
-
-            cn.cmd = new SqlCommand("insert into ordonnance values ('" + TextBox1.Text + "','" + TextBox2.Text + "','" + textblock1.InnerText + "','" + TextBox8.Text + "','" + DropDownList2.SelectedValue.ToString() + "','" + DropDownList3.SelectedValue.ToString() + "," + int.Parse(TextBox4.Text) + "," + int.Parse(TextBox5.Text) + "," + int.Parse(TextBox6.Text), cn.con);
+            /*cn.cmd = new SqlCommand("insert into ordonnance values ('" + "adresse" + "','" + "sad" + "','" + textblock1.InnerText + "','" + TextBox8.Text + "','" + DropDownList2.SelectedValue.ToString() + "','" + DropDownList3.SelectedValue.ToString() + "," + int.Parse(TextBox4.Text) + "," + int.Parse(TextBox5.Text) + "," + int.Parse(TextBox6.Text), cn.con);
             cn.con.Open();
             int k = cn.cmd.ExecuteNonQuery();
             if (k != 0)
@@ -60,27 +48,52 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
             {
                 Response.Write("<script>alert('Fuck you " + (5) + "times');</script>");
             }
-            cn.con.Close();
+            cn.con.Close();*/
         }
 
-        protected void DropDownList3_TextChanged(object sender, EventArgs e)
+        protected void Step_Click(object sender, EventArgs e)
         {
-            TextBox4.Text =(DateTime.Parse(DropDownList3.SelectedValue).Hour - DateTime.Parse(DropDownList2.SelectedValue).Hour).ToString();
-            if (int.Parse(TextBox4.Text)<0)
+            string Service;
+            Service = DropDownList1.SelectedItem.Text;
+            if (Service == " ")
             {
-                Response.Write("coflie des heures fixer le and stop troolling");
+                msg1.InnerText = "choisir un service";
+                msg1.Attributes.CssStyle.Add("color", "red");
             }
-            else
+            string desc;
+            desc = textblock1.InnerText;
+            if (desc == " ")
             {
-                cn.con.Open();
-                cn.cmd = new SqlCommand("select min(Prix_service) as prix from Fournisseurs", cn.con);
-                SqlDataReader reader = cn.cmd.ExecuteReader();
-                DataTable dt = new DataTable();
-                dt.Load(reader);
-                TextBox5.Text = dt.Rows[0][0].ToString();
-                TextBox6.Text = (int.Parse(TextBox5.Text) * int.Parse(TextBox4.Text)).ToString();
+                msg2.InnerText = "decrire votre besoin";
+                msg2.Attributes.CssStyle.Add("color", "red");
             }
+            string daterendevous;
+            daterendevous = TextBox2.Text;
+            if (daterendevous == " ")
+            {
+                msg3.InnerText = "choisir la date de la realisation de la service";
+                msg3.Attributes.CssStyle.Add("color", "red");
+            }
+            string hdebut;
+            hdebut = DropDownList2.SelectedItem.Text;
+            if (hdebut == " ")
+            {
+                msg4.InnerText = "choisir l'heur de debut de la service";
+                msg4.Attributes.CssStyle.Add("color", "red");
+            }
+            string hfin;
+            hfin = DropDownList3.SelectedItem.Text;
+            if (hfin == " ")
+            {
+                msg5.InnerText = "choisir l'heur de fin de la service";
+                msg5.Attributes.CssStyle.Add("color", "red");
+            }
+            Response.Write(Service + " " + desc + " " + daterendevous + " " + hdebut + "" + hfin);
+            Response.Redirect("~/Page List des fournisseurs/List des fournisseurs.aspx", false);
+            
 
         }
     }
+
+    
 }
