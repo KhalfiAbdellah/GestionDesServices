@@ -19,7 +19,8 @@
     <link href="assets/css/slick.css" rel="stylesheet" />
     <link href="assets/css/slicknav.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
-    <a href="assets/css/style.map">assets/css/style.map</a><link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/style.map" rel="stylesheet">
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
