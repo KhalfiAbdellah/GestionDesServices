@@ -159,6 +159,15 @@ namespace GestionDesServices.Page_Inscription
         protected global::System.Web.UI.WebControls.TextBox prix;
 
         /// <summary>
+        /// RequiredFieldValidatorPrix control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPrix;
+
+        /// <summary>
         /// Password control.
         /// </summary>
         /// <remarks>
