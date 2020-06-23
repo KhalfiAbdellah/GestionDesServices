@@ -33,7 +33,7 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
                 DropDownList1.DataBind();  //binding dropdownlist
                 cn.con.Close();
                 
-                DropDownList1.SelectedIndex = int.Parse(Request.QueryString["Name"]);
+                //DropDownList1.SelectedIndex = int.Parse(Request.QueryString["Name"]);
                  clt = Request.QueryString["clt"];
             }
                

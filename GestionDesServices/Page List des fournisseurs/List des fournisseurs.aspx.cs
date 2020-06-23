@@ -75,7 +75,7 @@ namespace GestionDesServices.Page_List_des_fournisseurs
                 for (j = 0; j < dt.Columns.Count; j++)
                 {
                     
-                    img.Attributes.Add("src", "Images/Deidara.jpg");
+                    img.Attributes.Add("src", "Images/chris%20pratt.jpg");
                     img.Attributes.Add("class", "pull-left span2 clearfix");
                     img.Attributes.CssStyle.Add("margin-right", "10px");
                     

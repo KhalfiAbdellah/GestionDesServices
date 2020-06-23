@@ -46,16 +46,23 @@ namespace GestionDesServices.Page_Inscription
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            if (Page.IsValid)
+            {
                 cn.con.Open();
-                cn.cmd = new SqlCommand("insert into Fournisseurs values ('" + firstName.Text + "','" + lastName.Text + "','" + email.Text + "','" + adresse.Text + "'," + (Dropdownlist1.SelectedIndex+1) + "," + 1 + "," + prix.Text + "," + phoneNumber.Text + ",'" + Encrypt(passwordConfirmation.Text) + "')", cn.con);
+                cn.cmd = new SqlCommand("insert into Fournisseurs values ('" + firstName.Text + "','" + lastName.Text + "','" + email.Text + "','" + adresse.Text + "'," + (Dropdownlist1.SelectedIndex + 1) + "," + 1 + "," + prix.Text + "," + phoneNumber.Text + ",'" + Encrypt(passwordConfirmation.Text) + "')", cn.con);
                 int k = cn.cmd.ExecuteNonQuery();
                 if (k != 0)
                 {
-                    Response.Write("<script>alert('Vous avez créé votre compte en tant que Prestataire avec succès "+ (Dropdownlist1.SelectedIndex+1) + "');</script>");
+                    Response.Write("<script>alert('Vous avez créé votre compte en tant que Prestataire avec succès " + (Dropdownlist1.SelectedIndex + 1) + "');</script>");
                 }
                 cn.con.Close();
+            }
+            else
+            {
+                Response.Write("<script>alert('Les donnees ne sont pas sauvegarder');</script>");
+            }
 
-            
+
 
         }
 

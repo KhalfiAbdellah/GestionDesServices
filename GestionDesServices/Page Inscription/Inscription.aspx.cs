@@ -29,19 +29,25 @@ namespace GestionDesServices
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
-            Connecter cn = new Connecter();
-            
-
-            cn.cmd = new SqlCommand("insert into Clients values ('"+firstName.Text+"','"+lastName.Text+"','"+email.Text+"','"+adresse.Text+"','"+ Encrypt(passwordConfirmation.Text)+"',"+1+",'"+phoneNumber.Text+"')", cn.con);
-            cn.con.Open();
-            int k = cn.cmd.ExecuteNonQuery();
-            if (k != 0)
+            if (Page.IsValid)
             {
-                Response.Write("<script>alert('Vous avez créé votre compte en tant que client avec succès');</script>");
-                
+                Connecter cn = new Connecter();
+
+
+                cn.cmd = new SqlCommand("insert into Clients values ('" + firstName.Text + "','" + lastName.Text + "','" + email.Text + "','" + adresse.Text + "','" + Encrypt(passwordConfirmation.Text) + "'," + 1 + ",'" + phoneNumber.Text + "')", cn.con);
+                cn.con.Open();
+                int k = cn.cmd.ExecuteNonQuery();
+                if (k != 0)
+                {
+                    Response.Write("<script>alert('Vous avez créé votre compte en tant que client avec succès');</script>");
+
+                }
+                cn.con.Close();
             }
-            cn.con.Close();
+            else
+            {
+                Response.Write("<script>alert('Les donnees ne sont pas sauvegarder');</script>");
+            }
         }
     }
 }

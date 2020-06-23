@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="a%20propos.css" rel="stylesheet" />
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" style="background-color:darkslategray !important">
     <!-- banner -->
     <div class="banner_w3lspvt" id="home" style=" margin-bottom:53px;">
         <div class="csslider infinity" id="slider1">
@@ -83,7 +83,7 @@
     <!-- //banner -->
 
     <!-- about -->
-    <section class="about py-5" id="about">
+    <section class="about py-5" id="about" style="background-color:lightslategray">
         <div class="container py-lg-5 py-md-3">
             <h3 class="heading mb-4">About <span>Us</span> </h3>
             <div class="row">
@@ -91,9 +91,8 @@
                     <img src="Images/about1.jpg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-lg-5 about-left">
-                    <p class="">
-                        Bridge To Knowledge is an online website whose perpose is help both students and teachers upgrade and boost their performance throughout whole semesters.<br />
-                        It's a multipurpose plateforme designed to offer both sides the right tools, either automatically or manually, all to excel and be the top of your class.
+                    <p class="" style="color:white !important">
+                       Go SERVICE dans une application Web en ligne dont le but est d'aider à la fois les prestataires qui fournissent un certain service et les clients qui recherchent ce service
                     </p>
                 </div>
 
@@ -104,24 +103,22 @@
 
 
     <!-- about bottom -->
-    <section class="about-bottom py-5" style="background-color: black;">
+    <section class="about-bottom py-5" style="background-color: indianred;">
         <div class="container py-md-3">
             <div class="row">
                 <div class="col-lg-6 left-img">
                     <img src="Images/about2.jpg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-lg-6 mt-lg-0 mt-4">
-                    <h3 class="heading mb-5">Find Lessons & courses</h3>
+                    <h3 class="heading mb-5">Trouvez les prestataires desiress</h3>
                     <div class="row inner-heading">
                         <div class="col-md-1">
                             <span class="fa fa-anchor"></span>
                         </div>
                         <div class="col-md-11">
 
-                            <p class="mt-3" style="color: yellow;">
-                                Find the courses provided by your teacher all organized, as well as outside Lessons by other teachers that can be added to your online library
-                                .<br />
-                                feel the power to e in charge of your online information ressources, to be the best in the class and your whole school.
+                            <p class="mt-3" style="color: white;">
+                                En travaillant avec notre site Web, vous pouvez trouver des prestataires prêts à travailler qui recherchent des clients
                             </p>
 
                         </div>
@@ -132,23 +129,22 @@
         </div>
     </section>
 
-    <section class="about-bottom py-5" style="background-color: black;">
+    <section class="about-bottom py-5" style="background-color: gray;">
         <div class="container py-md-3">
             <div class="row">
                 <div class="col-lg-6 left-img">
                     <img src="../Page%20Services%20disponibles/Images/plumber2.jpg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-lg-6 mt-lg-0 mt-4">
-                    <h3 class="heading mb-5">Connect with your teacher</h3>
+                    <h3 class="heading mb-5">Cree des commandes </h3>
                     <div class="row inner-heading">
                         <div class="col-md-1">
                             <span class="fa fa-anchor"></span>
                         </div>
                         <div class="col-md-11">
 
-                            <p class="mt-3" style="color: yellow;">
-                                Share an amazing experience this semester by connecting with your teachers, so that you can share your problems incountred during your 
-                                studying time, as well as know get to know your teachers opinions by approachig certain difficulities.
+                            <p class="mt-3" style="color: white;">
+                              Satisfaire à la fois les clients et les travailleurs est notre priorité absolue, nous donnons donc la possibilité aux clients de créer et de décrire leurs propres services personnalisés qu'ils souhaitent avoir.
                             </p>
 
                         </div>
@@ -159,23 +155,22 @@
         </div>
     </section>
 
-    <section class="about-bottom py-5" style="background-color: black;">
+    <section class="about-bottom py-5" style="background-color: indianred;">
         <div class="container py-md-3">
             <div class="row">
                 <div class="col-lg-6 left-img">
                     <img src="../Page Services disponibles/Images/babysitter5.jpg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-lg-6 mt-lg-0 mt-4">
-                    <h3 class="heading mb-5">Connect with your friends</h3>
+                    <h3 class="heading mb-5">Vous controller qui peut voir votre demande<h3>
                     <div class="row inner-heading">
                         <div class="col-md-1">
                             <span class="fa fa-anchor"></span>
                         </div>
                         <div class="col-md-11">
 
-                            <p class="mt-3" style="color: yellow;">
-                                Enjoy a fun and fulfiling experience connecting with your colleugues to help each other study for exams, discuss subjects and solve problems together.
-                                
+                            <p class="mt-3" style="color: white;">
+                              Les clients ont le pouvoir de choisir qui peut voir leurs services écrits, il est logique que ce soit le thème auquel le service sera envoyé
                             </p>
 
                         </div>
@@ -195,23 +190,23 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-6 text-center">
                     <span class="fa mr-1 fa-desktop"></span>
-                    <h4 class="mt-3">300+</h4>
-                    <p>Teacher</p>
+                    <h4 class="mt-3">20+</h4>
+                    <p>Prestatires</p>
                 </div>
                 <div class="col-md-3 col-sm-6 col-6 text-center">
                     <span class="fa mr-1 fa-calendar"></span>
                     <h4 class="mt-3">1500+</h4>
-                    <p>Student</p>
+                    <p>Clients</p>
                 </div>
                 <div class="col-md-3 col-sm-6 col-6 mt-md-0 mt-5 text-center">
                     <span class="fa mr-1 fa-users"></span>
                     <h4 class="mt-3">400+</h4>
-                    <p>Online courses</p>
+                    <p>Services Envoyees</p>
                 </div>
                 <div class="col-md-3 col-sm-6 col-6 mt-md-0 mt-5 text-center">
                     <span class="fa mr-1 fa-anchor"></span>
-                    <h4 class="mt-3">60+</h4>
-                    <p>Subject</p>
+                    <h4 class="mt-3">200+</h4>
+                    <p>Demandes Realisees</p>
                 </div>
             </div>
         </div>
@@ -219,33 +214,32 @@
     <!-- //stats -->
 
     <!-- Blog section -->
-    <section class="blog py-5" id="blog" style="background-color: black;">
+    <section class="blog py-5" id="blog" style="background-color: gray;">
         <div class="container py-lg-5">
             <div class="row">
                 <div class="col-lg-4">
                     <h3 class="heading mb-4">Performance</h3>
-                    <p class="mt-4">
-                        Our website is just not like any wesbsite, it was built with powerful tools to reach a high top level of performance
+                    <p class="mt-4" style="color:white">
+                       Notre site Web ne ressemble à aucun autre site Web, il a été construit avec des outils puissants pour atteindre un haut niveau de performance
                         
                     </p>
 
                 </div>
 
                 <div class="col-lg-4 ">
-                    <h3 class="heading mb-4">Simplicity</h3>
-                    <p>
-                        Easy usage is our top priority. This allows all users no matter what their age,
-                        language and technical knowledge, all to connect and help them reach their academic goals,
-                        and connect with their teachers as well as having multi-source information.
+                    <h3 class="heading mb-4">Simplicité</h3>
+                    <p  style="color:white">
+                        Une utilisation facile est notre priorité absolue. Cela permet à tous les utilisateurs quel que soit leur âge,
+                         connaissances linguistiques et techniques, le tout pour se connecter et les aider à atteindre leurs objectifs académiques,
+                         et se connecter avec leurs enseignants ainsi que d'avoir des informations multi-sources.
                     </p>
 
                 </div>
 
                 <div class="col-lg-4 ">
-                    <h3 class="heading mb-4">Powerful</h3>
-                    <p>
-                        Our website was built for the perpose to hear both teacher's and student's needs nothing more,
-                        we provide customized experience to help fasten information finding.                   
+                    <h3 class="heading mb-4">Puissant</h3>
+                    <p  style="color:white">
+                        Notre site Web a été construit dans le but d'entendre les besoins de l'enseignant et de l'élève, nous offrons une expérience personnalisée pour aider à accélérer la recherche d'informations.                  
                     </p>
 
                 </div>
@@ -259,12 +253,12 @@
         <div class="container py-md-5 text-center">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="mb-4 heading">Bridge to Knowledge</h2>
+                    <h2 class="mb-4 heading">GO SERVICE</h2>
                     <p style="background-color: black; color: white">
                         Was brought to you by
                     </p>
                     <a href="contact.html" class="btn mr-3">Soulaimane ELManioui</a>
-                    <a href="gallery.html" class="btn">Harakat Abdellah</a>
+                    <a href="gallery.html" class="btn">Khalfi Abdellah</a>
                 </div>
             </div>
         </div>
