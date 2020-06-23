@@ -14,25 +14,19 @@ namespace GestionDesServices.Page_Service_desire
         Connecter cn = new Connecter();
         protected void Page_Load(object sender, EventArgs e)
         {
-            int frn = int.Parse(Request.QueryString["id"]);
-            string s = Request.QueryString["service"];
+            int frn = int.Parse(Request.QueryString["indicefrn"]);
+            /*string s = Request.QueryString["service"];
             string d = Request.QueryString["desc"];
-            string clt = Request.QueryString["clt"];
+            string clt = Request.QueryString["clt"];*/
+            string encoded = System.Security.SecurityElement.Escape(Session["description"].ToString());
             cn.con.Open();
-            cn.cmd = new SqlCommand("select ID_metier from Metiers where nom_metier ='" + s + "'", cn.con);
+            cn.cmd = new SqlCommand("select ID_metier from Fournisseurs JOIN Metiers on Fournisseurs.ID_metier_fk = Metiers.ID_metier where Fournisseurs.ID_frn =" + frn , cn.con);
             string id_metier = cn.cmd.ExecuteScalar().ToString();
-            Response.Write(frn + " " + d + " " + s + "" + clt);
-            /*SqlCommand cmd = new SqlCommand("insert into Services values("+frn+","+int.Parse(clt)+","+int.Parse(id_metier)+",'"+d+"')", cn.con);
-            int k = cmd.ExecuteNonQuery();
-            if (k != 0)
-            {
-                Response.Write("<script>alert('Vous avez créé votre compte en tant que Prestataire avec succès " + d + "');</script>");
-            }
-            else
-            {
-                Response.Write("<script>alert('fuck you" + d + "');</script>");
-            }
-            */
+            //Response.Write(frn + " " + d + " " + s + "" + clt);
+            SqlCommand cmd = new SqlCommand("insert into Services values("+frn+","+int.Parse(Session["User"].ToString())+","+int.Parse(id_metier)+",'"+encoded+"')", cn.con);
+            cmd.ExecuteNonQuery();
+            cn.con.Close();
+
         }
 
         

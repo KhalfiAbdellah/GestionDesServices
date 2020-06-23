@@ -5,7 +5,7 @@
 }
 
 /*style pour les bouttons de navbar*/
-#vers_acceuil,#vers_inscription,#vers_services,#vers_aboutt,#vers_login{
+#vers_acceuil,#vers_inscription,#vers_services,#vers_aboutt,#vers_login,#log_out{
     color:white;
     font-weight:bold;
     font-size:larger;
@@ -15,7 +15,7 @@
 }
 
 
-#vers_acceuil:hover,#vers_inscription:hover, #vers_services:hover, #vers_aboutt:hover, #vers_login:hover {
+#vers_acceuil:hover,#vers_inscription:hover, #vers_services:hover, #vers_aboutt:hover, #vers_login:hover,#log_out:hover {
     background-color: white;
     color: indianred;
 }

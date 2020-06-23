@@ -13,7 +13,7 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
     {
         
         Connecter cn = new Connecter();
-        string clt;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             // = Request.QueryString["Name"];
@@ -23,7 +23,7 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
             {
                 cn.con.Open();
 
-                SqlCommand com = new SqlCommand("select *from Metiers", cn.con);
+                SqlCommand com = new SqlCommand("select * from Metiers", cn.con);
                 SqlDataAdapter da = new SqlDataAdapter(com);
                 DataSet ds = new DataSet();
                 da.Fill(ds);  // fill dataset
@@ -34,7 +34,7 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
                 cn.con.Close();
                 
                 DropDownList1.SelectedIndex = int.Parse(Request.QueryString["Name"]);
-                 clt = Request.QueryString["clt"];
+                 
             }
                
         }
@@ -95,8 +95,12 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
                 msg5.Attributes.CssStyle.Add("color", "red");
             }
             Response.Write(Service + " " + desc + " " + daterendevous + " " + hdebut + "" + hfin);
-            
-            Response.Redirect("~/Page List des fournisseurs/List des fournisseurs.aspx?Name="+ Service+"&desc="+desc+"&clt="+clt);
+            Session["service"] = Service;
+            Session["description"] = desc;
+            Session["rendevous"] = daterendevous;
+            Session["hdebut"] = hdebut;
+            Session["hfin"] = hfin;
+            Response.Redirect("~/Page List des fournisseurs/List des fournisseurs.aspx");
             
 
         }
