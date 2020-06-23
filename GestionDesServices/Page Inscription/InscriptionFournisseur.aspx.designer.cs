@@ -24,6 +24,15 @@ namespace GestionDesServices.Page_Inscription
         protected global::System.Web.UI.WebControls.TextBox firstName;
 
         /// <summary>
+        /// RequiredFieldValidatorName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorName;
+
+        /// <summary>
         /// lastName control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,42 @@ namespace GestionDesServices.Page_Inscription
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox lastName;
+
+        /// <summary>
+        /// RequiredFieldValidatorLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorLastName;
+
+        /// <summary>
+        /// Age control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Age;
+
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
+        /// RangeValidatorAge control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidatorAge;
 
         /// <summary>
         /// email control.
@@ -42,6 +87,15 @@ namespace GestionDesServices.Page_Inscription
         protected global::System.Web.UI.WebControls.TextBox email;
 
         /// <summary>
+        /// RequiredFieldValidatorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorEmail;
+
+        /// <summary>
         /// Dropdownlist1 control.
         /// </summary>
         /// <remarks>
@@ -49,6 +103,15 @@ namespace GestionDesServices.Page_Inscription
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList Dropdownlist1;
+
+        /// <summary>
+        /// RequiredFieldValidatorMetier control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorMetier;
 
         /// <summary>
         /// phoneNumber control.
@@ -60,6 +123,15 @@ namespace GestionDesServices.Page_Inscription
         protected global::System.Web.UI.WebControls.TextBox phoneNumber;
 
         /// <summary>
+        /// RequiredFieldValidatorPhoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPhoneNumber;
+
+        /// <summary>
         /// adresse control.
         /// </summary>
         /// <remarks>
@@ -67,6 +139,15 @@ namespace GestionDesServices.Page_Inscription
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox adresse;
+
+        /// <summary>
+        /// RequiredFieldValidatorAdresse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorAdresse;
 
         /// <summary>
         /// prix control.
@@ -78,6 +159,15 @@ namespace GestionDesServices.Page_Inscription
         protected global::System.Web.UI.WebControls.TextBox prix;
 
         /// <summary>
+        /// RequiredFieldValidatorPrix control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPrix;
+
+        /// <summary>
         /// Password control.
         /// </summary>
         /// <remarks>
@@ -87,6 +177,15 @@ namespace GestionDesServices.Page_Inscription
         protected global::System.Web.UI.WebControls.TextBox Password;
 
         /// <summary>
+        /// RequiredFieldValidatorpassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorpassword;
+
+        /// <summary>
         /// passwordConfirmation control.
         /// </summary>
         /// <remarks>
@@ -94,6 +193,24 @@ namespace GestionDesServices.Page_Inscription
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox passwordConfirmation;
+
+        /// <summary>
+        /// RequiredFieldValidatorCP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorCP;
+
+        /// <summary>
+        /// CompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator;
 
         /// <summary>
         /// Button1 control.

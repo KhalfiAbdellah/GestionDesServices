@@ -33,24 +33,47 @@
                 <div class="row">
 
                     <!-- First Name -->
-                    <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white px-4 border-md border-right-0">
                                 <i class="fa fa-user text-muted"></i>
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="firstName" type="text" name="firstname" placeholder="First Name" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorName" runat="server" ErrorMessage="Le nom est obligatoire" ControlToValidate="firstName" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
+                    
+
+
 
                     <!-- Last Name -->
-                    <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white px-4 border-md border-right-0">
                                 <i class="fa fa-user text-muted"></i>
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="lastName" type="text" name="lastname" placeholder="Last Name" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName" runat="server" ErrorMessage="Le prenom est obligatoire" ControlToValidate="lastName" ForeColor="Red"></asp:RequiredFieldValidator>
+
                     </div>
+                    
+
+
+                     <!-- Age -->
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-male text-muted"></i>
+                            </span>
+                        </div>
+                        <asp:TextBox runat="server" id="Age" type="text" name="lastname" placeholder="Age" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="L'age est obligatoire" ControlToValidate="Age" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <asp:RangeValidator ID="RangeValidatorAge" runat="server" ErrorMessage="L'age doit etre un nombre et entre 18 et 100  "  ControlToValidate="Age" ForeColor="Red"  Operator="DataTypeCheck" MinimumValue="18" MaximumValue="100" Type="Integer" Display="Dynamic" SetFocusOnError="true"></asp:RangeValidator>
+                        <br />
+                    </div>
+                    
+
 
                     <!-- Email Address -->
                     <div class="input-group col-lg-12 mb-4">
@@ -60,7 +83,12 @@
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ErrorMessage="L'email est obligatoire" ControlToValidate="email" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
+                    
+                    
+
+
 
                     <!-- Metier -->
                     <div class="input-group col-lg-12 mb-4">
@@ -69,8 +97,12 @@
                                 <i class="fa fa-wallet text-muted"></i>
                             </span>
                         </div>
-                        <asp:DropDownList runat="server" ID="Dropdownlist1" ></asp:DropDownList>
+                        <asp:DropDownList runat="server" ID="Dropdownlist1" >
+                        </asp:DropDownList>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorMetier" runat="server" ErrorMessage="Le metier est obligatoire" ControlToValidate="Dropdownlist1" ForeColor="Red" InitialValue="1"></asp:RequiredFieldValidator>
                         </div>
+                   
+
 
                     <!-- Phone Number -->
                     <div class="input-group col-lg-12 mb-4">
@@ -83,37 +115,47 @@
                             <option value="">+212</option>
                         </select>
                         <asp:TextBox runat="server" id="phoneNumber" type="tel" name="phone" placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhoneNumber" runat="server" ErrorMessage="Le numero de telephone est obligatoire" ControlToValidate="phoneNumber" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
+                   
+
+
 
                     <!-- Adresse -->
-                    <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white px-4 border-md border-right-0">
                                 <i class="fa fa-home text-muted"></i>
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="adresse" type="text" name="adresse" placeholder="Adresse" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorAdresse" runat="server" ErrorMessage="L'adresse est obligatoire" ControlToValidate="adresse" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
+                    
+
 
                     <!-- Prix -->
-                     <div class="input-group col-lg-6 mb-4">
+                     <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white px-4 border-md border-right-0">
                                 <i class="fa fa-money-bill text-muted"></i>
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="prix" type="text" name="prix" placeholder="Prix de votre service HORAIREMENT" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorPrix" runat="server" ErrorMessage="Le prix est obligatoire" ControlToValidate="prix" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                     </div>
-
+                    
                     <!-- Password -->
-                    <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white px-4 border-md border-right-0">
                                 <i class="fa fa-lock text-muted"></i>
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="Password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorpassword" runat="server" ErrorMessage="Le mot de passe est obligatoire" ControlToValidate="Password" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                     </div>
+                    
 
                     <!-- Password Confirmation -->
                     <div class="input-group col-lg-6 mb-4">
@@ -123,7 +165,10 @@
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="passwordConfirmation" type="password" name="passwordConfirmation" placeholder="Confirm Password" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorCP" runat="server" ErrorMessage="La confirmation est obligatoire" ControlToValidate="passwordConfirmation" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <asp:CompareValidator ID="CompareValidator" runat="server" ErrorMessage="Les deux champ doivent etre identiques" ControlToValidate="passwordConfirmation"  ControlToCompare="Password" Display="Dynamic" SetFocusOnError="true" ForeColor="Red"></asp:CompareValidator>
                     </div>
+                    
 
                     <!-- Submit Button -->
                      <asp:Button ID="Button1" runat="server" Text="Create your account" class="btn btn-danger btn-block py-2" OnClick="Button1_Click"/>

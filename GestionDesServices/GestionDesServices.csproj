@@ -256,6 +256,7 @@
     <Content Include="Page Inscription\Images\pexels-photo-3862376.jpeg" />
     <Content Include="Page Inscription\Inscription.css" />
     <Content Include="Page Inscription\InscriptionFournisseur.aspx" />
+    <Content Include="Page List des fournisseurs\Images\chris pratt.jpg" />
     <Content Include="Page List des fournisseurs\Images\Deidara.jpg" />
     <Content Include="Page List des fournisseurs\Images\Hinata.jpg" />
     <Content Include="Page List des fournisseurs\Images\Itachi.jpg" />
