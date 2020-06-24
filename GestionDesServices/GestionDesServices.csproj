@@ -248,7 +248,14 @@
     <Content Include="Page a propos\Images\about2.jpg" />
     <Content Include="Page Acceuil\Images\2675425.jpg" />
     <Content Include="Page Acceuil\Images\4th slide.jpg" />
+    <Content Include="Page Acceuil\Images\client.png" />
     <Content Include="Page Acceuil\Images\clients.jpg" />
+    <Content Include="Page Acceuil\Images\free.png" />
+    <Content Include="Page Acceuil\Images\give.png" />
+    <Content Include="Page Acceuil\Images\lock.png" />
+    <Content Include="Page Acceuil\Images\maintenance.png" />
+    <Content Include="Page Acceuil\Images\order %282%29.png" />
+    <Content Include="Page Acceuil\Images\order.png" />
     <Content Include="Page Acceuil\Images\workers2.jpg" />
     <Content Include="Page Anonce Fournisseur\liste.aspx" />
     <Content Include="Page Choisir Role\RoleStyle.css" />

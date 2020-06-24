@@ -41,7 +41,7 @@
                         </div>
                         <asp:TextBox runat="server" id="firstName" type="text" name="firstname" placeholder="First Name" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorName" runat="server" ErrorMessage="Le nom est obligatoire" ControlToValidate="firstName" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                        
+                        <asp:RegularExpressionValidator runat="server" ID="REVName" ControlToValidate="firstName" ErrorMessage="Le nom doit etre compose de characters" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
                     </div>
                     
                     
@@ -55,6 +55,7 @@
                         </div>
                         <asp:TextBox runat="server" id="lastName" type="text" name="lastname" placeholder="Last Name" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
                          <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName" runat="server" ErrorMessage="Le prenom est obligatoire" ControlToValidate="lastName" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidatorprenom" ControlToValidate="lastName" ErrorMessage="Le prenom doit etre compose de characters" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
                         <br />
                     </div>
                    
@@ -85,7 +86,7 @@
                         </div>
                         <asp:TextBox runat="server" id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
                          <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ErrorMessage="L'email est obligatoire" ControlToValidate="email" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                        <br />
+                        <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidator1" ControlToValidate="email" ErrorMessage="L'email est invalid" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                         </div>
                   
 
@@ -103,6 +104,7 @@
                         </select>
                         <asp:TextBox runat="server" id="phoneNumber" type="tel" name="phone" placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhoneNumber" runat="server" ErrorMessage="Le numero de telephone est obligatoire" ControlToValidate="phoneNumber" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <asp:CompareValidator ID="CVPN" runat="server" ErrorMessage="Le numero de telephone doit etre compose de numeros" ControlToValidate="phoneNumber" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Type="Integer" Operator="DataTypeCheck"></asp:CompareValidator>
                         <br />
                     </div>
                     
