@@ -16,7 +16,8 @@
        
         var Refuser = "refuser";
         <%
-    Session["Reponse"] = "refuser";
+            Session["Reponse"] = "refuser";
+           
         %>
         //alert(Refuser);
     }
