@@ -69,7 +69,7 @@
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="Age" type="text" name="lastname" placeholder="Age" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="L'age est obligatoire" ControlToValidate="Age" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="L'age est obligatoire" ControlToValidate="Age" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         <asp:RangeValidator ID="RangeValidatorAge" runat="server" ErrorMessage="L'age doit etre un nombre et entre 18 et 100  "  ControlToValidate="Age" ForeColor="Red"  Operator="DataTypeCheck" MinimumValue="18" MaximumValue="100" Type="Integer" Display="Dynamic" SetFocusOnError="true"></asp:RangeValidator>
                         <br />
                     </div>
@@ -113,12 +113,13 @@
                                 <i class="fa fa-phone-square text-muted"></i>
                             </span>
                         </div>
-                        <select id="countryCode" name="countryCode" style="max-width: 80px" class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
+<%--                        <select id="countryCode" name="countryCode" style="max-width: 80px" class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
                             <option value="">+212</option>
-                        </select>
+                        </select>--%>
                         <asp:TextBox runat="server" id="phoneNumber" type="tel" name="phone" placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhoneNumber" runat="server" ErrorMessage="Le numero de telephone est obligatoire" ControlToValidate="phoneNumber" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                        <asp:CompareValidator ID="CVPN" runat="server" ErrorMessage="Le numero de telephone doit etre compose de numeros" ControlToValidate="phoneNumber" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Type="Integer" Operator="DataTypeCheck"></asp:CompareValidator>
+                       <%-- <asp:CompareValidator ID="CVPN" runat="server" ErrorMessage="Le numero de telephone doit etre compose de numeros" ControlToValidate="phoneNumber" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Type="Integer" Operator="DataTypeCheck"></asp:CompareValidator>--%>
+                        <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidator2" ControlToValidate="phoneNumber" ErrorMessage="number should be 9 digits" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="0[567][0-9]{8}"></asp:RegularExpressionValidator>
                     </div>
                    
 
@@ -158,6 +159,7 @@
                         </div>
                         <asp:TextBox runat="server" id="Password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorpassword" runat="server" ErrorMessage="Le mot de passe est obligatoire" ControlToValidate="Password" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                         <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidatorpass" ControlToValidate="Password" ErrorMessage="le mote de passe doit contenir au moins un nombre, un miniscule, majuscule,chiffre, et 8 characters en langeur" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"></asp:RegularExpressionValidator>
                     </div>
                     
 
