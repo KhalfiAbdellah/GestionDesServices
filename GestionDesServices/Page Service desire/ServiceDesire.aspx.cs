@@ -28,6 +28,7 @@ namespace GestionDesServices.Page_Service_desire
                 SqlCommand cmd = new SqlCommand("insert into Services values(" + frn + "," + int.Parse(Session["User"].ToString()) + "," + int.Parse(id_metier) + ",'" + encoded + "')", cn.con);
                 cmd.ExecuteNonQuery();
                 cn.con.Close();
+                Response.Write("<script>alert('votre demande envoyer')</script>");
             }
             catch (Exception)
             {

@@ -45,7 +45,17 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         HtmlGenericControl div4 = new HtmlGenericControl("div");
                         div4.Attributes.Add("class", "card-title");
                         div3.Controls.Add(div4);
-
+                        HtmlGenericControl h2 = new HtmlGenericControl("h2");
+                        h2.InnerText = "Annonce : "+(i+1) ;
+                        div4.Controls.Add(h2);
+                        HtmlGenericControl choix = new HtmlGenericControl("input");
+                        choix.Attributes.Add("type", "hidden");
+                        string nb = i.ToString();
+                        choix.Attributes.Add("value", nb);
+                        choix.Attributes.Add("id", "SendA");
+                        choix.Attributes.Add("name", "SendA");
+                        
+                        
                         HtmlGenericControl div5 = new HtmlGenericControl("p");
                         div5.Attributes.Add("class", "card-text");
                         div5.InnerHtml = dt.Rows[i][j].ToString();
@@ -53,26 +63,66 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
 
                         HtmlGenericControl div8 = new HtmlGenericControl("br");
                         div5.Controls.Add(div8);
+                        
 
-
-                        HtmlGenericControl div6 = new HtmlGenericControl("a");
+                        /*HtmlGenericControl div6 = new HtmlGenericControl("a");
                         div6.Attributes.Add("class", "mt-auto btn btn-primary");
-                        div6.Attributes.Add("href", "#");
+                        div6.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Name=Accepter");
                         div6.InnerText = "Accepter";
-                        div5.Controls.Add(div6);
+                        div5.Controls.Add(div6);*/
 
-                        HtmlGenericControl div7 = new HtmlGenericControl("a");
+                        /*HtmlGenericControl div7 = new HtmlGenericControl("a");
                         div7.Attributes.Add("class", "mt-auto btn btn-danger");
-                        div7.Attributes.Add("href", "#");
+                        //div7.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Name=Refuser");
                         div7.InnerText = "Refuser";
-                        div5.Controls.Add(div7);
+                        div5.Controls.Add(div7);*/
+                        HtmlGenericControl div6 = new HtmlGenericControl("button");
+                        div6.Attributes.Add("class", "mt-auto btn btn-primary");
+                     
+                        div6.Attributes.Add("id", "Accepter");
+                        div6.InnerHtml = "Accepter";
+                        div6.Attributes.Add("runat", "server");
+                        div6.Attributes.Add("OnClick" , "'+accepter(nb)+'");
+                        //div7.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Name=Refuser");
+                        //div7.InnerText = "Refuser";
+                        div5.Controls.Add(div6);
+                        
+                        HtmlGenericControl div7 = new HtmlGenericControl("button");
+                        div7.Attributes.Add("class", "mt-auto btn btn-danger");
+                        div7.Attributes.Add("runat", "server");
+                        div7.InnerHtml = "Refuser";
+                        div7.Attributes.Add("id", "Refuser");
+                        //div7.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Name=Refuser");
+                        //div7.InnerText = "Refuser";
+                        div7.Attributes.Add("OnClick", "refuser()");
 
+                        /*Button button = new Button();
+                        button.Attributes.Add("id", "btn");
+                        button.Text = "Send";
+                        button.Attributes.Add("name", nb);
+                        button.Attributes.Add("OnClick",);
+                        div5.Controls.Add(button);
+                        div5.Controls.Add(div7);*/
+                        
                     }
 
                     
                 }
             }
             
+        }
+        public void accepter()
+        {
+            Session["btn1"] = "Accepter";
+            Response.Write("accepter la metode");
+             
+        }
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            
+            
+            Response.Write("<script>alert('tester testerasdfsadfsdaf');</script>");
+
         }
     }
 }

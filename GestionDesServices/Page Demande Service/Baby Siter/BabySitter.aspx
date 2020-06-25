@@ -54,7 +54,7 @@
 
     -->
     
-
+    
 <div class="cotainer">
         <div class="row justify-content-center py-5">
             <br />
@@ -78,6 +78,12 @@
 		        
                                     <div class="col-md-6">
                                         <textarea class="form-control" placeholder="Mes critaires" runat="server" cols="20" rows="10" id="textblock2"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-4 col-form-label text-md-right">A quelle date souhaitez vous que le job soit effectué ?</label>
+	                                <div class="col-md-6">
+                                        <asp:TextBox class="form-control" ID="TextBox3" type="date"  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" runat="server"></asp:TextBox>
                                     </div>
                                 </div>
 

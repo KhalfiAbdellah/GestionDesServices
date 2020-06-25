@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Client inbox\ClientInbox.aspx" />
     <Content Include="Join Us Page\Images\2245138.jpg" />
     <Content Include="Join Us Page\Images\345050.jpg" />
     <Content Include="Join Us Page\Images\pexels-photo-1659747.jpeg" />
@@ -522,6 +523,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Client inbox\ClientInbox.aspx.cs">
+      <DependentUpon>ClientInbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client inbox\ClientInbox.aspx.designer.cs">
+      <DependentUpon>ClientInbox.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Connecter.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
