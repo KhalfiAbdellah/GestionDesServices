@@ -159,13 +159,13 @@ namespace GestionDesServices.Page_Inscription
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPhoneNumber;
 
         /// <summary>
-        /// CVPN control.
+        /// RegularExpressionValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CVPN;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
 
         /// <summary>
         /// adresse control.
@@ -229,6 +229,15 @@ namespace GestionDesServices.Page_Inscription
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorpassword;
+
+        /// <summary>
+        /// RegularExpressionValidatorpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidatorpass;
 
         /// <summary>
         /// passwordConfirmation control.
