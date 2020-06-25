@@ -1,24 +1,40 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="List des fournisseurs.aspx.cs" Inherits="GestionDesServices.Page_List_des_fournisseurs.List_des_fournisseurs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   <%-- <<%--meta charset="utf-8" />
-    <meta name="viewport" content="width-device-width, Initial-scale=1.0" />
-     <title>List des Fournisseurs</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
-    <link href="List%20des%20fournisseurs.css" rel="stylesheet" />
-    <link href="../Ressource/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="../Ressource/bootstrap/js/bootstrap.min.js"></script>--%>
-    <script src="../Ressource/jquery.min.js"></script>
-    
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  
-
+  <div class="container">
+        <div class="row" id="menu1" runat="server">
+            <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://picsum.photos/200/150/?random">
+                        <div class="card-block">
+                            <h4 class="card-title mt-3">Tawshif Ahsan Khan</h4>
+                                <div class="card-text">
+                                    <p>Tawshif is a web designer living in Bangladesh.</p>
+                                </div>
+                        </div>
+                        <div class="card-footer">
+                            <small>Choisir votre Prestataire</small>
+                            <button class="btn btn-danger float-right btn-sm">show</button>
+                        </div>
+                </div>
+            </div>
+            
+        </div>
+ </div>
+        
+    <!--
     <div class="container">
 	<div class="row" id="menu" runat="server">
         <br />
         
 	</div>
+
 </div>
-  
+  -->
 </asp:Content>

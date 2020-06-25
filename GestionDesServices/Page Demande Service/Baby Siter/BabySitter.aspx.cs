@@ -57,7 +57,7 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
         string Service;
 
         protected void Step_Click(object sender, EventArgs e)
-        {
+        {/*
            Service = DropDownList1.SelectedItem.Text;
             
             
@@ -102,7 +102,7 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
             Session["hfin"] = hfin;
             Response.Redirect("~/Page List des fournisseurs/List des fournisseurs.aspx");
             
-
+            */
         }
 
         

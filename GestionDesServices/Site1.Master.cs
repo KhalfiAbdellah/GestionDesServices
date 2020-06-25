@@ -11,7 +11,7 @@ namespace GestionDesServices
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            log.Visible = false;
+            log_out.Visible = false;
            
             try
             {
