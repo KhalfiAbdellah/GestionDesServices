@@ -40,7 +40,8 @@
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="firstName" type="text" name="firstname" placeholder="First Name" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorName" runat="server" ErrorMessage="Le nom est obligatoire" ControlToValidate="firstName" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorName" runat="server" ErrorMessage="Le nom est obligatoire" ControlToValidate="firstName" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator runat="server" ID="REVName" ControlToValidate="firstName" ErrorMessage="Le nom doit etre compose de characters" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
                     </div>
                     
 
@@ -54,8 +55,8 @@
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="lastName" type="text" name="lastname" placeholder="Last Name" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName" runat="server" ErrorMessage="Le prenom est obligatoire" ControlToValidate="lastName" ForeColor="Red"></asp:RequiredFieldValidator>
-
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName" runat="server" ErrorMessage="Le prenom est obligatoire" ControlToValidate="lastName" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidatorprenom" ControlToValidate="lastName" ErrorMessage="Le prenom doit etre compose de characters" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
                     </div>
                     
 
@@ -68,7 +69,7 @@
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="Age" type="text" name="lastname" placeholder="Age" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="L'age est obligatoire" ControlToValidate="Age" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="L'age est obligatoire" ControlToValidate="Age" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         <asp:RangeValidator ID="RangeValidatorAge" runat="server" ErrorMessage="L'age doit etre un nombre et entre 18 et 100  "  ControlToValidate="Age" ForeColor="Red"  Operator="DataTypeCheck" MinimumValue="18" MaximumValue="100" Type="Integer" Display="Dynamic" SetFocusOnError="true"></asp:RangeValidator>
                         <br />
                     </div>
@@ -83,7 +84,8 @@
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ErrorMessage="L'email est obligatoire" ControlToValidate="email" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ErrorMessage="L'email est obligatoire" ControlToValidate="email" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                         <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidator1" ControlToValidate="email" ErrorMessage="L'email est invalid" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                         </div>
                     
                     
@@ -99,7 +101,7 @@
                         </div>
                         <asp:DropDownList runat="server" ID="Dropdownlist1" >
                         </asp:DropDownList>
-                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorMetier" runat="server" ErrorMessage="Le metier est obligatoire" ControlToValidate="Dropdownlist1" ForeColor="Red" InitialValue="1"></asp:RequiredFieldValidator>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorMetier" runat="server" ErrorMessage="Le metier est obligatoire" ControlToValidate="Dropdownlist1" ForeColor="Red" InitialValue="1" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
                    
 
@@ -115,7 +117,8 @@
                             <option value="">+212</option>
                         </select>
                         <asp:TextBox runat="server" id="phoneNumber" type="tel" name="phone" placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhoneNumber" runat="server" ErrorMessage="Le numero de telephone est obligatoire" ControlToValidate="phoneNumber" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhoneNumber" runat="server" ErrorMessage="Le numero de telephone est obligatoire" ControlToValidate="phoneNumber" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <asp:CompareValidator ID="CVPN" runat="server" ErrorMessage="Le numero de telephone doit etre compose de numeros" ControlToValidate="phoneNumber" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Type="Integer" Operator="DataTypeCheck"></asp:CompareValidator>
                     </div>
                    
 
@@ -129,7 +132,7 @@
                             </span>
                         </div>
                         <asp:TextBox runat="server" id="adresse" type="text" name="adresse" placeholder="Adresse" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorAdresse" runat="server" ErrorMessage="L'adresse est obligatoire" ControlToValidate="adresse" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorAdresse" runat="server" ErrorMessage="L'adresse est obligatoire" ControlToValidate="adresse" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                     </div>
                     
 
@@ -143,6 +146,7 @@
                         </div>
                         <asp:TextBox runat="server" id="prix" type="text" name="prix" placeholder="Prix de votre service HORAIREMENT" class="form-control bg-white border-left-0 border-md"></asp:TextBox>
                          <asp:RequiredFieldValidator ID="RequiredFieldValidatorPrix" runat="server" ErrorMessage="Le prix est obligatoire" ControlToValidate="prix" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                         <asp:CompareValidator ID="CPP" runat="server" ErrorMessage="Le prix de travail doit etre un nombre" ControlToValidate="prix" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Type="Integer" Operator="DataTypeCheck"></asp:CompareValidator>
                     </div>
                     
                     <!-- Password -->
@@ -158,7 +162,7 @@
                     
 
                     <!-- Password Confirmation -->
-                    <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white px-4 border-md border-right-0">
                                 <i class="fa fa-lock text-muted"></i>

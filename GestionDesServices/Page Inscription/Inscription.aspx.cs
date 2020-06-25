@@ -27,14 +27,25 @@ namespace GestionDesServices
                 return Convert.ToBase64String(data);
             }
         }
+
+       
+
+
+
+
         protected void Button1_Click(object sender, EventArgs e)
         {
+
+         
+           
+
+
             if (Page.IsValid)
             {
                 Connecter cn = new Connecter();
 
 
-                cn.cmd = new SqlCommand("insert into Clients values ('" + firstName.Text + "','" + lastName.Text + "','" + email.Text + "','" + adresse.Text + "','" + Encrypt(passwordConfirmation.Text) + "'," + 1 + ",'" + phoneNumber.Text + "')", cn.con);
+                cn.cmd = new SqlCommand("insert into Clients values ('" + firstName.Text + "','" + lastName.Text + "','" + email.Text + "','" + adresse.Text + "','" + Encrypt(passwordConfirmation.Text) + "'," + 1 + ",'" + phoneNumber.Text + "',"+Age.Text+")", cn.con);
                 cn.con.Open();
                 int k = cn.cmd.ExecuteNonQuery();
                 if (k != 0)
