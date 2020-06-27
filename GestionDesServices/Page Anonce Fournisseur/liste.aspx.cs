@@ -50,8 +50,8 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         div4.Controls.Add(h2);
                         HtmlGenericControl choix = new HtmlGenericControl("input");
                         choix.Attributes.Add("type", "hidden");
-                        string nb = i.ToString();
-                        choix.Attributes.Add("value", nb);
+                        string nbr = i.ToString();
+                        choix.Attributes.Add("value", nbr);
                         choix.Attributes.Add("id", "SendA");
                         choix.Attributes.Add("name", "SendA");
                         
@@ -76,17 +76,30 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         //div7.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Name=Refuser");
                         div7.InnerText = "Refuser";
                         div5.Controls.Add(div7);*/
+
+
+
+
+
+                        /*Boutton ACCEPTER*/
                         HtmlGenericControl div6 = new HtmlGenericControl("button");
                         div6.Attributes.Add("class", "mt-auto btn btn-primary");
-                     
+
+
+                        int nb = i;
+
+
                         div6.Attributes.Add("id", "Accepter");
                         div6.InnerHtml = "Accepter";
                         div6.Attributes.Add("runat", "server");
-                        div6.Attributes.Add("OnClick" , "'+accepter(nb)+'");
+                        div6.Attributes.Add("OnClick" , accepter(nb));
                         //div7.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Name=Refuser");
                         //div7.InnerText = "Refuser";
                         div5.Controls.Add(div6);
                         
+
+
+                        /*Boutton REFUSER*/
                         HtmlGenericControl div7 = new HtmlGenericControl("button");
                         div7.Attributes.Add("class", "mt-auto btn btn-danger");
                         div7.Attributes.Add("runat", "server");
@@ -111,11 +124,14 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
             }
             
         }
-        public void accepter()
+
+
+        public string accepter(int res)
         {
-            Session["btn1"] = "Accepter";
-            Response.Write("accepter la metode");
-             
+            //Session["btn1"] = "Accepter";
+            //Response.Write("accepter la metode");
+            Response.Write("<script>alert('Hello this is Citizen Z, do you copy ? I repeat do you copy ? " + res + "');</script>");
+            return "";
         }
         protected void Unnamed_Click(object sender, EventArgs e)
         {
