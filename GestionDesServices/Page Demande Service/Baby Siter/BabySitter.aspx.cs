@@ -37,7 +37,7 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
 
                 DropDownList3.SelectedIndex = int.Parse(Request.QueryString["Name"]);
                 
-                DropDownList3.Items.Insert(0, new ListItem("selecter Un Service", ""));
+                //DropDownList3.Items.Insert(0, new ListItem("selecter Un Service", ""));
             }
                
         }
@@ -46,12 +46,12 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
 
         protected void Step_Click(object sender, EventArgs e)
         {
-            if (DropDownList3.SelectedIndex == 0)
+            /*if (DropDownList3.SelectedIndex == 0)
             {
                 Response.Write("<script> alert('selecter une service; ')</script>");
             }
             else
-	        {
+	        {*/
                 string Service = DropDownList3.SelectedItem.Text;
 
 
@@ -65,7 +65,7 @@ namespace GestionDesServices.Page_Demande_Service.Baby_Siter
                 Session["description"] = desc;
                 Session["rendevous"] = daterendevous;
                 Response.Redirect("~/Page List des fournisseurs/List des fournisseurs.aspx");
-            }
+           // }
             
             
             

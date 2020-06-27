@@ -188,7 +188,7 @@ namespace GestionDesServices.Page_List_des_fournisseurs
                         string indicefrn = i.ToString();
                         a.Attributes.Add("id", indicefrn);
                         a.InnerText = "Select";
-                        a.Attributes.Add("href", "../Page Service desire/ServiceDesire.aspx?indicefrn=" + indicefrn);
+                        a.Attributes.Add("href", "../Page Service desire/ServiceDesire.aspx?indicefrn=" +dt.Rows[int.Parse(indicefrn)][0].ToString() );
                         div5.Controls.Add(a);
                     }
                     

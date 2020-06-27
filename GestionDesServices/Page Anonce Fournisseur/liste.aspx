@@ -2,24 +2,27 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <script >
     
-    function accepter(nb_service) {
+    function accepter() {
        
         var Accepter = "Accepter";
            
-       
-        
+        <%
+            Session["Reponse"] = "Accepter";
+           
+        %>
+        alert(Accepter);
 
         
     }
 
-    function refuser(nb_service) {
+    function refuser() {
        
         var Refuser = "refuser";
         <%
             Session["Reponse"] = "refuser";
            
         %>
-        //alert(Refuser);
+        alert(Refuser);
     }
 </script>
 </asp:Content>

@@ -12,7 +12,10 @@ namespace GestionDesServices.Client_inbox
         Connecter cn = new Connecter();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Write(Session["Reponse"] +" " +Session["pres"]+Session["haha"]);
+            Session["haha"] = Request.QueryString["Nbtab"].ToString();
+            Response.Write(Session["Reponse"] +" " +Session["pres"]+" "+Session["haha"]
+                +"La demande est accepter");
+            //Response.Redirect("../Page Anonce Fournisseur/liste.aspx");
             
         }
     }

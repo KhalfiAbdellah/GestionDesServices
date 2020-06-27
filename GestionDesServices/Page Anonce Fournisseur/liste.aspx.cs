@@ -15,7 +15,7 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
         protected void Page_Load(object sender, EventArgs e)
         {
             cn.con.Open();
-            cn.cmd = new SqlCommand("select desc_service from Services where ID_frn_fk =" + Session["Pres"], cn.con);
+            cn.cmd = new SqlCommand("select * from Services where ID_frn_fk =" + Session["Pres"], cn.con);
             SqlDataReader dr = cn.cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
@@ -23,7 +23,7 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    for (int j = 0; j < dt.Columns.Count; j++)
+                    for (int j = 4; j < dt.Columns.Count; j++)
                     {
                         HtmlGenericControl div = new HtmlGenericControl("div");
                         div.Attributes.Add("class", "card");
@@ -65,18 +65,19 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         div5.Controls.Add(div8);
                         
 
-                        /*HtmlGenericControl div6 = new HtmlGenericControl("a");
+                        HtmlGenericControl div6 = new HtmlGenericControl("a");
                         div6.Attributes.Add("class", "mt-auto btn btn-primary");
-                        div6.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Name=Accepter");
+                        div6.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Nbtab="+dt.Rows[int.Parse(nb)][2].ToString());
+                        div6.Attributes.Add("OnClick", "accepter()");
                         div6.InnerText = "Accepter";
-                        div5.Controls.Add(div6);*/
+                        div5.Controls.Add(div6);
 
-                        /*HtmlGenericControl div7 = new HtmlGenericControl("a");
+                        HtmlGenericControl div7 = new HtmlGenericControl("a");
                         div7.Attributes.Add("class", "mt-auto btn btn-danger");
-                        //div7.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Name=Refuser");
+                        div7.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Nbtab="+ dt.Rows[int.Parse(nb)][2].ToString());
                         div7.InnerText = "Refuser";
-                        div5.Controls.Add(div7);*/
-                        HtmlGenericControl div6 = new HtmlGenericControl("button");
+                        div5.Controls.Add(div7);
+                        /*HtmlGenericControl div6 = new HtmlGenericControl("button");
                         div6.Attributes.Add("class", "mt-auto btn btn-primary");
                      
                         div6.Attributes.Add("id", "Accepter");
@@ -87,7 +88,7 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         //div7.InnerText = "Refuser";
                         div5.Controls.Add(div6);
                         
-                        HtmlGenericControl div7 = new HtmlGenericControl("button");
+                        /*HtmlGenericControl div7 = new HtmlGenericControl("button");
                         div7.Attributes.Add("class", "mt-auto btn btn-danger");
                         div7.Attributes.Add("runat", "server");
                         div7.InnerHtml = "Refuser";
@@ -103,10 +104,10 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         button.Attributes.Add("OnClick",);
                         div5.Controls.Add(button);
                         div5.Controls.Add(div7);*/
-                        
+
                     }
 
-                    
+
                 }
             }
             
