@@ -6,10 +6,7 @@
        
         var Accepter = "Accepter";
            
-        <%
-            Session["Reponse"] = "Accepter";
-           
-        %>
+        
         alert(Accepter);
 
         
@@ -18,10 +15,7 @@
     function refuser() {
        
         var Refuser = "refuser";
-        <%
-            Session["Reponse"] = "refuser";
-           
-        %>
+        
         alert(Refuser);
     }
 </script>

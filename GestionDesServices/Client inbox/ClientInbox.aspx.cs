@@ -13,6 +13,7 @@ namespace GestionDesServices.Client_inbox
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["haha"] = Request.QueryString["Nbtab"].ToString();
+            Session["reponse"] = Request.QueryString["reponse"].ToString();
             Response.Write(Session["Reponse"] +" " +Session["pres"]+" "+Session["haha"]
                 +"La demande est accepter");
             //Response.Redirect("../Page Anonce Fournisseur/liste.aspx");

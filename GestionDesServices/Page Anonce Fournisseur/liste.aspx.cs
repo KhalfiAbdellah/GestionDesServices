@@ -67,14 +67,15 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
 
                         HtmlGenericControl div6 = new HtmlGenericControl("a");
                         div6.Attributes.Add("class", "mt-auto btn btn-primary");
-                        div6.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Nbtab="+dt.Rows[int.Parse(nb)][2].ToString());
+                        div6.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Nbtab="+dt.Rows[int.Parse(nb)][2].ToString()+"&reponse=Accepter");
                         div6.Attributes.Add("OnClick", "accepter()");
                         div6.InnerText = "Accepter";
                         div5.Controls.Add(div6);
 
                         HtmlGenericControl div7 = new HtmlGenericControl("a");
                         div7.Attributes.Add("class", "mt-auto btn btn-danger");
-                        div7.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Nbtab="+ dt.Rows[int.Parse(nb)][2].ToString());
+                        div7.Attributes.Add("OnClick", "refuser()");
+                        div7.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Nbtab="+ dt.Rows[int.Parse(nb)][2].ToString()+ "&reponse=Refuser");
                         div7.InnerText = "Refuser";
                         div5.Controls.Add(div7);
                         /*HtmlGenericControl div6 = new HtmlGenericControl("button");
