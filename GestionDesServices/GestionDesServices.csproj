@@ -333,6 +333,9 @@
     <Content Include="Ressource\font-awesome\css\font-awesome.min.css" />
     <Content Include="Ressource\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Site1.css" />
+    <Content Include="UI\Fournisseur\Fournisseur UI.aspx" />
+    <Content Include="UI\Fournisseur\Fournisseur UI.css" />
+    <Content Include="UI\UI.css" />
     <Content Include="website logo\android-chrome-192x192.png" />
     <Content Include="website logo\android-chrome-512x512.png" />
     <Content Include="website logo\apple-touch-icon.png" />
@@ -647,6 +650,20 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="UI\Fournisseur\Fournisseur UI.aspx.cs">
+      <DependentUpon>Fournisseur UI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Fournisseur\Fournisseur UI.aspx.designer.cs">
+      <DependentUpon>Fournisseur UI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UI.Master.cs">
+      <DependentUpon>UI.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\UI.Master.designer.cs">
+      <DependentUpon>UI.Master</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -657,11 +674,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="UI\Client\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="UI\UI.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

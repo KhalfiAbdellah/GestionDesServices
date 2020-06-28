@@ -1,27 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="liste.aspx.cs" Inherits="GestionDesServices.Page_Anonce_Fournisseur.liste" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<script >
-    
-    function accepter(nb_service) {
-       
-        var Accepter = "Accepter";
-           
-       
-        
-
-        
-    }
-
-    function refuser(nb_service) {
-       
-        var Refuser = "refuser";
-        <%
-            Session["Reponse"] = "refuser";
-           
-        %>
-        //alert(Refuser);
-    }
-</script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

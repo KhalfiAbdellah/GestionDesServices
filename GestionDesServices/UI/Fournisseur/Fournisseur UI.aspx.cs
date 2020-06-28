@@ -7,9 +7,13 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-namespace GestionDesServices.Page_Anonce_Fournisseur
+
+
+
+
+namespace GestionDesServices.UI.Fournisseur
 {
-    public partial class liste : System.Web.UI.Page
+    public partial class Fournisseur_UI : System.Web.UI.Page
     {
         Connecter cn = new Connecter();
         protected void Page_Load(object sender, EventArgs e)
@@ -19,7 +23,7 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
             SqlDataReader dr = cn.cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
-            if (dt.Rows.Count!=0)
+            if (dt.Rows.Count != 0)
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
@@ -28,8 +32,9 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         HtmlGenericControl div = new HtmlGenericControl("div");
                         div.Attributes.Add("class", "card");
                         div.Attributes.CssStyle.Add("margin-bottom", "2%");
-                        menu.Controls.Add(div);
+                        //menu.Controls.Add(div);
                        
+                        
                         HtmlGenericControl div1 = new HtmlGenericControl("div");
                         div1.Attributes.Add("class", "row");
                         div.Controls.Add(div1);
@@ -46,7 +51,7 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         div4.Attributes.Add("class", "card-title");
                         div3.Controls.Add(div4);
                         HtmlGenericControl h2 = new HtmlGenericControl("h2");
-                        h2.InnerText = "Annonce : "+(i+1) ;
+                        h2.InnerText = "Annonce : " + (i + 1);
                         div4.Controls.Add(h2);
                         HtmlGenericControl choix = new HtmlGenericControl("input");
                         choix.Attributes.Add("type", "hidden");
@@ -54,8 +59,8 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         choix.Attributes.Add("value", nbr);
                         choix.Attributes.Add("id", "SendA");
                         choix.Attributes.Add("name", "SendA");
-                        
-                        
+
+
                         HtmlGenericControl div5 = new HtmlGenericControl("p");
                         div5.Attributes.Add("class", "card-text");
                         div5.InnerHtml = dt.Rows[i][j].ToString();
@@ -92,14 +97,11 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         div6.Attributes.Add("id", "Accepter");
                         div6.InnerHtml = "Accepter";
                         div6.Attributes.Add("runat", "server");
-                       
-                       
-                            div6.Attributes.Add("OnClick", accepterr(nb));
-                        
+                        div6.Attributes.Add("OnClick", accepter(nb));
                         //div7.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Name=Refuser");
                         //div7.InnerText = "Refuser";
                         div5.Controls.Add(div6);
-                        
+
 
 
                         /*Boutton REFUSER*/
@@ -119,30 +121,21 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         button.Attributes.Add("OnClick",);
                         div5.Controls.Add(button);
                         div5.Controls.Add(div7);*/
-                        
+
                     }
 
-                    
+
                 }
             }
-            
-        }
 
-        
-        public string accepterr(int res)
+        }
+        public string accepter(int res)
         {
             //Session["btn1"] = "Accepter";
             //Response.Write("accepter la metode");
             Response.Write("<script>alert('Hello this is Citizen Z, do you copy ? I repeat do you copy ? " + res + "');</script>");
-           
-            return "";
-        }
-        protected void Unnamed_Click(object sender, EventArgs e)
-        {
-            
-            
-            Response.Write("<script>alert('tester testerasdfsadfsdaf');</script>");
 
+            return "";
         }
     }
 }
