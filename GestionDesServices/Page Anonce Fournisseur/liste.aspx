@@ -1,24 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="liste.aspx.cs" Inherits="GestionDesServices.Page_Anonce_Fournisseur.liste" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<script >
-    
-    function accepter() {
-       
-        var Accepter = "Accepter";
-           
-        
-        alert(Accepter);
-
-        
-    }
-
-    function refuser() {
-       
-        var Refuser = "refuser";
-        
-        alert(Refuser);
-    }
-</script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
