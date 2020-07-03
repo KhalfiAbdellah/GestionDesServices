@@ -78,6 +78,7 @@ namespace GestionDesServices.Page_Anonce_Fournisseur
                         div7.Attributes.Add("href", "../Client inbox/ClientInbox.aspx?Nbtab="+ dt.Rows[int.Parse(nb)][0].ToString()+ "&reponse=Refuser");
                         div7.InnerText = "Refuser";
                         div5.Controls.Add(div7);
+                        //go to hell
                         /*HtmlGenericControl div6 = new HtmlGenericControl("button");
                         div6.Attributes.Add("class", "mt-auto btn btn-primary");
                      
