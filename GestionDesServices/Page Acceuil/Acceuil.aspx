@@ -237,50 +237,51 @@ bgc2, .vLine, .hLine {
 <!-- Page Content -->
 <section class="py-5 text-center">
       <div class="container"> 
-        <h2 class="text-center">Luckmoshy`s Services</h2>
-        <p class="text-muted mb-5 text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+        <h2 class="text-center">Découvrez nos fonctionnalités</h2>
+        <p class="text-muted mb-5 text-center"></p>
         <div class="row">
           <div class="col-sm-6 col-lg-4 mb-3">
             <svg class="lnr text-primary services-icon">
               <use xlink:href="#lnr-magic-wand"></use>
             </svg>
-            <h6>Ex cupidatat eu</h6>
-            <p class="text-muted">Ex cupidatat eu officia consequat incididunt labore occaecat ut veniam labore et cillum id et.</p>
+            <h6>Services</h6>
+            <p class="text-muted">nous avons inclus la plupart des services dont on aurait besoin dans tous les secteurs d'activité, il vous suffit d'entrer
+                                    des informations spécifiques sur le service dont vous avez besoin et vous êtes prêt à partir.</p>
           </div>
           <div class="col-sm-6 col-lg-4 mb-3">
             <svg class="lnr text-primary services-icon">
               <use xlink:href="#lnr-heart"></use>
             </svg>
-            <h6>Tempor aute occaecat</h6>
-            <p class="text-muted">Tempor aute occaecat pariatur esse aute amet.</p>
+            <h6>satisfaction du client</h6>
+            <p class="text-muted">la satisfaction du client est notre priorité absolue en tant que créateurs de contenu, c'est pourquoi nous sommes prêts à entendre votre avis sur nous, afin que nous puissions vous aider à être plus à l'aise avec notre produit.</p>
           </div>
           <div class="col-sm-6 col-lg-4 mb-3">
             <svg class="lnr text-primary services-icon">
               <use xlink:href="#lnr-rocket"></use>
             </svg>
-            <h6>Voluptate ex irure</h6>
-            <p class="text-muted">Voluptate ex irure ipsum ipsum ullamco ipsum reprehenderit non ut mollit commodo.</p>
+            <h6>nos prestataires</h6>
+            <p class="text-muted">chaque jour, nous nous assurons que nos prestataires de services ont une qualité supérieure, et surtout une hestorique de satisfaction des clients.</p>
           </div>
           <div class="col-sm-6 col-lg-4 mb-3">
             <svg class="lnr text-primary services-icon">
               <use xlink:href="#lnr-paperclip"></use>
             </svg>
-            <h6>Tempor commodo</h6>
-            <p class="text-muted">Tempor commodo nostrud ex Lorem occaecat duis occaecat minim.</p>
+            <h6>Sécurisé</h6>
+            <p class="text-muted">La chose la plus importante en utilisant un site Web est sa sécurité, c'est pourquoi faire de la confidentialité de nos utilisateurs notre priorité absolue, afin que vos données ne puissent pas être divulguées.</p>
           </div>
           <div class="col-sm-6 col-lg-4 mb-3">
             <svg class="lnr text-primary services-icon">
               <use xlink:href="#lnr-screen"></use>
             </svg>
-            <h6>Et fugiat sint occaecat</h6>
-            <p class="text-muted">Et fugiat sint occaecat voluptate incididunt anim nostrud ea cillum cillum consequat.</p>
+            <h6>A jour</h6>
+            <p class="text-muted">nous effectuons un diagnostic quotidien du site Web pour nous assurer que tout est sous contrôle et qu'il fonctionne parfaitement.</p>
           </div>
           <div class="col-sm-6 col-lg-4 mb-3">
             <svg class="lnr text-primary services-icon">
               <use xlink:href="#lnr-inbox"></use>
             </svg>
-            <h6>Et labore tempor et</h6>
-            <p class="text-muted">Et labore tempor et adipisicing dolor.</p>
+            <h6>Gratuit </h6>
+            <p class="text-muted">nous nous sommes assurés que tout le monde a accès à nos services sans payer d'argent, car notre objectif est de rapprocher les deux parties et de vous faire économiser temps et argent en recherchant ce prestataire de services</p>
           </div>
         </div>
       </div>
