@@ -62,41 +62,42 @@
 
                         <ul>
                             <li>
-                                <a href="#" class="active">
+                                
+                                <asp:HyperLink runat="server" NavigateUrl="~/UI/Fournisseur/News feed.aspx" class="active">
                                     <span class="icon">
                                         <i class="fas fa-book-reader"></i></span>
                                     <span class="list">File d'actualites</span>
-                                </a>
+                                </asp:HyperLink>
                             </li>
                             <li>
-                                <a href="#" >
+                                <asp:HyperLink runat="server" NavigateUrl="~/UI/Fournisseur/News feed.aspx" >
                                     <span class="icon"><i class="fas fa-search-dollar"></i></span>
                                     <span class="list">Services disponibles</span>
-                                </a>
+                                </asp:HyperLink>
                             </li>
                             <li>
-                                <a href="#">
-                                    <span class="icon"><i class="fas fa-hand-holding-usd"></span>
+                                <asp:HyperLink runat="server" NavigateUrl="~/UI/Fournisseur/News feed.aspx" >
+                                    <span class="icon"><i class="fas fa-hand-holding-usd"></i></span>
                                     <span class="list">Demandes</span>
-                                </a>
+                                </asp:HyperLink>
                             </li>
                             <li>
-                                <a href="#">
+                                <asp:HyperLink runat="server" NavigateUrl="~/UI/Fournisseur/News feed.aspx" >
                                     <span class="icon"><i class="far fa-handshake"></i></span>
                                     <span class="list">Demandes Accepter</span>
-                                </a>
+                                </asp:HyperLink>
                             </li>
                             <li>
-                                <a href="#">
+                                <asp:HyperLink runat="server" NavigateUrl="~/UI/Fournisseur/News feed.aspx" >
                                     <span class="icon"><i class="fas fa-handshake-slash"></i></span>
                                     <span class="list">Demandes Refuser</span>
-                                </a>
+                                </asp:HyperLink>
                             </li>
                             <li>
-                                <a href="#">
-                                    <span class="icon"><i class="fas fa-map-marked-alt"></i></span>
+                                <asp:HyperLink runat="server" NavigateUrl="~/Page Acceuil/Acceuil.aspx">
+                                    <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
                                     <span class="list">Logout</span>
-                                </a>
+                                </asp:HyperLink>
                             </li>
                         </ul>
 

@@ -333,9 +333,12 @@
     <Content Include="Ressource\font-awesome\css\font-awesome.min.css" />
     <Content Include="Ressource\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Site1.css" />
-    <Content Include="UI\Fournisseur\Fournisseur UI.aspx" />
-    <Content Include="UI\Fournisseur\Fournisseur UI.css" />
+    <Content Include="UI\news feed\News feed.aspx" />
+    <Content Include="UI\news feed\News feed.css" />
     <Content Include="UI\UI.css" />
+    <Content Include="UI\User Profile\User Profile.aspx" />
+    <Content Include="UI\User Profile\User Profile.css" />
+    <Content Include="UI\User Profile\User Profile.js" />
     <Content Include="website logo\android-chrome-192x192.png" />
     <Content Include="website logo\android-chrome-512x512.png" />
     <Content Include="website logo\apple-touch-icon.png" />
@@ -650,12 +653,12 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
-    <Compile Include="UI\Fournisseur\Fournisseur UI.aspx.cs">
-      <DependentUpon>Fournisseur UI.aspx</DependentUpon>
+    <Compile Include="UI\news feed\News feed.aspx.cs">
+      <DependentUpon>News feed.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI\Fournisseur\Fournisseur UI.aspx.designer.cs">
-      <DependentUpon>Fournisseur UI.aspx</DependentUpon>
+    <Compile Include="UI\news feed\News feed.aspx.designer.cs">
+      <DependentUpon>News feed.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\UI.Master.cs">
       <DependentUpon>UI.Master</DependentUpon>
@@ -663,6 +666,13 @@
     </Compile>
     <Compile Include="UI\UI.Master.designer.cs">
       <DependentUpon>UI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User Profile\User Profile.aspx.cs">
+      <DependentUpon>User Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\User Profile\User Profile.aspx.designer.cs">
+      <DependentUpon>User Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -674,7 +684,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="UI\Client\" />
+    <Folder Include="UI\services disponibles\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
