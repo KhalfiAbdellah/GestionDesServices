@@ -87,8 +87,15 @@
                     <div class="panel-footer">
                         <span class="pull-right">
                             <asp:Button runat="server" class="btn btn-sm btn-warning" Text="Modifier mes infos" OnClick="Unnamed1_Click" ID="modifier"/>
-                            <asp:Button runat="server" class="btn btn-sm btn-danger" Text="Supprimer mon compte"/>
+                            <asp:Button runat="server" class="btn btn-sm btn-warning" Text="Enregistrer" OnClick="enregistrer" ID="Enregistrer"/>
+                            <asp:Button runat="server" class="btn btn-sm btn-warning" Text="Annuler" OnClick="annuler" ID="Annuler"/>
+                            <asp:Button runat="server" class="btn btn-sm btn-danger" Text="Supprimer mon compte" OnClick="Supprimmer"/>
                         </span>
+                        <p runat="server" style="color:red" id="attempt">Tu est sure que tu veux supprimer votre compte ?! 
+                            <asp:Button runat="server"  Text="oui" OnClick="Oui" ID="Button1"/>
+                            <asp:Button runat="server" Text="Non" OnClick="Non"/>
+
+                        </p>
                     </div>
 
                 </div>

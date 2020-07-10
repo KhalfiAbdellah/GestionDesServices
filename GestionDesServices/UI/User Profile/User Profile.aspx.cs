@@ -18,6 +18,10 @@ namespace GestionDesServices.UI.User_Profile
         {
             cn.con.Open();
 
+            //hiding the message or prompt about the deleting the account
+            attempt.Visible = false;
+
+
             //NOM
             cn.cmd = new SqlCommand("select nom_clt, prenom_clt from Clients where ID_clt=" + 4, cn.con);
             nom_prenom.InnerText = (string)cn.cmd.ExecuteScalar();
@@ -57,15 +61,18 @@ namespace GestionDesServices.UI.User_Profile
             cn.cmd = new SqlCommand("select mdp_clt from Clients where ID_clt=" + 4, cn.con);
             mdp.Text = (string)cn.cmd.ExecuteScalar();
             mdp.ReadOnly = true;
+
+            Enregistrer.Visible = false;
+            Annuler.Visible = false;
+            cn.con.Close();
         }
 
-        int a = 1;
+       
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
 
             
-            modifier.Text = "Enregistrer les modifications";
-            modifier.BackColor = System.Drawing.Color.Green;
+            
 
             nom.ReadOnly = false;
             prenom.ReadOnly = false;
@@ -74,22 +81,70 @@ namespace GestionDesServices.UI.User_Profile
             tel.ReadOnly = false;
             age.ReadOnly = false;
             mdp.ReadOnly = false;
-            if (a == 2)
-            {
-                this.modifier2();
-            }
-            else
-            {
-                a = 2;
-            }
+
+
+            modifier.Visible = false;
+        
+            Enregistrer.Visible = true;
+            Annuler.Visible = true;
+            Enregistrer.BackColor = System.Drawing.Color.Green;
 
 
         }
-        public void modifier2()
+       
+        protected void enregistrer(object sender, EventArgs e)
         {
-            cn.cmd = new SqlCommand("update Clients set nom_clt='" + nom.Text + "', prenom_clt='" + prenom.Text + "', email_clt='" + email.Text + "',mdp_clt='" + mdp.Text + "',numTel_clt=" + tel.Text + ", age_clt=" + age.Text + " where ID_clt=" + 4, cn.con);
+            cn.con.Open();
+            cn.cmd = new SqlCommand("update Clients set nom_clt='" + nom.Text + "', prenom_clt='" + prenom.Text + "', email_clt='" + email.Text + "', mdp_clt='" + mdp.Text + "', numTel_clt=" + Convert.ToInt32(tel.Text) + ", age_clt=" + Convert.ToInt32(age.Text) + " where ID_clt=" + 4 + "", cn.con);
             cn.cmd.ExecuteNonQuery();
             Response.Write("<script>alert('Les modifications sont enregistrer avec succees');</script>");
+
+            modifier.Visible = true;
+            Enregistrer.Visible = false;
+
+            nom.ReadOnly = true;
+            prenom.ReadOnly = true;
+            email.ReadOnly = true;
+            adress.ReadOnly = true;
+            tel.ReadOnly = true;
+            age.ReadOnly = true;
+            mdp.ReadOnly = true;
+        }
+
+      
+        protected void Oui(object sender, EventArgs e)
+        {
+            cn.cmd = new SqlCommand("delete from Clients where ID_clt=" + 4, cn.con);
+            cn.cmd.ExecuteNonQuery();
+            Response.Write("<script>alert('Votre compte est supprimer avec succees!');</script>");
+            modifier.Visible = true;
+        }
+
+        protected void Supprimmer(object sender, EventArgs e)
+        {
+            modifier.Visible = false;
+            Enregistrer.Visible = false;
+            attempt.Visible = true;
+        }
+
+        protected void Non(object sender, EventArgs e)
+        {
+            attempt.Visible = false;
+            modifier.Visible = true;
+        }
+
+        protected void annuler(object sender, EventArgs e)
+        {
+            nom.ReadOnly = true;
+            prenom.ReadOnly = true;
+            email.ReadOnly = true;
+            adress.ReadOnly = true;
+            tel.ReadOnly = true;
+            age.ReadOnly = true;
+            mdp.ReadOnly = true;
+            modifier.Visible = true;
+            Enregistrer.Visible = false;
+            Annuler.Visible = false;
         }
     }
 }
