@@ -23,7 +23,7 @@ namespace GestionDesServices.Page_Inscription
             {
                 cn.con.Open();
 
-                SqlCommand com = new SqlCommand("select *from Metiers", cn.con);
+                SqlCommand com = new SqlCommand("select * from Metiers", cn.con);
                 SqlDataAdapter da = new SqlDataAdapter(com);
                 DataSet ds = new DataSet();
                 da.Fill(ds);  // fill dataset

@@ -41,44 +41,97 @@
                                         <%--NOM--%>
                                         <tr>
                                             <td>Nom :</td>
-                                            <td><asp:TextBox runat="server" id="nom"></asp:TextBox></td>
+                                            <td>
+                                                <asp:TextBox runat="server" id="nom"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidatorName" runat="server" ErrorMessage="Le nom est obligatoire" ControlToValidate="nom" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                                <asp:RegularExpressionValidator runat="server" ID="REVName" ControlToValidate="nom" ErrorMessage="Le nom doit etre compose de characters" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
+                                            </td>
                                         </tr>
 
                                         <%--PRENOM--%>
                                         <tr>
                                             <td>Prenom :</td>
-                                            <td><asp:TextBox runat="server" id="prenom"></asp:TextBox></td>
+                                            <td>
+                                                <asp:TextBox runat="server" id="prenom"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName" runat="server" ErrorMessage="Le prenom est obligatoire" ControlToValidate="prenom" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                                <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidatorprenom" ControlToValidate="prenom" ErrorMessage="Le prenom doit etre compose de characters" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
+
+                                            </td>
                                         </tr>
 
                                         <%--EMAIL--%>
                                         <tr>
                                             <td>Email :</td>
-                                            <td><asp:TextBox runat="server" ID="email"></asp:TextBox></td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="email"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ErrorMessage="L'email est obligatoire" ControlToValidate="email" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                                <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidator1" ControlToValidate="email" ErrorMessage="L'email est invalid" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+
+                                            </td>
                                         </tr>
 
                                         <%--ADRESS--%>
                                         <tr>
                                             <td>Address :</td>
-                                            <td><asp:TextBox runat="server" ID="adress"></asp:TextBox></td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="adress"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidatorAdresse" runat="server" ErrorMessage="L'adresse est obligatoire" ControlToValidate="adress" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                            </td>
                                         </tr>
 
                                         <%--NUMERO DE TELEPHONE--%>
                                         <tr>
                                             <td>Numero de Telephone :</td>
-                                            <td><asp:TextBox runat="server" ID="tel"></asp:TextBox></td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="tel"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhoneNumber" runat="server" ErrorMessage="Le numero de telephone est obligatoire" ControlToValidate="tel" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                                <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidator2" ControlToValidate="tel" ErrorMessage="number should be 9 digits" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="[567][0-9]{8}"></asp:RegularExpressionValidator>
+
+                                            </td>
                                         </tr>
 
                                         <%--AGE--%>
                                         <tr>
                                             <td>Age :</td>
-                                            <td><asp:TextBox runat="server" id="age"></asp:TextBox></td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="age"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="L'age est obligatoire" ControlToValidate="age" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                                <asp:RangeValidator ID="RangeValidatorAge" runat="server" ErrorMessage="L'age doit etre un nombre et entre 18 et 100  " ControlToValidate="age" ForeColor="Red" Operator="DataTypeCheck" MinimumValue="18" MaximumValue="100" Type="Integer" Display="Dynamic" SetFocusOnError="true"></asp:RangeValidator>
+
+                                            </td>
                                         </tr>
 
                                         <%--MOT DE PASSE--%>
                                         <tr>
                                             <td>Mot de passe :</td>
-                                            <td><asp:TextBox runat="server" id="mdp"></asp:TextBox></td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="mdp"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidatorpassword" runat="server" ErrorMessage="Le mot de passe est obligatoire" ControlToValidate="mdp" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                  <%--              <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidatorpass" ControlToValidate="mdp" ErrorMessage="le mote de passe doit contenir au moins un nombre, un miniscule, majuscule,chiffre, et 8 characters en langeur" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"></asp:RegularExpressionValidator>--%>
+                                            </td>
                                         </tr>
+
+                                        <%--Metier--%>
+                                        <tr id="metier" runat="server">
+                                            <td>Metier ou service :</td>
+                                            <td>
+                                                <asp:DropDownList runat="server" ID="DropdownMetier">
+                                                </asp:DropDownList>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidatorMetier" runat="server" ErrorMessage="Le metier est obligatoire" ControlToValidate="DropdownMetier" ForeColor="Red" InitialValue="1" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+
+                                        <%--Prix de service--%>
+                                        <tr id="prix" runat="server">
+                                            <td>Prix/Heur :</td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="tbPrix"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidatorPrix" runat="server" ErrorMessage="Le prix est obligatoire" ControlToValidate="tbPrix" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                                <asp:CompareValidator ID="CPP" runat="server" ErrorMessage="Le prix de travail doit etre un nombre" ControlToValidate="tbPrix" ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Type="Integer" Operator="DataTypeCheck"></asp:CompareValidator>
+
+                                            </td>
+                                        </tr>
+
                                     </tbody>
                                 </table>
                             </div>

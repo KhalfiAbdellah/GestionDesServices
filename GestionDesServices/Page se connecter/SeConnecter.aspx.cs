@@ -45,6 +45,12 @@ namespace GestionDesServices
             dt.Load(dr);
             if (dt.Rows.Count !=0)
             {
+                //RECUPERATION DU ID D'UTILISATEUR
+                string identifiant = "select ID_clt from Clients where email_clt='" + login + "'";
+                SqlCommand cmd4id = new SqlCommand(identifiant, cn.con);
+                Session["Identifiant"] = cmd4id.ExecuteScalar();
+
+
                 //prendre la valeur du nombre de connexion
                 int nbr = int.Parse(dt.Rows[0][6].ToString());
 
@@ -59,7 +65,9 @@ namespace GestionDesServices
                 //Envoyer le clent vers la page des service , recuperer son id et donner son role
                 Session["Role"] = "client";
                 Session["User"] = dt.Rows[0][0].ToString();
-                Response.Redirect("~/Page Services disponibles/ServicesDisponibles.aspx");
+
+                //Response.Redirect("~/Page Services disponibles/ServicesDisponibles.aspx");
+                Response.Redirect("~/UI/news feed/News feed.aspx");
             }
             else
             {
@@ -69,6 +77,15 @@ namespace GestionDesServices
                 dt1.Load(dr1);
                 if (dt1.Rows.Count != 0)
                 {
+
+
+                    //RECUPERATION DU ID D'UTILISATEUR
+                    string identifiant = "select ID_frn from Fournisseurs where email_frn='" + login + "'";
+                    SqlCommand cmd4id = new SqlCommand(identifiant, cn.con);
+                    Session["Identifiant"] = cmd4id.ExecuteScalar();
+
+
+
                     //prendre la valeur du nombre de connexion
                     int nbr = int.Parse(dt1.Rows[0][6].ToString());
 
@@ -78,12 +95,21 @@ namespace GestionDesServices
                     string incrementation = "update Fournisseurs set nbr_cnx_frn=" + res + " where email_frn='" + login + "'";
                     SqlCommand cmd3 = new SqlCommand(incrementation, cn.con);
 
+                    
+
+
                     //saving changes
                     cmd3.ExecuteNonQuery();
+
+                    //hello abdelah I don't know what these two lines do !!
                     Session["Role"] = "prestataire";
                     Session["Pres"] = dt1.Rows[0][0].ToString();
+
+                    
                     //Response.Write(Session["Pres"]);
-                    Response.Redirect("../Page Anonce Fournisseur/liste.aspx");
+
+                    //Response.Redirect("../Page Anonce Fournisseur/liste.aspx");
+                    Response.Redirect("~/UI/news feed/News feed.aspx");
                 }
                 else
                 {
