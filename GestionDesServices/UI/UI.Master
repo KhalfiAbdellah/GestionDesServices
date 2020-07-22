@@ -63,19 +63,22 @@
 
                         <ul>
                             <li>
-                                
-                                <asp:HyperLink runat="server" NavigateUrl="~/UI/Fournisseur/News feed.aspx" class="active">
+                                <asp:HyperLink runat="server" NavigateUrl="~/UI/news feed/News feed.aspx" class="active">
                                     <span class="icon">
                                         <i class="fas fa-book-reader"></i></span>
                                     <span class="list">File d'actualites</span>
                                 </asp:HyperLink>
                             </li>
+
+
                             <li>
                                 <asp:HyperLink runat="server" NavigateUrl="~/UI/Fournisseur/News feed.aspx" >
                                     <span class="icon"><i class="fas fa-search-dollar"></i></span>
                                     <span class="list">Services disponibles</span>
                                 </asp:HyperLink>
                             </li>
+
+
                             <li>
                                 <asp:HyperLink runat="server" NavigateUrl="~/UI/Fournisseur/News feed.aspx" >
                                     <span class="icon"><i class="fas fa-hand-holding-usd"></i></span>

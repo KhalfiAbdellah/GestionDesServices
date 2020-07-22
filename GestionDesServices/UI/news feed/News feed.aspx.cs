@@ -27,41 +27,132 @@ namespace GestionDesServices.UI.Fournisseur
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    for (int j = 4; j < dt.Columns.Count; j++)
+                    HtmlGenericControl Annonce = new HtmlGenericControl("div");
+                    Annonce.Attributes.Add("class", "item_wrap");
+                    menu.Controls.Add(Annonce);
+
+                    //UPPER SECTION
+                    HtmlGenericControl UpperSection = new HtmlGenericControl("div");
+                    UpperSection.Attributes.Add("class", "Upper");
+                    Annonce.Controls.Add(UpperSection);
+
+                        //Numero de service
+                    HtmlGenericControl DivNumeroService = new HtmlGenericControl("div");
+                    DivNumeroService.Attributes.Add("class", "NumeroService");
+                    UpperSection.Controls.Add(DivNumeroService);
+
+                        //Date de Publication
+                    HtmlGenericControl DivDate = new HtmlGenericControl("div");
+                    DivDate.Attributes.Add("class", "Date");
+                    UpperSection.Controls.Add(DivDate);
+
+
+                    //MIDDLE SECTION
+                    HtmlGenericControl MiddleSection = new HtmlGenericControl("div");
+                    MiddleSection.Attributes.Add("class", "Middle");
+                    Annonce.Controls.Add(MiddleSection);
+
+                        //Paragraphe
+                    HtmlGenericControl Paragraphe = new HtmlGenericControl("p");
+                    Paragraphe.Attributes.Add("class", "paragraphe");
+                    MiddleSection.Controls.Add(Paragraphe);
+
+                        //
+                    HtmlGenericControl SpanFRN = new HtmlGenericControl("span");
+                    SpanFRN.Attributes.Add("class", "FRN");
+                    Paragraphe.Controls.Add(SpanFRN);
+
+                    //
+                    HtmlGenericControl SpanCLT = new HtmlGenericControl("span");
+                    SpanCLT.Attributes.Add("class", "CLT");
+                    Paragraphe.Controls.Add(SpanCLT);
+
+
+
+                    //BOTTOM SECTION
+                    HtmlGenericControl BottomSection = new HtmlGenericControl("div");
+                    BottomSection.Attributes.Add("class", "Bottom");
+                    Annonce.Controls.Add(BottomSection);
+
+                    HtmlGenericControl Desc = new HtmlGenericControl("p");
+                    Desc.Attributes.Add("class", "Desc");
+                    BottomSection.Controls.Add(Desc);
+
+                    HtmlGenericControl Domaine = new HtmlGenericControl("span");
+                    Domaine.Attributes.Add("class", "Domaine");
+                    BottomSection.Controls.Add(Domaine);
+
+                    for (int j = 0; j < dt.Columns.Count; j++)
                     {
-                        /*try1*/
-                        //HtmlGenericControl div = new HtmlGenericControl("div");
-                        //div.Attributes.Add("class", "item");
-                        //div.Attributes.CssStyle.Add("display","flex");
-                        //div.Attributes.CssStyle.Add("margin-bottom", "20px");
-                        //menu.Controls.Add(div);
-                        //div.InnerText = dt.Rows[i][j].ToString();
-                        /*end*/
+                        if (j == 0)                               //SECTION NUMERO DE SERVICE
+                        {
+                            //AFFICHAGE
+                            DivNumeroService.InnerText += "Numero de Service : "+dt.Rows[i][j].ToString() + "\n";
 
 
-                        /*try2*/
-                       
 
-                        HtmlGenericControl div = new HtmlGenericControl("div");
-                        div.Attributes.Add("class", "item_wrap");
-                        div.Attributes.CssStyle.Add("display", "flex");
-                        div.Attributes.CssStyle.Add("margin-bottom", "20px");
-                        menu.Controls.Add(div);
+                        }else if (j==1)                          //SECTION DES INFORMATIONS DE PRESTATAIRE
+                        {
+                            //RECUPERATION DU NOM DE PRESTATAIRE
+                            string nomFournisseur = "select nom_frn from Fournisseurs where ID_frn="+ dt.Rows[i][j].ToString();
+                            SqlCommand cmdNF = new SqlCommand(nomFournisseur, cn.con);
 
 
-                        HtmlGenericControl div2 = new HtmlGenericControl("div");
-                        div2.Attributes.Add("class", "item");
-                        div2.Attributes.CssStyle.Add("background", "#fff");
-                        div2.Attributes.CssStyle.Add("border", "1px solid #e0e0e0");
-                        div2.Attributes.CssStyle.Add("padding", "25px");
-                        div2.Attributes.CssStyle.Add("font-size", "14px");
-                        div2.Attributes.CssStyle.Add("line-height", "22px");
-                        div.Controls.Add(div2);
+                            //RECUPERATION DU PRENOM DU PRESTATAIRE
+                            string prenomFournisseur = "select nom_frn from Fournisseurs where ID_frn=" + dt.Rows[i][j].ToString();
+                            SqlCommand cmdPF = new SqlCommand(nomFournisseur, cn.con);
 
 
-                        div2.InnerText = dt.Rows[i][j].ToString();
-                        /*end*/
+                            //AFFICHAGE
+                            SpanFRN.InnerText +=cmdNF.ExecuteScalar() + "\n" + cmdPF.ExecuteScalar()+"\n a accepter la demande de service de ";
 
+                            
+                            
+                        }
+                        else if (j == 2)                        //SECTION DES INFORMATIONS DE CLIENT
+                        {
+                            //RECUPERATION DU NOM DU CLIENT
+                            string nomClient = "select nom_clt from Clients where ID_clt=" + dt.Rows[i][j].ToString();
+                            SqlCommand cmdNC = new SqlCommand(nomClient, cn.con);
+
+
+                            //RECUPERATION DU PRENOM DU CLIENT
+                            string prenomClient = "select prenom_clt from Clients where ID_clt=" + dt.Rows[i][j].ToString();
+                            SqlCommand cmdPC = new SqlCommand(prenomClient, cn.con);
+
+
+                            //AFFICHAGE
+                            SpanCLT.InnerText +=cmdNC.ExecuteScalar() + "\n" + cmdPC.ExecuteScalar() + "\n";
+
+
+                        }
+                        else if (j == 3)                       //SECTION DE NOM DE METIER
+                        {
+                            //RECUPERATION DU NOM DU METIER
+                            string nomMetier = "select nom_metier from Metiers where ID_metier=" + dt.Rows[i][j].ToString();
+                            SqlCommand cmdNM = new SqlCommand(nomMetier, cn.con);
+
+                            //AFFICHAGE
+                            Domaine.InnerText += "Domaine de Travaille : " + cmdNM.ExecuteScalar() + "\n";
+                        }
+                        else if (j == 4)                       //SECTION DE DESCRIPTION DE SERVICE
+                        {
+                            
+
+                            //AFFICHAGE
+                            Desc.InnerText += "Description : " + dt.Rows[i][j].ToString() + "\n";
+
+
+                        }
+                        else if (j == 5)                       //SECTION DE DATE DE PUBLICATION
+                        {
+
+
+                            //AFFICHAGE
+                            DivDate.InnerText += "Date de Publication : " + dt.Rows[i][j].ToString() + "\n";
+
+
+                        }
 
 
                     }
@@ -70,13 +161,6 @@ namespace GestionDesServices.UI.Fournisseur
                 }
             }
             
-        }
-        protected void Unnamed_Click(object sender, EventArgs e)
-        {
-
-
-            Response.Write("<script>alert('tester testerasdfsadfsdaf');</script>");
-
         }
     }
 }
