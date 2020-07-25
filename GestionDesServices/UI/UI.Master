@@ -72,7 +72,7 @@
 
 
                             <li>
-                                <asp:HyperLink runat="server" NavigateUrl="~/UI/Fournisseur/News feed.aspx" >
+                                <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/services dispo.aspx" >
                                     <span class="icon"><i class="fas fa-search-dollar"></i></span>
                                     <span class="list">Services disponibles</span>
                                 </asp:HyperLink>

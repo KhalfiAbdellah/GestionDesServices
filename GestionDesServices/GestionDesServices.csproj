@@ -336,6 +336,7 @@
     <Content Include="UI\news feed\News feed.aspx" />
     <Content Include="UI\news feed\News feed.css" />
     <Content Include="UI\Services dispo\services dispo.aspx" />
+    <Content Include="UI\Services dispo\Services Dispo.css" />
     <Content Include="UI\UI.css" />
     <Content Include="UI\User Profile\User Profile.aspx" />
     <Content Include="UI\User Profile\User Profile.css" />
