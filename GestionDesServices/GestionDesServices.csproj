@@ -335,6 +335,7 @@
     <Content Include="Site1.css" />
     <Content Include="UI\news feed\News feed.aspx" />
     <Content Include="UI\news feed\News feed.css" />
+    <Content Include="UI\Services dispo\Formulaire de demande\Form.aspx" />
     <Content Include="UI\Services dispo\services dispo.aspx" />
     <Content Include="UI\Services dispo\Services Dispo.css" />
     <Content Include="UI\UI.css" />
@@ -662,6 +663,13 @@
     <Compile Include="UI\news feed\News feed.aspx.designer.cs">
       <DependentUpon>News feed.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UI\Services dispo\Formulaire de demande\Form.aspx.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Services dispo\Formulaire de demande\Form.aspx.designer.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\Services dispo\services dispo.aspx.cs">
       <DependentUpon>services dispo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -693,7 +701,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="UI\services disponibles\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

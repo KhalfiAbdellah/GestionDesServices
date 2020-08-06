@@ -1,354 +1,95 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UI/UI.Master" AutoEventWireup="true" CodeBehind="services dispo.aspx.cs" Inherits="GestionDesServices.UI.Services_dispo.services_dispo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <style>
-        /*********************** Demo - 17 *******************/
-        .box17 {
-            position: relative
-        }
-
-            .box17:after {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                opacity: 0;
-                transition: all .5s ease 0s
-            }
-
-            .box17:hover:after {
-                opacity: 1
-            }
-
-            .box17 img {
-                width: 100%;
-                height: auto;
-                transition: all 1.5s ease 0s
-            }
-
-            .box17 .box-content, .box17 .icon li a {
-                position: absolute;
-                transition: all .6s ease 0s
-            }
-
-            .box17:hover img {
-                transform: scale(1.2)
-            }
-
-            .box17 .icon {
-                width: 100%;
-                height: 100%;
-                list-style: none;
-                padding: 0;
-                margin: 0 auto;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 1
-            }
-
-                .box17 .icon li a {
-                    width: 45px;
-                    height: 45px;
-                    line-height: 45px;
-                    margin: 0 auto;
-                    top: 50%;
-                    border: 1px solid #fff;
-                    opacity: 0
-                }
-
-            .box17:hover .icon li a {
-                top: 30%;
-                opacity: 1
-            }
-
-            .box17 .icon li a:hover {
-                background: #fff;
-                color: #02a2dd
-            }
-
-            .box17 .icon li:first-child a {
-                left: -90%;
-                right: 0
-            }
-
-            .box17:hover .icon li:first-child a {
-                left: -55px
-            }
-
-            .box17 .icon li:last-child a {
-                right: -90%;
-                left: 0
-            }
-
-            .box17:hover .icon li:last-child a {
-                right: -55px
-            }
-
-            .box17:hover .box-content {
-                bottom: 0;
-                display: block;
-            }
-
-            .box17 .title {
-                font-size: 18px;
-                font-weight: 700;
-                color: #fff;
-                margin-top: 0
-            }
-
-            .box17 .post {
-                display: block;
-                font-size: 14px;
-                color: #fff
-            }
-
-        .box-content {
-            display: none;
-        }
-
-        .box17 img {
-            border-radius: 20px;
-        }
-
-        @media only screen and (max-width:990px) {
-            .box17 {
-                margin-bottom: 30px
-            }
-        }
-
-        /*********************** EndDemo - 17 *******************/
-    </style>
+    <link href="Services%20Dispo.css" rel="stylesheet" />
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container mt-40">
-        <h3 class="text-center">Hover Effect Style : Demo - 17</h3>
-        <div class="row mt-30">
+    <div class="wrapper2">
+        <div>
+            <img src="../../Page Services disponibles/Images/babysitter5.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/lift service.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
 
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=1">
-                    <div class="box17">
-                        <img src="Images/babysitter5.jpg" alt="">
-                        <div class="box-content">
-                            <h3 class="title">Baby Sitter</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=20">
-                    <div class="box17">
-                        <img src="Images/lift service.jpg" alt="">
-                        <div class="box-content">
-                            <h3 class="title">Monte Meuble</h3>
-                        </div>
-                    </div>
-                </a>
-                <br />
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=2">
-                    <div class="box17">
-                        <img src="Images/cook2.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Cuisiniere</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/cook2.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/electrician4.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
 
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=3">
-                    <div class="box17">
-                        <img src="Images/electrician4.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Electricien</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=5">
-                    <div class="box17">
-                        <img src="Images/gardener2.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Jardinier</h3>
-                        </div>
-                    </div>
-                </a>
-                <br />
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=0">
-                    <div class="box17">
-                        <img src="Images/home nurse2.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Infirmiere</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=4">
-                    <div class="box17">
-                        <img src="Images/mechanical3.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Mechanicien</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=6">
-                    <div class="box17">
-                        <img src="Images/painter1.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Painteur</h3>
-                        </div>
-                    </div>
-                </a>
-                <br />
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=17">
-                    <div class="box17">
-                        <img src="Images/pexels-photo-313776.jpeg">
-                        <div class="box-content">
-                            <h3 class="title">Menuisier</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=7">
-                    <div class="box17">
-                        <img src="Images/plumber2.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Plombier</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=19">
-                    <div class="box17">
-                        <img src="Images/semsar2.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Agent Immobiler</h3>
-                        </div>
-                    </div>
-                </a>
-                <br />
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=16">
-                    <div class="box17">
-                        <img src="Images/blacksmith.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Forgeron</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=18">
-                    <div class="box17">
-                        <img src="Images/construction.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Ouvrier de Batiment</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=15">
-                    <div class="box17">
-                        <img src="Images/maid2.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Menage</h3>
-                        </div>
-                    </div>
-                </a>
-                <br />
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=9">
-                    <div class="box17">
-                        <img src="Images/web  developer.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Developeur</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=13">
-                    <div class="box17">
-                        <img src="Images/hairdresser.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Coiffeur</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=14">
-                    <div class="box17">
-                        <img src="Images/beautician.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Masseur</h3>
-                        </div>
-                    </div>
-                </a>
-                <br />
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=12">
-                    <div class="box17">
-                        <img src="Images/tailor.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Tailleur</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=10">
-                    <div class="box17">
-                        <img src="Images/home teacher.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Enseignant</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=11">
-                    <div class="box17">
-                        <img src="Images/photographer.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Photographeur</h3>
-                        </div>
-                    </div>
-                </a>
-                <br />
-            </div>
-            <div class="col-md-4 col-sm-1">
-                <a href="../Page Demande Service/Baby Siter/BabySitter.aspx?Name=8">
-                    <div class="box17">
-                        <img src="Images/driver.jpg">
-                        <div class="box-content">
-                            <h3 class="title">Baby Sitter</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/gardener2.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/home nurse2.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/mechanical3.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/painter1.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/pexels-photo-313776.jpeg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/plumber2.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/semsar2.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/blacksmith.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/construction.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/maid2.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/web  developer.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/hairdresser.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/beautician.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/tailor.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/home teacher.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/photographer.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
+        </div>
+        <div>
+            <img src="../../Page Services disponibles/Images/driver.jpg" />
+            <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
         </div>
     </div>
 </asp:Content>
