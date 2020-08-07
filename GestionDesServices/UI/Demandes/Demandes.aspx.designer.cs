@@ -7,21 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GestionDesServices.Page_List_des_fournisseurs
+namespace GestionDesServices.UI.Demandes
 {
 
 
-    public partial class List_des_fournisseurs
+    public partial class Demandes
     {
-
-        /// <summary>
-        /// menu1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menu1;
 
         /// <summary>
         /// menu control.

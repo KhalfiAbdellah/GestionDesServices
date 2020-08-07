@@ -270,6 +270,7 @@
     <Content Include="Page Inscription\Images\pexels-photo-3862376.jpeg" />
     <Content Include="Page Inscription\Inscription.css" />
     <Content Include="Page Inscription\InscriptionFournisseur.aspx" />
+    <Content Include="Page List des fournisseurs\BasicCSS.css" />
     <Content Include="Page List des fournisseurs\Images\chris pratt.jpg" />
     <Content Include="Page List des fournisseurs\Images\Deidara.jpg" />
     <Content Include="Page List des fournisseurs\Images\Hinata.jpg" />
@@ -333,6 +334,7 @@
     <Content Include="Ressource\font-awesome\css\font-awesome.min.css" />
     <Content Include="Ressource\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Site1.css" />
+    <Content Include="UI\Demandes\Demandes.aspx" />
     <Content Include="UI\news feed\News feed.aspx" />
     <Content Include="UI\news feed\News feed.css" />
     <Content Include="UI\Services dispo\Formulaire de demande\Form.aspx" />
@@ -655,6 +657,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Demandes\Demandes.aspx.cs">
+      <DependentUpon>Demandes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Demandes\Demandes.aspx.designer.cs">
+      <DependentUpon>Demandes.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\news feed\News feed.aspx.cs">
       <DependentUpon>News feed.aspx</DependentUpon>
