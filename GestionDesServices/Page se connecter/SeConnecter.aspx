@@ -21,9 +21,6 @@
         <!-- The image half -->
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
             <img src="Images/pexels-photo-3184287.jpeg" alt="" class="img-fluid mb-3 d-none d-md-block">
-            <h1>Connecter-vous</h1>
-            <p class="font-italic text-muted mb-0">Rejoigner nous pour etre mis a jour avec notre nouveau actualiters</p>
-
         </div>
 
 
@@ -35,8 +32,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-10 col-xl-7 mx-auto">
-                            <h3 class="display-4">Login !</h3>
-                            <p class="text-muted mb-4">Remplisser les champs pour se connecter</p>
+                            <h3 class="display-4">Connecter-vous</h3>
+                            <p class="text-muted mb-4">Rejoigner nous pour etre mis a jour avec notre nouveau actualiters</p>
                  
                                 <div class="form-group mb-3">
                                     <asp:TextBox runat="server" id="inputEmail" type="email" placeholder="Email address" required="required" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4"></asp:TextBox>
@@ -50,7 +47,7 @@
                                 </div>
                                 <asp:Button runat="server"  class="btn btn-danger btn-block text-uppercase mb-2 rounded-pill shadow-sm" Text="Connecter" OnClick="Button1_Click1"/>
                                 <div class="text-center d-flex justify-content-between mt-4">
-                                    <asp:HyperLink runat="server" NavigateUrl="#">Cree un compte</asp:HyperLink>
+                                    <asp:HyperLink runat="server" NavigateUrl="../Page Inscription/Inscription.aspx">Cree un compte</asp:HyperLink>
                                 </div>
                             
                             

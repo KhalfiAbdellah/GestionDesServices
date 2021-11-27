@@ -107,10 +107,8 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Client inbox\ClientInbox.aspx" />
-    <Content Include="Join Us Page\Images\2245138.jpg" />
-    <Content Include="Join Us Page\Images\345050.jpg" />
-    <Content Include="Join Us Page\Images\pexels-photo-1659747.jpeg" />
-    <Content Include="Join Us Page\Images\pexels-photo-594610.jpeg" />
+    <Content Include="Join Us Page\Images\client.jpg" />
+    <Content Include="Join Us Page\Images\service-provider-photo.jpeg" />
     <Content Include="Join Us Page\Join Us.aspx" />
     <Content Include="Join Us Page\Join Us.css" />
     <Content Include="Page a propos\Images\1172354.jpg" />
@@ -247,7 +245,10 @@
     <Content Include="Page a propos\a propos.css" />
     <Content Include="Page a propos\Images\about1.jpg" />
     <Content Include="Page a propos\Images\about2.jpg" />
-    <Content Include="Page Acceuil\Images\2675425.jpg" />
+    <Content Include="Page Acceuil\Images\slide-one.jpg" />
+    <Content Include="Page Acceuil\Images\slide-three.jpg" />
+    <Content Include="Page Acceuil\Images\slide-two.jpg" />
+    <Content Include="Page Acceuil\Images\second-slide.jpg" />
     <Content Include="Page Acceuil\Images\4th slide.jpg" />
     <Content Include="Page Acceuil\Images\client.png" />
     <Content Include="Page Acceuil\Images\clients.jpg" />

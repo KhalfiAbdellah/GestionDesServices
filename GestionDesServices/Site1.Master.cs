@@ -15,7 +15,7 @@ namespace GestionDesServices
            
             try
             {
-                if (Session["Role"].Equals(" "))
+                if (Session["Role"]==null)
                 {
                     
                 }

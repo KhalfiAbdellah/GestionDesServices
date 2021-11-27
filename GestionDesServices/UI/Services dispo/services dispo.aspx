@@ -13,7 +13,6 @@
             <img src="../../Page Services disponibles/Images/lift service.jpg" />
             <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
         </div>
-
         <div>
             <img src="../../Page Services disponibles/Images/cook2.jpg" />
             <asp:HyperLink runat="server" NavigateUrl="~/UI/Services dispo/Formulaire de demande/Form.aspx?Name=1" Text="Demander" class="DemandeBTN"></asp:HyperLink>
